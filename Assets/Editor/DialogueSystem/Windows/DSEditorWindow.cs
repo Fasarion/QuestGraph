@@ -56,7 +56,7 @@ namespace DS.Windows
             Button resetButton = DSElementUtility.CreateButton("Reset", () => ResetGraph());
             Button deleteButton = DSElementUtility.CreateButton("Delete", () => OpenDeleteConfirmationMenu());
             miniMapButton = DSElementUtility.CreateButton("Minimap", () => ToggleMinimap());
-            
+            Toggle autoPlayToggle = DSElementUtility.CreateToggle("Autoplay", () => ToggleAutoPlay());
             toolbar.Add(fileNameTextField);
             toolbar.Add(saveButton);
             toolbar.Add(loadButton);
@@ -64,6 +64,9 @@ namespace DS.Windows
             toolbar.Add(resetButton);
             toolbar.Add(deleteButton);
             toolbar.Add(miniMapButton);
+            toolbar.Add(autoPlayToggle);
+
+            
             
             
             
@@ -157,6 +160,11 @@ namespace DS.Windows
             graphView.ToggleMiniMap();
             
             miniMapButton.ToggleInClassList("ds-toolbar__button__selected");
+        }
+
+        private void ToggleAutoPlay()
+        {
+            graphView.ToggleAutoPlay();
         }
 
         #endregion

@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3abeb2780963ae4ab4c21046a96b99d, type: 3}
-  m_Name: Wolf2Graph
+  m_Name: Wolf3Graph
   m_EditorClassIdentifier: 
-  <FileName>k__BackingField: Wolf2
+  <FileName>k__BackingField: Wolf3
   groups: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: d12dee48-3c1b-4e2a-8f55-dfc606651448
+  - <ID>k__BackingField: 26097b0e-d274-404f-b8ac-875bda1ee755
     <Name>k__BackingField: DialogueName
-    <Text>k__BackingField: Welcome to the Left
+    <Text>k__BackingField: 'Welcome to the Right
+
+'
     <Choices>k__BackingField:
     - <Text>k__BackingField: NextDialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 304, y: 109}
+    <Position>k__BackingField: {x: 304, y: 76}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - DialogueName

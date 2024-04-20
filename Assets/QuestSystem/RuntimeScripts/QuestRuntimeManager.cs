@@ -197,6 +197,7 @@ public class QuestRuntimeManager : MonoBehaviour
 
     public void OnQuestConditionMet()
     {
+        //Maybe we can do a null check here, and if the current node is empty we just move on. 
         //Debug.Log("Condition fulfilled!");
         conditionMet = true;
         if (currentNode.GetType() == typeof(QSConditionSO))

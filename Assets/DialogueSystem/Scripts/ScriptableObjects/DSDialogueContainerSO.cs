@@ -12,14 +12,16 @@ namespace DS.ScriptableObjects
         [field: SerializeField] public SerializableDictionary<DSDialogueGroupSO, List<DSDialogueSO>> dialogueGroups { get; set; }
         [field: SerializeField] public List<DSDialogueSO> ungroupedDialogues { get; set; }
 
+        [field: SerializeField] public bool AutoPlayDialogue { get; set; }
+        
         public List<DSDialogueSO> allDialogueNodes;
         public List<DSDialogueSO> exitDialogues;
         
         
-        public void Initialize(string fileName)
+        public void Initialize(string fileName, bool autoPlayDialogue)
         {
             FileName = fileName;
-
+            AutoPlayDialogue = autoPlayDialogue;
             dialogueGroups = new SerializableDictionary<DSDialogueGroupSO, List<DSDialogueSO>>();
             ungroupedDialogues = new List<DSDialogueSO>();
             allDialogueNodes = new List<DSDialogueSO>();

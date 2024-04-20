@@ -13,7 +13,7 @@ namespace DS.ScriptableObjects
         [field: SerializeField] public List<DSDialogueChoiceData> Choices { get; set; }
         [field: SerializeField] public DSDialogueType DialogueType { get; set; }
         [field: SerializeField] public bool isStartingDialogue { get; set; }
-
+        
 
 
         public void Initialize(string dialogueName, string text, List<DSDialogueChoiceData> choices,DSDialogueType dialogueType, bool isStartingDialogue)
@@ -22,7 +22,9 @@ namespace DS.ScriptableObjects
             Text = text;
             Choices = choices;
             DialogueType = dialogueType;
+           
             this.isStartingDialogue = isStartingDialogue;
+            //this.autoPlayDialogue = autoPlayDialogue;
             
         }
         

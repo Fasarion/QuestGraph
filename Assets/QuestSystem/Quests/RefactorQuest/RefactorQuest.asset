@@ -16,8 +16,10 @@ MonoBehaviour:
   <questDialogueGraphSOs>k__BackingField:
   - {fileID: 11400000, guid: b05b13f3968b7204bba796180426ed20, type: 2}
   - {fileID: 11400000, guid: acb37887d988c0342a55c1f1ff72a3a5, type: 2}
+  - {fileID: 11400000, guid: 36f385ce6093353498180ae77e04b04f, type: 2}
   <activatorSOs>k__BackingField:
   - {fileID: 11400000, guid: c2943699860241a4fb090f123c2256fa, type: 2}
+  - {fileID: 11400000, guid: 2ec557f7cb71102418c087d5326ce4ab, type: 2}
   <questHandlerSOs>k__BackingField:
   - {fileID: 11400000, guid: 1b03892c3343f114d91cf16620412299, type: 2}
   <startingNode>k__BackingField: {fileID: 11400000, guid: aa8a374ec47821a4692ada2502bfdd54, type: 2}

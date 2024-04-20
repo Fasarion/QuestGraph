@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbbc82e8539c2ac468fac43146f346ef, type: 3}
-  m_Name: Wolf2
+  m_Name: Wolf3
   m_EditorClassIdentifier: 
-  <FileName>k__BackingField: Wolf2
+  <FileName>k__BackingField: Wolf3
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
-  - {fileID: 11400000, guid: 9930e4a1aa357f246a6b3fcf9cd35960, type: 2}
+  - {fileID: 11400000, guid: d50b36e741ad3794aacb36944f795c35, type: 2}
   <AutoPlayDialogue>k__BackingField: 0
   allDialogueNodes:
-  - {fileID: 11400000, guid: 9930e4a1aa357f246a6b3fcf9cd35960, type: 2}
+  - {fileID: 11400000, guid: d50b36e741ad3794aacb36944f795c35, type: 2}
   exitDialogues:
-  - {fileID: 11400000, guid: 9930e4a1aa357f246a6b3fcf9cd35960, type: 2}
+  - {fileID: 11400000, guid: d50b36e741ad3794aacb36944f795c35, type: 2}

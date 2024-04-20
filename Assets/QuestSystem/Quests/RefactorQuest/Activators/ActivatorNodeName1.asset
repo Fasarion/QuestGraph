@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d62e97f1ca9448b3b890d225dda12, type: 3}
-  m_Name: ActivatorNodeName
+  m_Name: ActivatorNodeName1
   m_EditorClassIdentifier: 
-  <NodeName>k__BackingField: ActivatorNodeName
+  <NodeName>k__BackingField: ActivatorNodeName1
   <QuestNodeType>k__BackingField: 2
   <IsStartingNode>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: acb37887d988c0342a55c1f1ff72a3a5, type: 2}
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 36f385ce6093353498180ae77e04b04f, type: 2}
   <GameObjectsToActivateNames>k__BackingField:
-  - Wolf2Character
-  <GameObjectsToDeactivateNames>k__BackingField:
   - Wolf1Character
+  <GameObjectsToDeactivateNames>k__BackingField:
+  - Wolf3Character

@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1739351b32e9b8447852a0857805ed1b, type: 3}
-  m_Name: ConditionSetterNodeName
+  m_Script: {fileID: 11500000, guid: 25b76c97e4500cd4d9dc58652f4ae43d, type: 3}
+  m_Name: ConditionNodeName
   m_EditorClassIdentifier: 
-  <NodeName>k__BackingField: ConditionSetterNodeName
-  <QuestNodeType>k__BackingField: 4
+  <NodeName>k__BackingField: ConditionNodeName
+  <QuestNodeType>k__BackingField: 3
   <IsStartingNode>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: ae38362ae1b1b7f4f921ebf40d2191e5, type: 2}
+    <NextQuestNode>k__BackingField: {fileID: 0}

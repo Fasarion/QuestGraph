@@ -17,15 +17,47 @@ MonoBehaviour:
   <nodes>k__BackingField:
   - <ID>k__BackingField: 05916e3f-0005-490a-9f86-f849f65420d8
     <Name>k__BackingField: DialogueName
-    <Text>k__BackingField: See me over by the cube!
+    <Text>k__BackingField: Greetings
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: bd5a3959-0e98-48ea-b66a-4b6e461fe147
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 162, y: 122}
+  - <ID>k__BackingField: bd5a3959-0e98-48ea-b66a-4b6e461fe147
+    <Name>k__BackingField: DialogueName2
+    <Text>k__BackingField: Go left or right?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Goleft
+      <NodeID>k__BackingField: ca617e84-4576-402a-b91d-4ba208d339b2
+    - <Text>k__BackingField: Goright
+      <NodeID>k__BackingField: 770954f4-f5a2-42df-9d48-a249cf26d65e
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 488, y: 122}
+  - <ID>k__BackingField: ca617e84-4576-402a-b91d-4ba208d339b2
+    <Name>k__BackingField: WentLeft
+    <Text>k__BackingField: Left it is!
     <Choices>k__BackingField:
     - <Text>k__BackingField: NextDialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 162, y: 122}
+    <Position>k__BackingField: {x: 866, y: 82}
+  - <ID>k__BackingField: 770954f4-f5a2-42df-9d48-a249cf26d65e
+    <Name>k__BackingField: WentRight
+    <Text>k__BackingField: Right it is!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 831, y: 281}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - DialogueName
+  - DialogueName2
+  - WentLeft
+  - WentRight
   <OldGroupedNodeNames>k__BackingField:
     list: []

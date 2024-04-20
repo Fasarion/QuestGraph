@@ -69,7 +69,7 @@ namespace DS.Utilities
             DSDialogueContainerSO dialogueContainer =
                 CreateAsset<DSDialogueContainerSO>(containerFolderPath, graphFileName);
 
-            dialogueContainer.Initialize(graphFileName);
+            dialogueContainer.Initialize(graphFileName, graphView.autoPlayDialogue);
             SaveGroups(graphData, dialogueContainer);
             SaveNodes(graphData, dialogueContainer);
 

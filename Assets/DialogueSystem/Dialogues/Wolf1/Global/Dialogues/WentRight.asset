@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b326c8638c83c4d8abfd2d25c84aa0, type: 3}
-  m_Name: DialogueName
+  m_Name: WentRight
   m_EditorClassIdentifier: 
-  <DialogueName>k__BackingField: DialogueName
-  <Text>k__BackingField: Welcome to the Left
+  <DialogueName>k__BackingField: WentRight
+  <Text>k__BackingField: Right it is!
   <Choices>k__BackingField:
   - <Text>k__BackingField: NextDialogue
     <NextDialogue>k__BackingField: {fileID: 0}
   <DialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 1
+  <isStartingDialogue>k__BackingField: 0

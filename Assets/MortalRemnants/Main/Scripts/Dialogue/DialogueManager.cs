@@ -68,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         private float standardFontSize;
 
         public QuestInternalGraphBehaviour currentInternalGraph;
+        
         private void Awake()
         {
             dialogues = new Queue<Dialogue>();
@@ -89,6 +90,7 @@ public class DialogueManager : MonoBehaviour
         public void StartDialogue (Dialogue dialogue)
         {
             dialogueOpen = true;
+            //Check that something is subbed to this one.
             dialogueOpened?.Invoke();
             animator.SetBool(IsOpen, true);
 
@@ -107,6 +109,64 @@ public class DialogueManager : MonoBehaviour
             }
             firstTimeDialogueOpened = false;
             DisplayNextSentence();
+        }
+
+        public void StartAutoplayDialogue(Dialogue dialogue)
+        {
+            dialogueOpen = true;
+            dialogueOpened?.Invoke();
+            _mSentences.Clear();
+            _mNames.Clear();
+            _mAudioClips.Clear();
+            _mColors.Clear();
+            
+            //Probably more efficient to just enqueue the text and the names but we'll leave it like this for now
+            foreach (var sentence in dialogue.sentences)
+            {
+                _mSentences.Enqueue(sentence.text);
+                _mNames.Enqueue(sentence.name);
+                _mAudioClips.Enqueue(sentence.voiceLine);
+                _mColors.Enqueue(sentence.textColor);
+            }
+            
+            firstTimeDialogueOpened = false;
+            AutoplayNextSentence();
+        }
+
+        public void AutoplayNextSentence()
+        {
+             if (firstTimeDialogueOpened == false)
+            {
+                //We check if there are sentences, if not we run the End Dialogue function
+                if (_mSentences.Count == 0)
+                {
+                    EndDialogue();
+                    return;
+                }
+            
+            
+                //If there are sentences and the container type is a branching dialogue
+                if (_mSentences.Count == 1 && dialogueContainer.containerType == ContainerType.BranchingDialogue)
+                {
+                    
+                    //Get the name of the first branch in the dialogueContainer. We always autoplay the first branch for now.
+                    dialogueOptions.TryGetValue(dialogueContainer.branches[0].name, out chosenDialogue);
+                    AutoplayNextSentence();
+                    AutoplayNextSentence();
+
+                }
+                else
+                {
+                    branchChoiceDialogueBoxOpen = false;
+                }
+                
+                //We then dequeue the sentences, names, voice lines, and the color of our text for the given dialogue so that we can move on with the next set.
+
+                var sentence = _mSentences.Dequeue();
+                var name = _mNames.Dequeue();
+                var voiceLine = _mAudioClips.Dequeue();
+                var textColor = _mColors.Dequeue();
+            }
         }
 
         
@@ -128,6 +188,7 @@ public class DialogueManager : MonoBehaviour
                 //If there are sentences and the container type is a branching dialogue, we open the choice box and we show the dialogue options.
                 if (_mSentences.Count == 1 && dialogueContainer.containerType == ContainerType.BranchingDialogue)
                 {
+                    
                     branchChoiceDialogueBoxOpen = true;
                     DisplayDialogueOptions();
                 }
@@ -267,7 +328,15 @@ public class DialogueManager : MonoBehaviour
                 if (dialogues.Count != 0)
                 {
                     Dialogue dialogue = dialogues.Dequeue();
-                    StartDialogue(dialogue);
+                    //if (chosenDialogue.autoPlayDialogue == false)
+                    //{
+                        StartDialogue(dialogue);
+                    //}
+                    //else
+                    //{
+                        //StartAutoplayDialogue(dialogue);
+                    //}
+                    
                 }
 
                 yield return new WaitUntil(DialogueComplete);

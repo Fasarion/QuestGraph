@@ -11,6 +11,14 @@ namespace DS.Utilities
     public static class DSElementUtility
     {
 
+        public static Toggle CreateToggle(string text, Action onClick = null)
+        {
+            Toggle toggle = new Toggle()
+            {
+                text = text
+            };
+            return toggle;
+        }
         public static Button CreateButton(string text, Action onClick = null)
         {
             Button button = new Button(onClick)

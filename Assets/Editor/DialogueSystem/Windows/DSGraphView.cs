@@ -19,6 +19,7 @@ namespace DS.Windows
         private DSSearchWindow searchWindow;
 
         private MiniMap miniMap;
+        public bool autoPlayDialogue = false;
 
         private SerializableDictionary<string, DSNodeErrorData> ungroupedNodes;
         private SerializableDictionary<string, DSGroupErrorData> groups;
@@ -634,6 +635,11 @@ namespace DS.Windows
             ungroupedNodes.Clear();
             
             NameErrorsAmount = 0;
+        }
+
+        public void ToggleAutoPlay()
+        {
+            autoPlayDialogue = !autoPlayDialogue;
         }
 
         public void ToggleMiniMap()

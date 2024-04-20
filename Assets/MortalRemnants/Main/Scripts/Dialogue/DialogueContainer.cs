@@ -50,6 +50,7 @@ public class DialogueContainer : MonoBehaviour//, ISerializationCallbackReceiver
 
     public bool useCustomFontSize;
     public float fontScale;
+    public bool autoPlayDialogue = false;
     public void Awake()
     {
        
