@@ -7,6 +7,7 @@ using DS.ScriptableObjects;
 using KKD;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestRuntimeManager : MonoBehaviour
 {
@@ -94,10 +95,15 @@ public class QuestRuntimeManager : MonoBehaviour
     {
         List<GameObject> objectsInScene = new List<GameObject>();
 
+        var sceneName = SceneManager.GetActiveScene().name;
         foreach (GameObject gameObject in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
         {
             if (!EditorUtility.IsPersistent(gameObject.transform.root.gameObject) && !(gameObject.hideFlags == HideFlags.NotEditable || gameObject.hideFlags == HideFlags.HideAndDontSave))
-                objectsInScene.Add(gameObject);
+                if (gameObject.scene.name == sceneName)
+                {
+                    objectsInScene.Add(gameObject);
+                }
+                
         }
 
         return objectsInScene;
