@@ -129,15 +129,20 @@ private void FixedUpdate()
 
     public void PointPlayerTowardsMouse()
     {
-        Plane plane = new Plane(Vector3.up, transform.position);
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        float distance;
-        if (plane.Raycast(ray, out distance))
-        {
-            mousePos = ray.GetPoint(distance);
+        if (Input.mousePosition.y < Screen.height && Input.mousePosition.y > 0 && Input.mousePosition.x < Screen.width && Input.mousePosition.x > 0)
+        { 
+            Plane plane = new Plane(Vector3.up, transform.position);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            float distance;
+            if (plane.Raycast(ray, out distance))
+            {
+                mousePos = ray.GetPoint(distance);
+            }
+            lookDirection = (mousePos - transform.position).normalized;
+            lookRotation = Quaternion.LookRotation(lookDirection).normalized;
+            
         }
-        lookDirection = (mousePos - transform.position).normalized;
-        lookRotation = Quaternion.LookRotation(lookDirection).normalized;
+       
 
     }
     //Audio
