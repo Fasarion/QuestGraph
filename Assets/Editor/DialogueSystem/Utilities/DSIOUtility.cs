@@ -64,12 +64,13 @@ namespace DS.Utilities
 
             graphData = CreateAsset<DSGraphSaveDataSO>("Assets/Editor/DialogueSystem/Graphs", $"{graphFileName}Graph");
             graphData.Initialize(graphFileName);
-
+            graphData.autoPlayGraph = graphView.autoPlayDialogue;
             
             DSDialogueContainerSO dialogueContainer =
                 CreateAsset<DSDialogueContainerSO>(containerFolderPath, graphFileName);
 
             dialogueContainer.Initialize(graphFileName, graphView.autoPlayDialogue);
+            
             SaveGroups(graphData, dialogueContainer);
             SaveNodes(graphData, dialogueContainer);
 
@@ -349,7 +350,7 @@ namespace DS.Utilities
                 
                 return;
             }
-
+            graphView.autoPlayDialogue = graphData.autoPlayGraph;
             Debug.Log("Loading");
             Debug.Log("File name:" + graphFileName);
             Debug.Log("Container name:" + containerFolderPath);

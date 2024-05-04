@@ -33,6 +33,7 @@ public class DialogueManager : MonoBehaviour
         private Queue<AudioClip> _mAudioClips;
         private Queue<Color> _mColors;
 
+        //This should be for the autoplaying dialogues I think
         [Header("Control")]
         [NonSerialized]public bool useAutomaticDialogueSkip = false;
         [SerializeField]private float timeBeforeAutomaticSkip;
@@ -68,6 +69,8 @@ public class DialogueManager : MonoBehaviour
         private float standardFontSize;
 
         public QuestInternalGraphBehaviour currentInternalGraph;
+
+        public bool autoPlayDialogue;
         
         private void Awake()
         {
@@ -241,8 +244,16 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    DisplayNextSentence();
-                    dialogueSkipTimer = timeBeforeAutomaticSkip;
+                    if (autoPlayDialogue)
+                    {
+                        AutoplayNextSentence();
+                    }
+                    else
+                    {
+                        DisplayNextSentence();
+                        dialogueSkipTimer = timeBeforeAutomaticSkip;
+                    }
+                    
                 }
             }
            
@@ -328,14 +339,14 @@ public class DialogueManager : MonoBehaviour
                 if (dialogues.Count != 0)
                 {
                     Dialogue dialogue = dialogues.Dequeue();
-                    //if (chosenDialogue.autoPlayDialogue == false)
-                    //{
+                    if (autoPlayDialogue == false)
+                    {
                         StartDialogue(dialogue);
-                    //}
-                    //else
-                    //{
-                        //StartAutoplayDialogue(dialogue);
-                    //}
+                    }
+                    else
+                    {
+                        StartAutoplayDialogue(dialogue);
+                    }
                     
                 }
 

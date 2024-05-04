@@ -23,7 +23,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: bd5a3959-0e98-48ea-b66a-4b6e461fe147
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 162, y: 122}
+    <Position>k__BackingField: {x: 162.4, y: 121.600006}
   - <ID>k__BackingField: bd5a3959-0e98-48ea-b66a-4b6e461fe147
     <Name>k__BackingField: DialogueName2
     <Text>k__BackingField: Go left or right?
@@ -34,7 +34,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 770954f4-f5a2-42df-9d48-a249cf26d65e
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 488, y: 122}
+    <Position>k__BackingField: {x: 488, y: 121.600006}
   - <ID>k__BackingField: ca617e84-4576-402a-b91d-4ba208d339b2
     <Name>k__BackingField: WentLeft
     <Text>k__BackingField: Left it is!
@@ -43,7 +43,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 866, y: 82}
+    <Position>k__BackingField: {x: 866.4, y: 81.600006}
   - <ID>k__BackingField: 770954f4-f5a2-42df-9d48-a249cf26d65e
     <Name>k__BackingField: WentRight
     <Text>k__BackingField: Right it is!
@@ -52,7 +52,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 831, y: 281}
+    <Position>k__BackingField: {x: 831.2, y: 280.8}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - DialogueName
@@ -61,3 +61,4 @@ MonoBehaviour:
   - WentRight
   <OldGroupedNodeNames>k__BackingField:
     list: []
+  autoPlayGraph: 1

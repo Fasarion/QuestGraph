@@ -3,6 +3,7 @@ using DS.Utilities;
 using UnityEditor;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using UnityEngine;
 
 namespace DS.Windows
 {
@@ -15,7 +16,7 @@ namespace DS.Windows
         private static TextField fileNameTextField;
         private Button saveButton;
         private Button miniMapButton;
-       
+        private Toggle autoPlayToggle;
         
         [MenuItem("Window/DS/Dialogue Graph")]
         public static void ShowExample()
@@ -49,14 +50,21 @@ namespace DS.Windows
             {
                 fileNameTextField.value = callback.newValue.RemoveWhitespaces().RemoveSpecialCharacters();
             });
-            saveButton = DSElementUtility.CreateButton("Save", () => Save());
+            
+            autoPlayToggle = DSElementUtility.CreateToggle("Autoplay", callback =>
+            {
+                //autoPlayToggle.value = callback.newValue;
+                
+                ToggleAutoPlay();
 
+            });
+            saveButton = DSElementUtility.CreateButton("Save", () => Save());
             Button loadButton = DSElementUtility.CreateButton("Load", () => Load());
             Button clearButton = DSElementUtility.CreateButton("Clear", () => OpenClearConfirmationMenu());
             Button resetButton = DSElementUtility.CreateButton("Reset", () => ResetGraph());
             Button deleteButton = DSElementUtility.CreateButton("Delete", () => OpenDeleteConfirmationMenu());
             miniMapButton = DSElementUtility.CreateButton("Minimap", () => ToggleMinimap());
-            Toggle autoPlayToggle = DSElementUtility.CreateToggle("Autoplay", () => ToggleAutoPlay());
+           
             toolbar.Add(fileNameTextField);
             toolbar.Add(saveButton);
             toolbar.Add(loadButton);
@@ -65,7 +73,8 @@ namespace DS.Windows
             toolbar.Add(deleteButton);
             toolbar.Add(miniMapButton);
             toolbar.Add(autoPlayToggle);
-
+           
+            
             
             
             
@@ -97,8 +106,10 @@ namespace DS.Windows
                 return;
                 
             }
+            
             DSIOUtility.Initialize(graphView, fileNameTextField.value, true);
             DSIOUtility.Save();
+            
         }
         
         private void Load()
@@ -113,6 +124,8 @@ namespace DS.Windows
             
             DSIOUtility.Initialize(graphView, Path.GetFileNameWithoutExtension(filePath));
             DSIOUtility.Load();
+            autoPlayToggle.value = graphView.autoPlayDialogue;
+            
         }
 
         private void Clear()

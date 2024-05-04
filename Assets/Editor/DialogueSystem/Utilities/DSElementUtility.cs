@@ -11,12 +11,16 @@ namespace DS.Utilities
     public static class DSElementUtility
     {
 
-        public static Toggle CreateToggle(string text, Action onClick = null)
+        public static Toggle CreateToggle(string text, EventCallback<ChangeEvent<bool>> onValueChanged = null)
         {
             Toggle toggle = new Toggle()
             {
                 text = text
             };
+            if (onValueChanged != null)
+            {
+                toggle.RegisterValueChangedCallback(onValueChanged);
+            }
             return toggle;
         }
         public static Button CreateButton(string text, Action onClick = null)

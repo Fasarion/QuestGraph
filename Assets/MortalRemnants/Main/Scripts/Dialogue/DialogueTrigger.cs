@@ -30,6 +30,7 @@ public enum DialogueSystemType
     Legacy,
     DialogueGraph
 }
+//Note: Autoplay is only supported for interactDialogues right now.
     public class DialogueTrigger : MonoBehaviour
     {
         [HideInInspector]public DialogueManager dialogueManager;
@@ -68,6 +69,8 @@ public enum DialogueSystemType
         private bool counterDone = false;
         private void Awake()
         {
+            
+            dialogueManager = FindObjectOfType<DialogueManager>();
             if (dialogueSystemType == DialogueSystemType.DialogueGraph)
             {
                dialogueContainerGeneratorBehaviour = FindObjectOfType<DialogueContainerGeneratorBehaviour>();
@@ -75,7 +78,10 @@ public enum DialogueSystemType
                 ContainerParent dialogueParent;
                 dialogueContainerGeneratorBehaviour.dialogueContainerParents.TryGetValue(
                     dialogueContainerScriptableObject.name, out dialogueParent);
+                //WE might have to do something with this
+                //dialogueContainerScriptableObject.AutoPlayDialogue;
                 startingDialogueBranch = dialogueParent.containers[0];
+                
 
             }
             if (triggerType != TriggerType.Interaction)
@@ -87,8 +93,8 @@ public enum DialogueSystemType
                 interactUIText = FindObjectOfType<InteractCheck>(true).gameObject;
             }
             
-            dialogueManager = FindObjectOfType<DialogueManager>();
-            dialogueManager.dialogueClosed += OnDialogueClosed;
+            
+            
             dialogueTriggerReceiver = FindObjectOfType<DialogueTriggerReceiver>();
 
             if (triggerType == TriggerType.Counter)
@@ -96,6 +102,11 @@ public enum DialogueSystemType
                 
             }
             
+        }
+
+        public void OnEnable()
+        {
+            dialogueManager.dialogueClosed += OnDialogueClosed;
         }
 
         public void OnDisable()
@@ -210,6 +221,7 @@ public enum DialogueSystemType
                 canOpenDialogue = false;
                 if (dialogueAdded == false)
                 {
+                    dialogueManager.autoPlayDialogue = dialogueContainerScriptableObject.AutoPlayDialogue;
                     dialogueManager.EnqueueDialogue(startingDialogueBranch);
                     
                     dialogueAdded = true;

@@ -13,6 +13,7 @@ namespace DS.Data.Save
         [field: SerializeField] public List<string> oldUngroupedNodeNames { get; set; }
         [field: SerializeField] public SerializableDictionary<string, List<string>> OldGroupedNodeNames { get; set; }
 
+        [field: SerializeField] public bool autoPlayGraph;
         public void Initialize(string fileName)
         {
             FileName = fileName;
