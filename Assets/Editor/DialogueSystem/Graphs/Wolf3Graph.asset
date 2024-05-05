@@ -31,3 +31,4 @@ MonoBehaviour:
   - DialogueName
   <OldGroupedNodeNames>k__BackingField:
     list: []
+  autoPlayGraph: 1

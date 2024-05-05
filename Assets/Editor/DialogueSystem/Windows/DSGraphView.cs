@@ -637,9 +637,9 @@ namespace DS.Windows
             NameErrorsAmount = 0;
         }
 
-        public void ToggleAutoPlay()
+        public void ToggleAutoPlay(bool value)
         {
-            autoPlayDialogue = !autoPlayDialogue;
+            autoPlayDialogue = value;
         }
 
         public void ToggleMiniMap()

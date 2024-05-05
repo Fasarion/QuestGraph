@@ -138,22 +138,30 @@ public class DialogueManager : MonoBehaviour
 
         public void AutoplayNextSentence()
         {
-             if (firstTimeDialogueOpened == false)
+            if (firstTimeDialogueOpened == false)
             {
-                //We check if there are sentences, if not we run the End Dialogue function
-                if (_mSentences.Count == 0)
-                {
-                    EndDialogue();
-                    return;
+                 //We check if there are sentences, if not we run the End Dialogue function
+                if (_mSentences.Count == 0) 
+                { 
+                    EndDialogue(); 
+                    return; 
                 }
-            
-            
+
+                string sentence;
+                string name;
+                AudioClip voiceLine;
+                Color textColor;
                 //If there are sentences and the container type is a branching dialogue
                 if (_mSentences.Count == 1 && dialogueContainer.containerType == ContainerType.BranchingDialogue)
                 {
                     
                     //Get the name of the first branch in the dialogueContainer. We always autoplay the first branch for now.
                     dialogueOptions.TryGetValue(dialogueContainer.branches[0].name, out chosenDialogue);
+                    Debug.Log("Dialogue choice autoplayed");
+                    sentence = _mSentences.Dequeue();
+                    name = _mNames.Dequeue();
+                    voiceLine = _mAudioClips.Dequeue(); 
+                     textColor = _mColors.Dequeue(); 
                     AutoplayNextSentence();
                     AutoplayNextSentence();
 
@@ -164,11 +172,31 @@ public class DialogueManager : MonoBehaviour
                 }
                 
                 //We then dequeue the sentences, names, voice lines, and the color of our text for the given dialogue so that we can move on with the next set.
+                Debug.Log("Sentence autodequeued");
+                if (_mSentences.Count > 0)
+                {
+                    sentence = _mSentences.Dequeue();
+                }
 
-                var sentence = _mSentences.Dequeue();
-                var name = _mNames.Dequeue();
-                var voiceLine = _mAudioClips.Dequeue();
-                var textColor = _mColors.Dequeue();
+                if (_mNames.Count > 0)
+                {
+                    name = _mNames.Dequeue();
+                }
+
+                if (_mAudioClips.Count > 0)
+                {
+                    voiceLine = _mAudioClips.Dequeue(); 
+                }
+
+                if (_mColors.Count > 0)
+                {
+                    textColor = _mColors.Dequeue(); 
+                }
+                
+                
+                 
+                 
+                 
             }
         }
 
@@ -193,6 +221,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     
                     branchChoiceDialogueBoxOpen = true;
+                    Debug.Log("DialogueChoice played normally");
                     DisplayDialogueOptions();
                 }
                 /*else if (_mSentences.Count == 1)
@@ -210,6 +239,7 @@ public class DialogueManager : MonoBehaviour
                 
                 //We then dequeue the sentences, names, voice lines, and the color of our text for the given dialogue.
 
+                Debug.Log("Sentence dequeued manually");
                 var sentence = _mSentences.Dequeue();
                 var name = _mNames.Dequeue();
                 var voiceLine = _mAudioClips.Dequeue();
@@ -235,27 +265,32 @@ public class DialogueManager : MonoBehaviour
             
             if (dialogueOpen != true) return;
 
-            if (useAutomaticDialogueSkip)
+            
+            if (autoPlayDialogue)
             {
-                if (dialogueSkipTimer > 0)
+                AutoplayNextSentence();
+            }
+            else
+            {
+                if (useAutomaticDialogueSkip)
                 {
-                    dialogueSkipTimer -= Time.deltaTime;
-                
-                }
-                else
-                {
-                    if (autoPlayDialogue)
+                    if (dialogueSkipTimer > 0)
                     {
-                        AutoplayNextSentence();
+                        dialogueSkipTimer -= Time.deltaTime;
+                
                     }
                     else
                     {
                         DisplayNextSentence();
                         dialogueSkipTimer = timeBeforeAutomaticSkip;
+
                     }
-                    
                 }
             }
+            
+            
+            
+           
            
             //if (_audioSource.clip == null) return;
             //if (_audioSource.isPlaying != true)

@@ -23,9 +23,10 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 304, y: 109}
+    <Position>k__BackingField: {x: 304, y: 108.8}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - DialogueName
   <OldGroupedNodeNames>k__BackingField:
     list: []
+  autoPlayGraph: 1

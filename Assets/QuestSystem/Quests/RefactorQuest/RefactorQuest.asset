@@ -20,6 +20,7 @@ MonoBehaviour:
   <activatorSOs>k__BackingField:
   - {fileID: 11400000, guid: c2943699860241a4fb090f123c2256fa, type: 2}
   - {fileID: 11400000, guid: 2ec557f7cb71102418c087d5326ce4ab, type: 2}
+  - {fileID: 11400000, guid: 7b9dce55174bcb04c9a0619eaa75ac5b, type: 2}
   <questHandlerSOs>k__BackingField:
   - {fileID: 11400000, guid: 1b03892c3343f114d91cf16620412299, type: 2}
   <startingNode>k__BackingField: {fileID: 11400000, guid: aa8a374ec47821a4692ada2502bfdd54, type: 2}

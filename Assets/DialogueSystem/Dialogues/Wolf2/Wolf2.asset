@@ -17,7 +17,7 @@ MonoBehaviour:
     list: []
   <ungroupedDialogues>k__BackingField:
   - {fileID: 11400000, guid: 9930e4a1aa357f246a6b3fcf9cd35960, type: 2}
-  <AutoPlayDialogue>k__BackingField: 0
+  <AutoPlayDialogue>k__BackingField: 1
   allDialogueNodes:
   - {fileID: 11400000, guid: 9930e4a1aa357f246a6b3fcf9cd35960, type: 2}
   exitDialogues:

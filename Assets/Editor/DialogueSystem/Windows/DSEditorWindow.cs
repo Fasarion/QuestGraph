@@ -53,9 +53,9 @@ namespace DS.Windows
             
             autoPlayToggle = DSElementUtility.CreateToggle("Autoplay", callback =>
             {
-                //autoPlayToggle.value = callback.newValue;
+                autoPlayToggle.value = callback.newValue;
                 
-                ToggleAutoPlay();
+                ToggleAutoPlay(callback.newValue);
 
             });
             saveButton = DSElementUtility.CreateButton("Save", () => Save());
@@ -175,9 +175,9 @@ namespace DS.Windows
             miniMapButton.ToggleInClassList("ds-toolbar__button__selected");
         }
 
-        private void ToggleAutoPlay()
+        private void ToggleAutoPlay(bool value)
         {
-            graphView.ToggleAutoPlay();
+            graphView.ToggleAutoPlay(value);
         }
 
         #endregion

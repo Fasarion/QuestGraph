@@ -23,7 +23,15 @@ public class DialogueCommand : Command
                 
                 if (dialogueManager.dialogueOpen)
                 {
-                    dialogueManager.DisplayNextSentence();
+                    if (dialogueManager.autoPlayDialogue)
+                    {
+                        dialogueManager.AutoplayNextSentence();
+                    }
+                    else
+                    {
+                        dialogueManager.DisplayNextSentence();
+                    }
+                    
                 }
             }
         }

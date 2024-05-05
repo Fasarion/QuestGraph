@@ -14,17 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: RefactorQuest
   <Nodes>k__BackingField:
-  - rid: 6840580170873307180
-  - rid: 6840580170873307181
-  - rid: 6840580170873307182
-  - rid: 6840580170873307183
-  - rid: 6840580170873307184
-  - rid: 6840580170873307185
-  - rid: 6840580170873307186
-  - rid: 6840580170873307187
-  - rid: 6840580170873307188
-  - rid: 6840580170873307189
-  - rid: 6840580170873307190
+  - rid: 3553848207499067392
+  - rid: 3553848207499067393
+  - rid: 3553848207499067394
+  - rid: 3553848207499067395
+  - rid: 3553848207499067396
+  - rid: 3553848207499067397
+  - rid: 3553848207499067398
+  - rid: 3553848207499067399
+  - rid: 3553848207499067400
+  - rid: 3553848207499067401
+  - rid: 3553848207499067402
+  - rid: 3553848207499067403
   <QuestHandlerNodes>k__BackingField: []
   <DialogueGraphNodes>k__BackingField: []
   <OldNodeNames>k__BackingField: []
@@ -37,6 +38,7 @@ MonoBehaviour:
   <OldActivatorNodeNames>k__BackingField:
   - ActivatorNodeName
   - ActivatorNodeName1
+  - ActivatorNodeName2
   <OldConditionNodeNames>k__BackingField:
   - ConditionSetterNodeName
   - ConditionSetterNode
@@ -49,7 +51,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 6840580170873307180
+    - rid: 3553848207499067392
       type: {class: QSQuestAcceptedNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 96e5baf8-06eb-4cc7-b71f-06b8ab9f15ae
@@ -58,8 +60,8 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NodeID>k__BackingField: 8166213c-1ddb-4ecc-8b71-ff5019bc2f2d
         <QuestNodeType>k__BackingField: 5
-        <Position>k__BackingField: {x: -442, y: -245}
-    - rid: 6840580170873307181
+        <Position>k__BackingField: {x: -441.6, y: -244.8}
+    - rid: 3553848207499067393
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 8166213c-1ddb-4ecc-8b71-ff5019bc2f2d
@@ -70,9 +72,9 @@ MonoBehaviour:
         - <Text>k__BackingField: WentRight
           <NodeID>k__BackingField: d0721764-2bd2-4fd3-9901-67748bce2e18
         <QuestNodeType>k__BackingField: 1
-        <Position>k__BackingField: {x: 51, y: -254}
+        <Position>k__BackingField: {x: 51.2, y: -254.4}
         DialogueContainerSO: {fileID: 11400000, guid: 286a2127b672b0a4592d020fe6897799, type: 2}
-    - rid: 6840580170873307182
+    - rid: 3553848207499067394
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 9f9d61ff-c7fa-4637-9c43-34ede1b01e70
@@ -81,12 +83,12 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NodeID>k__BackingField: d31a4f22-cadc-4102-aeae-485e03c96633
         <QuestNodeType>k__BackingField: 2
-        <Position>k__BackingField: {x: 569, y: -300}
+        <Position>k__BackingField: {x: 568.8, y: -300}
         GameObjectsToActivateNames:
         - Wolf2Character
         GameObjectToDeactivateNames:
         - Wolf1Character
-    - rid: 6840580170873307183
+    - rid: 3553848207499067395
       type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 9c7f8992-9a72-4159-b411-749f3381e4c5
@@ -95,8 +97,8 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NodeID>k__BackingField: 3d21c2f7-3a00-4d66-b8e3-66f9eaa71f94
         <QuestNodeType>k__BackingField: 4
-        <Position>k__BackingField: {x: 1378, y: -365}
-    - rid: 6840580170873307184
+        <Position>k__BackingField: {x: 1378.4, y: -364.80002}
+    - rid: 3553848207499067396
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: d0721764-2bd2-4fd3-9901-67748bce2e18
@@ -105,12 +107,12 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NodeID>k__BackingField: 5c78a729-684b-41f5-99b3-7fb22963ba65
         <QuestNodeType>k__BackingField: 2
-        <Position>k__BackingField: {x: 569, y: -89}
+        <Position>k__BackingField: {x: 568.8, y: -88.8}
         GameObjectsToActivateNames:
         - Wolf1Character
         GameObjectToDeactivateNames:
         - Wolf3Character
-    - rid: 6840580170873307185
+    - rid: 3553848207499067397
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: d31a4f22-cadc-4102-aeae-485e03c96633
@@ -119,9 +121,9 @@ MonoBehaviour:
         - <Text>k__BackingField: DialogueName
           <NodeID>k__BackingField: 9c7f8992-9a72-4159-b411-749f3381e4c5
         <QuestNodeType>k__BackingField: 1
-        <Position>k__BackingField: {x: 936, y: -365}
+        <Position>k__BackingField: {x: 936, y: -364.80002}
         DialogueContainerSO: {fileID: 11400000, guid: b54d38820d4025742951be997488d7cc, type: 2}
-    - rid: 6840580170873307186
+    - rid: 3553848207499067398
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 5c78a729-684b-41f5-99b3-7fb22963ba65
@@ -130,9 +132,9 @@ MonoBehaviour:
         - <Text>k__BackingField: DialogueName
           <NodeID>k__BackingField: a12539f1-82f2-4f03-8273-c7577b8babe9
         <QuestNodeType>k__BackingField: 1
-        <Position>k__BackingField: {x: 936, y: -89}
+        <Position>k__BackingField: {x: 936, y: -88.8}
         DialogueContainerSO: {fileID: 11400000, guid: 17b5e38b35cfade47a89d4ea53d220fe, type: 2}
-    - rid: 6840580170873307187
+    - rid: 3553848207499067399
       type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: a12539f1-82f2-4f03-8273-c7577b8babe9
@@ -141,18 +143,18 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NodeID>k__BackingField: d2878431-dc74-4341-a6a8-79dd9fc79997
         <QuestNodeType>k__BackingField: 4
-        <Position>k__BackingField: {x: 1395, y: -20}
-    - rid: 6840580170873307188
+        <Position>k__BackingField: {x: 1395.2, y: -20}
+    - rid: 3553848207499067400
       type: {class: QSConditionNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 3d21c2f7-3a00-4d66-b8e3-66f9eaa71f94
         <Name>k__BackingField: ConditionNodeName
         <Branches>k__BackingField:
         - <Text>k__BackingField: NextNode
-          <NodeID>k__BackingField: 
+          <NodeID>k__BackingField: 646927ba-9db1-4e36-978c-ff8c8b9c4321
         <QuestNodeType>k__BackingField: 3
-        <Position>k__BackingField: {x: 1980, y: -365}
-    - rid: 6840580170873307189
+        <Position>k__BackingField: {x: 1980, y: -364.80002}
+    - rid: 3553848207499067401
       type: {class: QSConditionNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: d2878431-dc74-4341-a6a8-79dd9fc79997
@@ -161,8 +163,8 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 3
-        <Position>k__BackingField: {x: 2146, y: -20}
-    - rid: 6840580170873307190
+        <Position>k__BackingField: {x: 2146.4, y: -20}
+    - rid: 3553848207499067402
       type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 2d7ce4f8-6f2b-4665-9817-9bafe008d9e3
@@ -171,5 +173,18 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 0
-        <Position>k__BackingField: {x: -847, y: -300}
+        <Position>k__BackingField: {x: -847.2, y: -300}
         <QuestHandler>k__BackingField: {fileID: 11400000, guid: 338f090d623fc114a96b237a36bdc532, type: 2}
+    - rid: 3553848207499067403
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 646927ba-9db1-4e36-978c-ff8c8b9c4321
+        <Name>k__BackingField: ActivatorNodeName2
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 2251.2, y: -364.80002}
+        GameObjectsToActivateNames:
+        - BigCube
+        GameObjectToDeactivateNames: []
