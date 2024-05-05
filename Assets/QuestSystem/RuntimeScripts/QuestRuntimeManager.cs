@@ -9,6 +9,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//The functions in this script run on the assumption that if there is no node to transition to, it will simply cease to iterate over itself
+//And wait for some kind of external change that affects the state.
 public class QuestRuntimeManager : MonoBehaviour
 {
     private DialogueManager dialogueManager;
@@ -61,9 +63,16 @@ public class QuestRuntimeManager : MonoBehaviour
 
     private void Start()
     {
-        //This is probably going to be VERY slow when we have 1000s of enemies in the scene. It would at least increase load times. Might have to resort to some kind of assignment logic for scene objects after all.
-        //Could have a base class for all game objects that should be saved in the scene and add them into a list of objects to activate/deactivate.
-        //Then we could leave spawned enemies created at runtime out of that list. Anyway, it is out of scope for the school assignment.
+        //This is probably going to be VERY slow when we have 1000s of enemies in the scene. It would at least increase load times. Might have to 
+        //resort to some kind of assignment logic for scene objects after all. Could have a base class for all game objects that should be saved
+        //in the scene and add them into a list of objects to activate/deactivate. Then we could leave spawned enemies created at runtime out 
+        //of that list. Anyway, it is out of scope for the school assignment.
+        //
+        //Actually since we're using entities and those are possibly spawned later it is possible it won't be an issue. Also we could maybe do the 
+        //initialization a frame later in order to create a buffer to only get the scene objects before all objects are initialized. Another way
+        //would be to get the children of some game object and not include the spawned enemies under that object, that is also likely to be more
+        //performant and an easier solution as well.
+        
         gameObjectsInSceneAtStart = GetAllObjectsOnlyInScene();
         if (questHandler.questActive)
         {
@@ -136,6 +145,7 @@ public class QuestRuntimeManager : MonoBehaviour
         }
         else if (currentNode.GetType() == typeof(QSConditionSetterSO))
         {
+            conditionMet = true;
             GoToNextNode(currentNode.Branches[0]);
             if (questHandler.questType == QuestType.TalkToQuest)
             {
@@ -151,6 +161,11 @@ public class QuestRuntimeManager : MonoBehaviour
                 GoToNextNode(currentNode.Branches[0]);
             }
             
+        }
+        else
+        {
+            //This would mean there is no node to transition to so the quest is just going to stop here instead.
+            //Debug.LogError("Current node is null, no transition possible.");
         }
 
     }
@@ -200,10 +215,14 @@ public class QuestRuntimeManager : MonoBehaviour
         //Maybe we can do a null check here, and if the current node is empty we just move on. 
         //Debug.Log("Condition fulfilled!");
         conditionMet = true;
-        if (currentNode.GetType() == typeof(QSConditionSO))
+        if (currentNode != null)
         {
-            GoToNextNode(currentNode.Branches[0]);
+            if (currentNode.GetType() == typeof(QSConditionSO))
+            {
+                GoToNextNode(currentNode.Branches[0]);
+            }
         }
+        
     }
     //We have to set the chosen path based on what dialogue is played out.
     public void SelectDialogueGraphBranch(DSDialogueSO dialogueSo)
@@ -253,8 +272,16 @@ public class QuestRuntimeManager : MonoBehaviour
                 }
                 else
                 {
-                    currentNode = questData.startingNode;
-                    CheckNodeTransitionCondition();
+                    //Why would I set the currentNode to be the startingNode if the quest is not accepted and we call go to nextNode I wonder?
+                    //Maybe I need to check that it is also a dialogueNode since this will obviously causes a loop.
+                    Debug.LogWarning("Note that if the quest was not set as accepted, this will cause a stack overflow since it will keep calling nodes.");
+                    //currentNode = questData.startingNode;
+                    //If we have reached the end here we will simply say the quest is completed automatically for now.
+                    //it might cause problems later, but it is what it is right now.
+                    
+                    questHandler.questAccepted = true;
+                    questHandler.QuestCompleted(questHandler);
+                    //CheckNodeTransitionCondition();
                 }
                 
                 
@@ -269,8 +296,10 @@ public class QuestRuntimeManager : MonoBehaviour
             }
             else
             {
-                currentNode = questData.startingNode;
-                CheckNodeTransitionCondition();
+                //I am seriously not sure why I am doing this.
+                
+                //currentNode = questData.startingNode;
+                //CheckNodeTransitionCondition();
             }
             
         }

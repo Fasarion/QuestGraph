@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 81ce7839953e61e4aa2be8e68e76ab7a, type: 2}
   - {fileID: 11400000, guid: 8d641cf542760e94fa542de03ffcde6e, type: 2}
   - {fileID: 11400000, guid: 8b7fe466307963a4885e907c7cfb667e, type: 2}
-  <AutoPlayDialogue>k__BackingField: 1
+  <AutoPlayDialogue>k__BackingField: 0
   allDialogueNodes:
   - {fileID: 11400000, guid: 2c266191aa8b3fd44b24334242f5bb88, type: 2}
   - {fileID: 11400000, guid: 81ce7839953e61e4aa2be8e68e76ab7a, type: 2}
