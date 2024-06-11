@@ -28,6 +28,7 @@ namespace QS.Elements
         protected List<PropertyField> propertyFields;
         private VisualElement textBoxContainer;
         protected VisualElement customDataContainer;
+        private Toggle testFromThisToggle;
         public string oldNameText;
         
         public virtual void Initialize(string nodeName, QSGraphView qsGraphView, Vector2 position)
@@ -44,12 +45,29 @@ namespace QS.Elements
             mainContainer.AddToClassList("qs-node__main-container");
             mainContainer.AddToClassList("qs-node__extension-container");
             propertyFields = new List<PropertyField>();
-            
-            
+            qsGraphView.currentTestNodeUpdated += OnCurrentTestNodeUpdated;
             
 
         }
+
         
+        //Should be ignored by the testNode that was just tagged as the current one
+        private void OnCurrentTestNodeUpdated(QSNode testNode)
+        {
+            if (testFromThisToggle != null)
+            {
+                if (testNode != this)
+                {
+                    if (testFromThisToggle.value)
+                    {
+                        testFromThisToggle.SetValueWithoutNotify(false);
+                    }
+                }
+                
+            }
+           
+        }
+
         public virtual void OnDestroy(QSGraphView qsGraphView) { }
         
         
@@ -61,6 +79,17 @@ namespace QS.Elements
         public virtual void Draw()
         {
             
+            testFromThisToggle = QSElementUtility.CreateToggle("Test from this Node", callback =>
+            {
+                
+                testFromThisToggle.value = callback.newValue;
+                
+                graphView.currentTestNode = this;
+                graphView.SendCurrentTestNodeUpdatedEvent(this);
+                //ToggleAutoPlay(callback.newValue);
+            });
+            
+           
             //That's right, we wanted to figure out if there's a way to get a callback on deselecting the text field
             TextField dialogueNameTextField = QSElementUtility.CreateTextField(NodeName, null,callback =>
             {
@@ -121,9 +150,9 @@ namespace QS.Elements
 
 
             titleContainer.Insert(0,dialogueNameTextField);
+            
             Port inputPort = this.CreatePort("Quest Connection", Orientation.Horizontal, Direction.Input,
                 Port.Capacity.Multi);
-            
             inputPort.portName = "Quest Connection";
             inputContainer.Add(inputPort);
 
@@ -140,7 +169,9 @@ namespace QS.Elements
             }
             
             extensionContainer.Add(customDataContainer);
+            extensionContainer.Add(testFromThisToggle);
            
+            
             RefreshExpandedState();
 
         }

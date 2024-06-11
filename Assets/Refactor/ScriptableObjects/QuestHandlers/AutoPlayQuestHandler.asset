@@ -15,10 +15,10 @@ MonoBehaviour:
   currentQuestState: 0
   questType: 0
   questActive: 1
-  questTasksComplete: 1
-  questComplete: 1
-  questAccepted: 1
-  firstTimeAccepting: 1
+  questTasksComplete: 0
+  questComplete: 0
+  questAccepted: 0
+  firstTimeAccepting: 0
   characterToTalkTo: 
   fetchItemRetrieved: 0
   itemToFetchName: 

@@ -23,6 +23,7 @@ namespace QS.Elements
         //public List<TextField> fields;
         private VisualElement activeObjectFieldContainer;
         private VisualElement inactiveObjectFieldContainer;
+       
 
         public override void Initialize(string nodeName, QSGraphView qsGraphView, Vector2 position)
         {

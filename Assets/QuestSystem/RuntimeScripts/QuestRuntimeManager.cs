@@ -147,6 +147,7 @@ public class QuestRuntimeManager : MonoBehaviour
         {
             conditionMet = true;
             GoToNextNode(currentNode.Branches[0]);
+            //This feels redundant or in the wrong place.
             if (questHandler.questType == QuestType.TalkToQuest)
             {
                 questHandler.QuestTasksCompleted();
@@ -296,6 +297,7 @@ public class QuestRuntimeManager : MonoBehaviour
             }
             else
             {
+                Debug.LogError("A quest was traversed without being accepted by the player!");
                 //I am seriously not sure why I am doing this.
                 
                 //currentNode = questData.startingNode;

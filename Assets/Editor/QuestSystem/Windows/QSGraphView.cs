@@ -23,6 +23,7 @@ namespace QS.Windows
         private QSSearchWindow searchWindow;
 
         public HashSet<string> uniqueNodeNames;
+        public QSNode currentTestNode;
 
         public event Action<QSQuestHandlerNode> questHandlerAdded;
         public event Action<QSQuestHandlerNode> questHandlerRemoved;
@@ -32,6 +33,8 @@ namespace QS.Windows
         //public event Action<QSConditionSetterNode> conditionSetterNodeRemoved;
         public event Action <QSQuestAcceptedNode> questAcceptedNodeAdded;
         public event Action <QSQuestAcceptedNode> questAcceptedNodeRemoved;
+
+        public event Action<QSNode> currentTestNodeUpdated;
         //public event Action <QSConditionNode> conditionNodeRemoved;
         //private SerializableDictionary<string, QS>
 
@@ -286,8 +289,11 @@ namespace QS.Windows
         {
             conditionSetterNodeAdded?.Invoke(conditionSetterNode);
         }
-        
-        
+
+        public void SendCurrentTestNodeUpdatedEvent(QSNode currentTestNode)
+        {
+            currentTestNodeUpdated?.Invoke(currentTestNode);
+        }
 
        
 

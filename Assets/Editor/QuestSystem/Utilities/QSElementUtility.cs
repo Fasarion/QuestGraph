@@ -17,6 +17,22 @@ namespace QS.Utilities
 {
     public static class QSElementUtility
     {
+        
+        
+        public static Toggle CreateToggle(string text, EventCallback<ChangeEvent<bool>> onValueChanged = null)
+        {
+            
+            Toggle toggle = new Toggle()
+            {
+                text = text
+            };
+            if (onValueChanged != null)
+            {
+                toggle.RegisterValueChangedCallback(onValueChanged);
+            }
+            return toggle;
+        }
+        
         public static Button CreateButton(string text, Action onClick = null)
         {
             Button button = new Button(onClick)

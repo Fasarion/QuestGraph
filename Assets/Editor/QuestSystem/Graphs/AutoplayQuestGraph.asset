@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: AutoplayQuest
   <Nodes>k__BackingField:
-  - rid: 3553848209186750464
-  - rid: 3553848209186750465
-  - rid: 3553848209186750466
-  - rid: 3553848209186750467
+  - rid: 1684527942027968512
+  - rid: 1684527942027968513
+  - rid: 1684527942027968514
+  - rid: 1684527942027968515
   <QuestHandlerNodes>k__BackingField: []
   <DialogueGraphNodes>k__BackingField: []
   <OldNodeNames>k__BackingField: []
@@ -35,7 +35,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 3553848209186750464
+    - rid: 1684527942027968512
       type: {class: QSConditionNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 277426b3-fbfb-42c9-b63a-c4b4f886ed7f
@@ -45,7 +45,7 @@ MonoBehaviour:
           <NodeID>k__BackingField: c2aa5f4d-5d6c-4d4d-ba9c-da218a209bf2
         <QuestNodeType>k__BackingField: 3
         <Position>k__BackingField: {x: -584.8, y: -1212.7999}
-    - rid: 3553848209186750465
+    - rid: 1684527942027968513
       type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 1823eca6-c070-4851-a641-62d7dc2a21c3
@@ -56,7 +56,7 @@ MonoBehaviour:
         <QuestNodeType>k__BackingField: 0
         <Position>k__BackingField: {x: -1595.2, y: -1276}
         <QuestHandler>k__BackingField: {fileID: 11400000, guid: 7380f8a34dd364d49bc8b00a5377f1bd, type: 2}
-    - rid: 3553848209186750466
+    - rid: 1684527942027968514
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: bbed9721-f59e-49bb-8eba-d0a5e43db397
@@ -69,7 +69,7 @@ MonoBehaviour:
         GameObjectsToActivateNames:
         - BigCube
         GameObjectToDeactivateNames: []
-    - rid: 3553848209186750467
+    - rid: 1684527942027968515
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: c2aa5f4d-5d6c-4d4d-ba9c-da218a209bf2
