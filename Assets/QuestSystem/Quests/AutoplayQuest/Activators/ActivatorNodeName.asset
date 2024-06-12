@@ -19,6 +19,7 @@ MonoBehaviour:
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
     <NextQuestNode>k__BackingField: {fileID: 0}
+    <PreviousQuestNode>k__BackingField: {fileID: 0}
   <GameObjectsToActivateNames>k__BackingField:
   - SmallCube
   <GameObjectsToDeactivateNames>k__BackingField: []

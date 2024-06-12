@@ -16,5 +16,7 @@ namespace QS.Data.Save
         [field: SerializeField]public Vector2 Position { get; set; }
         [field: SerializeField]public bool TestTarget { get; set; }
         
+        [field: SerializeField]public string ParentID { get; set; }
+        
     }
 }

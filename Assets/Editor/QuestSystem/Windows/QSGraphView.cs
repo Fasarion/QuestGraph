@@ -324,20 +324,9 @@ namespace QS.Windows
                 {
                     QSNode nextNode = (QSNode)edge.input.node;
                     QSBranchSaveData branchData = (QSBranchSaveData)edge.output.userData;
-                    var node = edge.output.node;
-                    branchData.NodeID = nextNode.ID;
-                    /*if (node.GetType() == typeof(QSDialogueGraphNode))
-                    {
-                        QSDialogueGraphNode graphNode = (QSDialogueGraphNode)node;
-                        //Debug.Log(graphNode.branches);
-                        
-                    }
-                    if (node.GetType() == typeof(QSQuestHandlerNode))
-                    {
-                        QSQuestHandlerNode questHandlerNode = (QSQuestHandlerNode)node;
-                        //Debug.Log(questHandlerNode.branches);
-                        
-                    }*/
+                    var node = (QSNode)edge.output.node;
+                    branchData.NextNodeID = nextNode.ID;
+                    edge.input.userData = node.ID;
 
                 }
             }
@@ -371,7 +360,8 @@ namespace QS.Windows
 
                     QSBranchSaveData branchData = (QSBranchSaveData) edge.output.userData;
 
-                    branchData.NodeID = "";
+                    branchData.NextNodeID = "";
+                    edge.input.userData = "";
                     
                     
                 }

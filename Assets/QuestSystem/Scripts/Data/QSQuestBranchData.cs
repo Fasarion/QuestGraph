@@ -8,4 +8,5 @@ public class QSQuestBranchData
 {
     [field: SerializeField] public string Text { get; set; }
     [field: SerializeField] public QSQuestSO NextQuestNode { get; set; }
+    [field: SerializeField] public QSQuestSO PreviousQuestNode { get; set; }
 }

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <NodeName>k__BackingField: ActivatorNodeName
   <QuestNodeType>k__BackingField: 2
-  <IsStartingNode>k__BackingField: 0
+  <IsStartingNode>k__BackingField: 1
+  <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: e47a5493b43442545917d46dd6ded44c, type: 2}
-  <GameObjectsToActivateNames>k__BackingField:
-  - NPC1
-  <GameObjectsToDeactivateNames>k__BackingField:
-  - NPC2
+    <NextQuestNode>k__BackingField: {fileID: 0}
+    <PreviousQuestNode>k__BackingField: {fileID: 0}
+  <GameObjectsToActivateNames>k__BackingField: []
+  <GameObjectsToDeactivateNames>k__BackingField: []

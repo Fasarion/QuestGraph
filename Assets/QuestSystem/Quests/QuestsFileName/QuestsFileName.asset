@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: QuestsFileName
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: QuestsFileName
-  <questDialogueGraphSOs>k__BackingField:
-  - {fileID: 11400000, guid: 6a8f11a565a13164597ce843349a523f, type: 2}
-  - {fileID: 11400000, guid: e47a5493b43442545917d46dd6ded44c, type: 2}
-  <activatorSOs>k__BackingField:
-  - {fileID: 11400000, guid: 7c784f68e7a46f94993f478cac50bf36, type: 2}
-  <questHandlerSOs>k__BackingField:
-  - {fileID: 11400000, guid: 508850b6e0ae459428a8e1eb62b09d73, type: 2}
+  <questDialogueGraphSOs>k__BackingField: []
+  <activatorSOs>k__BackingField: []
+  <questHandlerSOs>k__BackingField: []
   <startingNode>k__BackingField: {fileID: 11400000, guid: 6a8f11a565a13164597ce843349a523f, type: 2}

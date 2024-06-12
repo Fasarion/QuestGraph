@@ -9,7 +9,8 @@ namespace QS.Data.Save
     public class QSBranchSaveData
     {
         [field: SerializeField]public string Text { get; set; }
-        [field: SerializeField]public string NodeID { get; set; }
+        [field: SerializeField]public string NextNodeID { get; set; }
+        [field: SerializeField]public string PreviousNodeID { get; set; }
     }
 
 }

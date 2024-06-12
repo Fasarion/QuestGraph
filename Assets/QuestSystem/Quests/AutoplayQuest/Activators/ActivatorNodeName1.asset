@@ -18,7 +18,8 @@ MonoBehaviour:
   <IsTestTarget>k__BackingField: 1
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: b1b383cf8c494ec43905fa8f9c19018a, type: 2}
+    <NextQuestNode>k__BackingField: {fileID: 0}
+    <PreviousQuestNode>k__BackingField: {fileID: 0}
   <GameObjectsToActivateNames>k__BackingField:
   - BigCube
   <GameObjectsToDeactivateNames>k__BackingField: []

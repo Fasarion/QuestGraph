@@ -514,12 +514,13 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 if (string.IsNullOrEmpty(nodeBranch.NodeID))
+                 if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
-                 activator.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NodeID];
+                 activator.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
+                 activator.ParentID = node.parentID;
                  SaveAsset(activator);
              }
          }
@@ -532,12 +533,13 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 if (string.IsNullOrEmpty(nodeBranch.NodeID))
+                 if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
-                 questHandler.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NodeID];
+                 questHandler.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
+                 questHandler.Branches[branchIndex].PreviousQuestNode = createdNodes[nodeBranch.PreviousNodeID];
                  SaveAsset(questHandler);
              }
          }
@@ -550,13 +552,14 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 if (string.IsNullOrEmpty(nodeBranch.NodeID))
+                 if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
                  
-                 dialogueGraph.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NodeID];
+                 dialogueGraph.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
+                 dialogueGraph.Branches[branchIndex].PreviousQuestNode = createdNodes[nodeBranch.PreviousNodeID];
                  SaveAsset(dialogueGraph);
              }
          }
@@ -569,13 +572,14 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 if (string.IsNullOrEmpty(nodeBranch.NodeID))
+                 if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
                  
-                 condition.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NodeID];
+                 condition.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
+                 condition.Branches[branchIndex].PreviousQuestNode = createdNodes[nodeBranch.PreviousNodeID];
                  SaveAsset(condition);
              }
          }
@@ -588,13 +592,13 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 if (string.IsNullOrEmpty(nodeBranch.NodeID))
+                 if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
                  
-                 questAccepted.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NodeID];
+                 questAccepted.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
                  SaveAsset(questAccepted);
              }
          }
@@ -607,13 +611,13 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 if (string.IsNullOrEmpty(nodeBranch.NodeID))
+                 if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
                  
-                 questActivator.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NodeID];
+                 questActivator.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
                  SaveAsset(questActivator);
              }
          }
@@ -626,11 +630,11 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 if (string.IsNullOrEmpty(nodeBranch.NodeID))
+                 if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
-                 conditionSetter.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NodeID];
+                 conditionSetter.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
                  SaveAsset(conditionSetter);
              }
          }
@@ -925,12 +929,12 @@ public class QSIOUtility : MonoBehaviour
                 //Grab the userData from the Port. This info should include the ID and name.
                 QSBranchSaveData branchData = (QSBranchSaveData)choicePort.userData;
 
-                if (string.IsNullOrEmpty(branchData.NodeID))
+                if (string.IsNullOrEmpty(branchData.NextNodeID))
                 {
                     continue;
                 }
 
-                QSNode nextNode = loadedNodes[branchData.NodeID];
+                QSNode nextNode = loadedNodes[branchData.NextNodeID];
 
                 Port nextNodeInputPort = (Port)nextNode.inputContainer.Children().First();
                 //var node = nextNodeInputPort.node;
@@ -1055,7 +1059,7 @@ public class QSIOUtility : MonoBehaviour
             QSBranchSaveData choiceData = new QSBranchSaveData()
             {
                 Text = choice.Text,
-                NodeID = choice.NodeID
+                NextNodeID = choice.NextNodeID
             };
 
             choices.Add(choiceData);

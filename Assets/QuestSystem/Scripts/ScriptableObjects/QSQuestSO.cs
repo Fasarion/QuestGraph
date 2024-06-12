@@ -10,6 +10,7 @@ public class QSQuestSO : ScriptableObject
     [field: SerializeField] private bool IsStartingNode { get; set; }
     [field: SerializeField] private bool IsTestTarget { get; set; }
     [field: SerializeField] public List<QSQuestBranchData> Branches { get; set; }
+    [field: SerializeField] public string ParentID { get; set; }
 
     public virtual void Initialize(string nodeName,List<QSQuestBranchData> branches, QSQuestNodeType questNodeType, bool isStartingNode, bool isTestTarget)
     {

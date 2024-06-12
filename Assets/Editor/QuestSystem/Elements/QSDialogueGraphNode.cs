@@ -232,14 +232,14 @@ namespace QS.Elements
                     foreach (var branch in branches)
                     {
 
-                        if (branch.NodeID == null)
+                        if (branch.NextNodeID == null)
                         {
                             continue;
                         }
                         QSBranchSaveData saveData = new QSBranchSaveData()
                         {
                             Text = branch.Text,
-                            NodeID = branch.NodeID
+                            NextNodeID = branch.NextNodeID
                         };
                     
                     
