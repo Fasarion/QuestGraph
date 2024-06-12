@@ -306,6 +306,7 @@ namespace QS.Windows
             conditionNodeAdded = null;
             conditionNodeRemoved = null;
             conditionSetterNodeAdded = null;
+            currentTestNodeUpdated = null;
             //conditionSetterNodeRemoved = null;
         }
         
@@ -449,6 +450,7 @@ namespace QS.Windows
         {
             graphElements.ForEach(graphElement => RemoveElement(graphElement));
             uniqueNodeNames.Clear();
+            ClearSubscriptions();
             
             NameErrorsAmount = 0;
         }

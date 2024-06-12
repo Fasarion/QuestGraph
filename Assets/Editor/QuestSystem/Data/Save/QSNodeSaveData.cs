@@ -14,6 +14,7 @@ namespace QS.Data.Save
         [field: SerializeField]public List<QSBranchSaveData> Branches { get; set; }
         [field: SerializeField]public QSQuestNodeType QuestNodeType { get; set; }
         [field: SerializeField]public Vector2 Position { get; set; }
+        [field: SerializeField]public bool TestTarget { get; set; }
         
     }
 }

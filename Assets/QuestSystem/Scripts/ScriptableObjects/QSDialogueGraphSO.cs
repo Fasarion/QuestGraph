@@ -14,9 +14,9 @@ public class QSDialogueGraphSO : QSQuestSO
     private QuestHandler testHandler;
    
 
-    public void Initialize(string nodeName,List<QSQuestBranchData> branches, DSDialogueContainerSO dialogueContainerSo, QSQuestNodeType questNodeType, bool isStartingNode)
+    public void Initialize(string nodeName,List<QSQuestBranchData> branches, DSDialogueContainerSO dialogueContainerSo, QSQuestNodeType questNodeType, bool isStartingNode, bool isTestTarget)
     {
-        base.Initialize(nodeName,branches, questNodeType,isStartingNode);
+        base.Initialize(nodeName,branches, questNodeType,isStartingNode,isTestTarget);
         DialogueContainerSO = dialogueContainerSo;
         
 

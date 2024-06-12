@@ -29,6 +29,7 @@ namespace QS.Elements
         private VisualElement textBoxContainer;
         protected VisualElement customDataContainer;
         private Toggle testFromThisToggle;
+        public bool testTarget;
         public string oldNameText;
         
         public virtual void Initialize(string nodeName, QSGraphView qsGraphView, Vector2 position)
@@ -46,7 +47,8 @@ namespace QS.Elements
             mainContainer.AddToClassList("qs-node__extension-container");
             propertyFields = new List<PropertyField>();
             qsGraphView.currentTestNodeUpdated += OnCurrentTestNodeUpdated;
-            
+
+
 
         }
 
@@ -61,6 +63,7 @@ namespace QS.Elements
                     if (testFromThisToggle.value)
                     {
                         testFromThisToggle.SetValueWithoutNotify(false);
+                        testTarget = false;
                     }
                 }
                 
@@ -68,7 +71,10 @@ namespace QS.Elements
            
         }
 
-        public virtual void OnDestroy(QSGraphView qsGraphView) { }
+        public virtual void OnDestroy(QSGraphView qsGraphView)
+        {
+            qsGraphView.currentTestNodeUpdated -= OnCurrentTestNodeUpdated;
+        }
         
         
         
@@ -83,11 +89,13 @@ namespace QS.Elements
             {
                 
                 testFromThisToggle.value = callback.newValue;
-                
+                testTarget = callback.newValue;
                 graphView.currentTestNode = this;
                 graphView.SendCurrentTestNodeUpdatedEvent(this);
+               
                 //ToggleAutoPlay(callback.newValue);
             });
+            testFromThisToggle.SetValueWithoutNotify(testTarget);
             
            
             //That's right, we wanted to figure out if there's a way to get a callback on deselecting the text field

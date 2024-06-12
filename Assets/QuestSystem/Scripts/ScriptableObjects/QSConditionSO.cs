@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class QSConditionSO : QSQuestSO
 {
-    public override void Initialize(string nodeName, List<QSQuestBranchData> branches, QSQuestNodeType questNodeType, bool isStartingNode)
+    public override void Initialize(string nodeName, List<QSQuestBranchData> branches, QSQuestNodeType questNodeType, bool isStartingNode, bool isTestTarget)
     {
-        base.Initialize(nodeName, branches, questNodeType, isStartingNode);
+        base.Initialize(nodeName, branches, questNodeType, isStartingNode, isTestTarget);
     }
 }

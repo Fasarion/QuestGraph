@@ -15,6 +15,7 @@ MonoBehaviour:
   <NodeName>k__BackingField: ConditionNodeName
   <QuestNodeType>k__BackingField: 3
   <IsStartingNode>k__BackingField: 0
+  <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
     <NextQuestNode>k__BackingField: {fileID: 0}

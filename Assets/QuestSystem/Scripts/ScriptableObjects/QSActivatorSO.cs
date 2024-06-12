@@ -10,9 +10,9 @@ public class QSActivatorSO : QSQuestSO
     [field: SerializeField] public List<string> GameObjectsToDeactivateNames { get; set; }
 
     //Store data for activators here.
-    public void Initialize(string nodeName,List<QSQuestBranchData> branches, List<string> gameObjectsToActivateNames, List<string> gameObjectsToDeactivateNames, QSQuestNodeType questNodeType, bool isStartingNode)
+    public void Initialize(string nodeName,List<QSQuestBranchData> branches, List<string> gameObjectsToActivateNames, List<string> gameObjectsToDeactivateNames, QSQuestNodeType questNodeType, bool isStartingNode, bool isTestTarget)
     {
-        base.Initialize(nodeName,branches,questNodeType,isStartingNode);
+        base.Initialize(nodeName,branches,questNodeType,isStartingNode, isTestTarget);
         GameObjectsToActivateNames = gameObjectsToActivateNames;
         GameObjectsToDeactivateNames = gameObjectsToDeactivateNames;
        
