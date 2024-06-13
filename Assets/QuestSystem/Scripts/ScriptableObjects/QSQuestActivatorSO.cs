@@ -8,9 +8,9 @@ public class QSQuestActivatorSO : QSQuestSO
 {
     [field: SerializeField] public QuestHandler QuestHandler { get; set; }
 
-    public void Initialize(string nodeName,List<QSQuestBranchData> branches, QuestHandler questHandler, QSQuestNodeType questNodeType, bool isStartingNode, bool isTestTarget)
+    public void Initialize(string nodeName,List<QSQuestBranchData> branches, QuestHandler questHandler, QSQuestNodeType questNodeType, bool isStartingNode, bool isTestTarget, QSParentData parentData)
     {
-        base.Initialize(nodeName,branches, questNodeType,isStartingNode,isTestTarget);
+        base.Initialize(nodeName,branches, questNodeType,isStartingNode,isTestTarget, parentData);
         QuestHandler = questHandler;
         
     }

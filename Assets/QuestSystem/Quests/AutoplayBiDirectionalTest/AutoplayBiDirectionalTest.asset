@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42a2245cbf5c7be48a333bc6589eb4f2, type: 2}
   <questHandlerSOs>k__BackingField:
   - {fileID: 11400000, guid: 30c4281b72b40f64986d0f75a4cc2b25, type: 2}
-  <startingNode>k__BackingField: {fileID: 11400000, guid: 42a2245cbf5c7be48a333bc6589eb4f2, type: 2}
+  <startingNode>k__BackingField: {fileID: 11400000, guid: 1676afeb2c7b5a74c9f95f1dafb77cd4, type: 2}

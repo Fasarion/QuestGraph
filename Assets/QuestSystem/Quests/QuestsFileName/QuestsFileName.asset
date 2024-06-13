@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: QuestsFileName
   <questDialogueGraphSOs>k__BackingField: []
-  <activatorSOs>k__BackingField: []
+  <activatorSOs>k__BackingField:
+  - {fileID: 11400000, guid: 388e373ba588ef8438579e25854f1e4b, type: 2}
+  - {fileID: 11400000, guid: ebf38abd897348b428efceddaf10d277, type: 2}
   <questHandlerSOs>k__BackingField: []
-  <startingNode>k__BackingField: {fileID: 11400000, guid: 6a8f11a565a13164597ce843349a523f, type: 2}
+  <startingNode>k__BackingField: {fileID: 11400000, guid: 388e373ba588ef8438579e25854f1e4b, type: 2}

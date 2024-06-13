@@ -31,7 +31,7 @@ namespace QS.Elements
         private Toggle testFromThisToggle;
         public bool testTarget;
         public string oldNameText;
-        public string parentID;
+        public QSParentSaveData parentSaveData;
         
         public virtual void Initialize(string nodeName, QSGraphView qsGraphView, Vector2 position)
         {
@@ -164,8 +164,14 @@ namespace QS.Elements
                 Port.Capacity.Multi);
             inputPort.portName = "Quest Connection";
             
-            //Holds the ID for the PreviousNode variable on the QSBranchSaveDataObject
-            inputPort.userData = "";
+            //Holds the ID for the node the comes before the current one.
+
+            parentSaveData = new QSParentSaveData()
+            {
+                ParentNodeID = ""
+            };
+          
+            inputPort.userData = parentSaveData;
             inputContainer.Add(inputPort);
 
             customDataContainer = new VisualElement();

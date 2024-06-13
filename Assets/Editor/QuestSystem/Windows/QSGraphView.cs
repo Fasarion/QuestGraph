@@ -326,7 +326,9 @@ namespace QS.Windows
                     QSBranchSaveData branchData = (QSBranchSaveData)edge.output.userData;
                     var node = (QSNode)edge.output.node;
                     branchData.NextNodeID = nextNode.ID;
-                    edge.input.userData = node.ID;
+                    QSParentSaveData parentSaveData = (QSParentSaveData)edge.input.userData;
+                    parentSaveData.ParentNodeID = node.ID;
+                    //nextNode.parentID = node.ID;
 
                 }
             }
@@ -361,9 +363,10 @@ namespace QS.Windows
                     QSBranchSaveData branchData = (QSBranchSaveData) edge.output.userData;
 
                     branchData.NextNodeID = "";
-                    edge.input.userData = "";
-                    
-                    
+                    QSParentSaveData parentSaveData = (QSParentSaveData)edge.input.userData;
+                    parentSaveData.ParentNodeID = "";
+
+
                 }
                 //var nodes = oldNodes;
             }

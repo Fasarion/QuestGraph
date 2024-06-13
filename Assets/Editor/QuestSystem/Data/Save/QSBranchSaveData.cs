@@ -10,7 +10,12 @@ namespace QS.Data.Save
     {
         [field: SerializeField]public string Text { get; set; }
         [field: SerializeField]public string NextNodeID { get; set; }
-        [field: SerializeField]public string PreviousNodeID { get; set; }
+    }
+
+    [Serializable]
+    public class QSParentSaveData
+    {
+        [field: SerializeField]public string ParentNodeID { get; set; }
     }
 
 }

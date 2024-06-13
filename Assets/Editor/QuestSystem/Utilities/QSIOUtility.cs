@@ -232,6 +232,7 @@ public class QSIOUtility : MonoBehaviour
         
         //List<DSChoiceSaveData> choices = CloneNodeChoices(node.choices);
         List<QSBranchSaveData> branches = CloneNodeBranches(node.branches);
+        QSParentSaveData parentSaveData = CloneParentID(node.parentSaveData);
         //This might be where I need to create special methods to save specific nodes, unless they can be successfully stored as their derived type
         //bool testTarget = node.testTarget;
         switch (node.QuestNodeType)
@@ -248,7 +249,8 @@ public class QSIOUtility : MonoBehaviour
                     QuestHandler = questHandlerNode.questHandler,
                     QuestNodeType = questHandlerNode.QuestNodeType,
                     Position = questHandlerNode.GetPosition().position,
-                    TestTarget = questHandlerNode.testTarget
+                    TestTarget = questHandlerNode.testTarget,
+                    ParentSaveData = parentSaveData
                 };
             
                 //Might not be enough that these are saved in the graphData.Nodes list. Might have to save each node type into separate lists
@@ -267,7 +269,8 @@ public class QSIOUtility : MonoBehaviour
                     DialogueContainerSO = dialogueGraphNode.dialogueContainerSO,
                     QuestNodeType = dialogueGraphNode.QuestNodeType,
                     Position = dialogueGraphNode.GetPosition().position,
-                    TestTarget = dialogueGraphNode.testTarget
+                    TestTarget = dialogueGraphNode.testTarget,
+                    ParentSaveData = parentSaveData
                 };
                 graphData.Nodes.Add(nodeData);
                 break;
@@ -285,7 +288,8 @@ public class QSIOUtility : MonoBehaviour
                     GameObjectToDeactivateNames = activatorGraphNode.GetObjectsToDeactivateNames(),
                     QuestNodeType = activatorGraphNode.QuestNodeType,
                     Position = activatorGraphNode.GetPosition().position,
-                    TestTarget = activatorGraphNode.testTarget
+                    TestTarget = activatorGraphNode.testTarget,
+                    ParentSaveData = parentSaveData
                 };
                 graphData.Nodes.Add(nodeData);
                 break;
@@ -300,7 +304,8 @@ public class QSIOUtility : MonoBehaviour
                     Branches = branches,
                     QuestNodeType = conditionGraphNode.QuestNodeType,
                     Position = conditionGraphNode.GetPosition().position,
-                    TestTarget = conditionGraphNode.testTarget
+                    TestTarget = conditionGraphNode.testTarget,
+                    ParentSaveData = parentSaveData
                 };
                
                 graphData.Nodes.Add(nodeData);
@@ -316,7 +321,8 @@ public class QSIOUtility : MonoBehaviour
                     Branches = branches,
                     QuestNodeType = conditionSetterNode.QuestNodeType,
                     Position = conditionSetterNode.GetPosition().position,
-                    TestTarget = conditionSetterNode.testTarget
+                    TestTarget = conditionSetterNode.testTarget,
+                    ParentSaveData = parentSaveData
                 };
                 graphData.Nodes.Add(nodeData);
                 break;
@@ -331,7 +337,8 @@ public class QSIOUtility : MonoBehaviour
                     Branches = branches,
                     QuestNodeType = questAcceptedNode.QuestNodeType,
                     Position = questAcceptedNode.GetPosition().position,
-                    TestTarget = questAcceptedNode.testTarget
+                    TestTarget = questAcceptedNode.testTarget,
+                    ParentSaveData = parentSaveData
                 };
                 graphData.Nodes.Add(nodeData);
                 break;
@@ -348,7 +355,8 @@ public class QSIOUtility : MonoBehaviour
                     QuestHandler = questActivatorNode.questHandler,
                     QuestNodeType = questActivatorNode.QuestNodeType,
                     Position = questActivatorNode.GetPosition().position,
-                    TestTarget = questActivatorNode.testTarget
+                    TestTarget = questActivatorNode.testTarget,
+                    ParentSaveData = parentSaveData
                 };
                 graphData.Nodes.Add(nodeData);
                 break;
@@ -367,9 +375,8 @@ public class QSIOUtility : MonoBehaviour
                 var questHandlerNode = (QSQuestHandlerNode)node;
                 QSQuestHandlerSO questHandler = CreateAsset<QSQuestHandlerSO>($"{containerFolderPath}/QuestHandlers",questHandlerNode.NodeName);
                 questDataContainer.questHandlerSOs.Add(questHandler);
-                
                 questHandler.Initialize(questHandlerNode.NodeName,ConvertQuestBranchesToQuestBranchData(questHandlerNode.branches),
-                    questHandlerNode.questHandler,QSQuestNodeType.QuestHandler, questHandlerNode.IsStartingNode(), questHandlerNode.testTarget);
+                    questHandlerNode.questHandler,QSQuestNodeType.QuestHandler, questHandlerNode.IsStartingNode(), questHandlerNode.testTarget, ConvertParentSaveDataToParentData(questHandlerNode.parentSaveData));
                 createdQuestHandlers.Add(questHandlerNode.ID, questHandler);
                 createdNodes.Add(questHandlerNode.ID, questHandler);
                 SaveAsset(questHandler);
@@ -381,7 +388,9 @@ public class QSIOUtility : MonoBehaviour
                 QSDialogueGraphSO dialogueGraph = CreateAsset<QSDialogueGraphSO>($"{containerFolderPath}/DialogueGraphs",dialogueGraphNode.NodeName);
                 questDataContainer.questDialogueGraphSOs.Add(dialogueGraph);
                 dialogueGraph.Initialize(dialogueGraphNode.NodeName,ConvertQuestBranchesToQuestBranchData(dialogueGraphNode.branches), 
-                    dialogueGraphNode.dialogueContainerSO, QSQuestNodeType.DialogueGraph, dialogueGraphNode.IsStartingNode(), dialogueGraphNode.testTarget);
+                    dialogueGraphNode.dialogueContainerSO, QSQuestNodeType.DialogueGraph, dialogueGraphNode.IsStartingNode(), dialogueGraphNode.testTarget,
+                    ConvertParentSaveDataToParentData(dialogueGraphNode.parentSaveData));
+                
                 createdDialogueGraphs.Add(dialogueGraphNode.ID, dialogueGraph);
                 createdNodes.Add(dialogueGraphNode.ID,dialogueGraph);
                 if (dialogueGraphNode.IsStartingNode())
@@ -400,7 +409,7 @@ public class QSIOUtility : MonoBehaviour
                 questDataContainer.activatorSOs.Add(activator);
                 activator.Initialize(activatorNode.NodeName,ConvertQuestBranchesToQuestBranchData(activatorNode.branches), 
                     activatorNode.GetObjectsToActivateNames(),activatorNode.GetObjectsToDeactivateNames(), QSQuestNodeType.Activator,
-                    activatorNode.IsStartingNode(), activatorNode.testTarget);
+                    activatorNode.IsStartingNode(), activatorNode.testTarget, ConvertParentSaveDataToParentData(activatorNode.parentSaveData));
                 
                 createdActivators.Add(activatorNode.ID, activator);
                 createdNodes.Add(activatorNode.ID,activator);
@@ -419,7 +428,7 @@ public class QSIOUtility : MonoBehaviour
                 QSConditionSO condition =
                     CreateAsset<QSConditionSO>($"{containerFolderPath}/Conditions", conditionNode.NodeName);
                 condition.Initialize(conditionNode.NodeName, ConvertQuestBranchesToQuestBranchData(conditionNode.branches),
-                    QSQuestNodeType.Condition, conditionNode.IsStartingNode(), conditionNode.testTarget);
+                    QSQuestNodeType.Condition, conditionNode.IsStartingNode(), conditionNode.testTarget, ConvertParentSaveDataToParentData(conditionNode.parentSaveData));
                 createdConditions.Add(conditionNode.ID, condition);
                 createdNodes.Add(conditionNode.ID, condition);
                
@@ -433,7 +442,7 @@ public class QSIOUtility : MonoBehaviour
                 QSConditionSetterSO conditionSetter =
                     CreateAsset<QSConditionSetterSO>($"{containerFolderPath}/ConditionSetters", conditionSetterNode.NodeName);
                 conditionSetter.Initialize(conditionSetterNode.NodeName, ConvertQuestBranchesToQuestBranchData(conditionSetterNode.branches),
-                    QSQuestNodeType.ConditionSetter, conditionSetterNode.IsStartingNode(),conditionSetterNode.testTarget);
+                    QSQuestNodeType.ConditionSetter, conditionSetterNode.IsStartingNode(),conditionSetterNode.testTarget, ConvertParentSaveDataToParentData(conditionSetterNode.parentSaveData));
                 createdConditionSetters.Add(conditionSetterNode.ID, conditionSetter);
                 createdNodes.Add(conditionSetterNode.ID, conditionSetter);
                 if (conditionSetterNode.IsStartingNode())
@@ -451,7 +460,7 @@ public class QSIOUtility : MonoBehaviour
                 QSQuestAcceptedSO questAccepted =
                     CreateAsset<QSQuestAcceptedSO>($"{containerFolderPath}/QuestAcceptors", questAcceptedNode.NodeName);
                 questAccepted.Initialize(questAcceptedNode.NodeName, ConvertQuestBranchesToQuestBranchData(questAcceptedNode.branches),
-                    QSQuestNodeType.QuestAccepted, questAcceptedNode.IsStartingNode(), questAcceptedNode.testTarget);
+                    QSQuestNodeType.QuestAccepted, questAcceptedNode.IsStartingNode(), questAcceptedNode.testTarget, ConvertParentSaveDataToParentData(questAcceptedNode.parentSaveData));
                 createdQuestAcceptors.Add(questAcceptedNode.ID, questAccepted);
                 createdNodes.Add(questAcceptedNode.ID, questAccepted);
                 if (questAcceptedNode.IsStartingNode())
@@ -468,7 +477,9 @@ public class QSIOUtility : MonoBehaviour
                 QSQuestActivatorSO questActivator =
                     CreateAsset<QSQuestActivatorSO>($"{containerFolderPath}/QuestActivators", questActivatorNode.NodeName);
                 questActivator.Initialize(questActivatorNode.NodeName, ConvertQuestBranchesToQuestBranchData(questActivatorNode.branches),
-                    questActivatorNode.questHandler, QSQuestNodeType.QuestActivator, questActivatorNode.IsStartingNode(), questActivatorNode.testTarget);
+                    questActivatorNode.questHandler, QSQuestNodeType.QuestActivator, questActivatorNode.IsStartingNode(), questActivatorNode.testTarget, 
+                    ConvertParentSaveDataToParentData(questActivatorNode.parentSaveData));
+                
                 createdQuestActivators.Add(questActivatorNode.ID, questActivator);
                 createdNodes.Add(questActivatorNode.ID, questActivator);
                 if (questActivatorNode.IsStartingNode())
@@ -485,7 +496,19 @@ public class QSIOUtility : MonoBehaviour
 
 
     }
+     private static QSParentData ConvertParentSaveDataToParentData(
+         QSParentSaveData parentSaveData)
+     {
+         QSParentData parentData = new QSParentData()
+         {
+             ParentNodeID = parentSaveData.ParentNodeID
+         };
+       
+
      
+
+         return parentData;
+     }
      private static List<QSQuestBranchData> ConvertQuestBranchesToQuestBranchData(
          List<QSBranchSaveData> questBranches)
      {
@@ -513,14 +536,20 @@ public class QSIOUtility : MonoBehaviour
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
-
+                 QSParentSaveData parentData = node.parentSaveData;
+                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+                 {
+                     activator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 }
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
                  activator.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
-                 activator.ParentID = node.parentID;
+                
+                
+                 
                  SaveAsset(activator);
              }
          }
@@ -533,13 +562,21 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
+                 QSParentSaveData parentData = node.parentSaveData;
+                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+                 {
+                     questHandler.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 }
+                 
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                 
                  questHandler.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
-                 questHandler.Branches[branchIndex].PreviousQuestNode = createdNodes[nodeBranch.PreviousNodeID];
+                 
+               
+                
                  SaveAsset(questHandler);
              }
          }
@@ -552,6 +589,12 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
+                 QSParentSaveData parentData = node.parentSaveData;
+                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+                 {
+                     dialogueGraph.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 }
+                 
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
@@ -559,7 +602,8 @@ public class QSIOUtility : MonoBehaviour
                 
                  
                  dialogueGraph.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
-                 dialogueGraph.Branches[branchIndex].PreviousQuestNode = createdNodes[nodeBranch.PreviousNodeID];
+               
+                 
                  SaveAsset(dialogueGraph);
              }
          }
@@ -572,6 +616,11 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
+                 QSParentSaveData parentData = node.parentSaveData;
+                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+                 {
+                     condition.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 }
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
@@ -579,7 +628,7 @@ public class QSIOUtility : MonoBehaviour
                 
                  
                  condition.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
-                 condition.Branches[branchIndex].PreviousQuestNode = createdNodes[nodeBranch.PreviousNodeID];
+                
                  SaveAsset(condition);
              }
          }
@@ -592,13 +641,18 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
+                 QSParentSaveData parentData = node.parentSaveData;
+                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+                 {
+                     questAccepted.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 }
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
-                
                  
                  questAccepted.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
+               
                  SaveAsset(questAccepted);
              }
          }
@@ -618,6 +672,7 @@ public class QSIOUtility : MonoBehaviour
                 
                  
                  questActivator.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
+                 questActivator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
                  SaveAsset(questActivator);
              }
          }
@@ -635,6 +690,7 @@ public class QSIOUtility : MonoBehaviour
                      continue;
                  }
                  conditionSetter.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
+                 conditionSetter.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
                  SaveAsset(conditionSetter);
              }
          }
@@ -805,6 +861,7 @@ public class QSIOUtility : MonoBehaviour
         foreach (var nodeData in nodes)
         {
             List<QSBranchSaveData> branches = CloneNodeBranches(nodeData.Branches);
+            QSParentSaveData parentSaveData = CloneParentID(nodeData.ParentSaveData);
             switch (nodeData.QuestNodeType)
             {
                 case QSQuestNodeType.QuestHandler:
@@ -816,6 +873,7 @@ public class QSIOUtility : MonoBehaviour
                     qsQuestHandlerNode.branches = branches;
                     qsQuestHandlerNode.questHandler = questNodeData.QuestHandler;
                     qsQuestHandlerNode.testTarget = questNodeData.TestTarget;
+                    qsQuestHandlerNode.parentSaveData = parentSaveData;
                     qsQuestHandlerNode.Draw();
                     
                     graphView.AddElement(qsQuestHandlerNode);
@@ -832,6 +890,7 @@ public class QSIOUtility : MonoBehaviour
                     qsDialogueGraphNode.branches = branches;
                     qsDialogueGraphNode.dialogueContainerSO = dialogueGraphNodeData.DialogueContainerSO;
                     qsDialogueGraphNode.testTarget = dialogueGraphNodeData.TestTarget;
+                    qsDialogueGraphNode.parentSaveData = parentSaveData;
                     qsDialogueGraphNode.Draw();
                     graphView.AddElement(qsDialogueGraphNode);
                     loadedNodes.Add(qsDialogueGraphNode.ID, qsDialogueGraphNode);
@@ -848,6 +907,7 @@ public class QSIOUtility : MonoBehaviour
                     qsActivatorNode.gameObjectsToActivateNames = activatorNodeData.GameObjectsToActivateNames;
                     qsActivatorNode.gameObjectsToDeactivateNames = activatorNodeData.GameObjectToDeactivateNames;
                     qsActivatorNode.testTarget = activatorNodeData.TestTarget;
+                    qsActivatorNode.parentSaveData = parentSaveData;
                     qsActivatorNode.Draw();
                     graphView.AddElement(qsActivatorNode);
                     loadedNodes.Add(qsActivatorNode.ID, qsActivatorNode);
@@ -860,6 +920,7 @@ public class QSIOUtility : MonoBehaviour
                     qsConditionNode.ID = conditionNodeData.ID;
                     qsConditionNode.branches = branches;
                     qsConditionNode.testTarget = conditionNodeData.TestTarget;
+                    qsConditionNode.parentSaveData = parentSaveData;
                     qsConditionNode.Draw();
                     graphView.AddElement(qsConditionNode);
                     loadedNodes.Add(qsConditionNode.ID, qsConditionNode);
@@ -872,6 +933,7 @@ public class QSIOUtility : MonoBehaviour
                     qsConditionSetterNode.ID = conditionSetterNodeSaveData.ID;
                     qsConditionSetterNode.branches = branches;
                     qsConditionSetterNode.testTarget = conditionSetterNodeSaveData.TestTarget;
+                    qsConditionSetterNode.parentSaveData = parentSaveData;
                     qsConditionSetterNode.Draw();
                     graphView.AddElement(qsConditionSetterNode);
                     loadedNodes.Add(qsConditionSetterNode.ID, qsConditionSetterNode);
@@ -885,6 +947,7 @@ public class QSIOUtility : MonoBehaviour
                     qsQuestAcceptedNode.ID = questAcceptedNodeSaveData.ID;
                     qsQuestAcceptedNode.branches = branches;
                     qsQuestAcceptedNode.testTarget = questAcceptedNodeSaveData.TestTarget;
+                    qsQuestAcceptedNode.parentSaveData = parentSaveData;
                     qsQuestAcceptedNode.Draw();
                     graphView.AddElement(qsQuestAcceptedNode);
                     loadedNodes.Add(qsQuestAcceptedNode.ID, qsQuestAcceptedNode);
@@ -900,6 +963,7 @@ public class QSIOUtility : MonoBehaviour
                     qsQuestActivatorNode.branches = branches;
                     qsQuestActivatorNode.questHandler = questActivatorNodeSaveData.QuestHandler;
                     qsQuestActivatorNode.testTarget = questActivatorNodeSaveData.TestTarget;
+                    qsQuestActivatorNode.parentSaveData = parentSaveData;
                     qsQuestActivatorNode.Draw();
                     graphView.AddElement(qsQuestActivatorNode);
                     loadedNodes.Add(qsQuestActivatorNode.ID, qsQuestActivatorNode);
@@ -928,6 +992,7 @@ public class QSIOUtility : MonoBehaviour
             {
                 //Grab the userData from the Port. This info should include the ID and name.
                 QSBranchSaveData branchData = (QSBranchSaveData)choicePort.userData;
+             
 
                 if (string.IsNullOrEmpty(branchData.NextNodeID))
                 {
@@ -946,6 +1011,17 @@ public class QSIOUtility : MonoBehaviour
                 loadedNode.Value.RefreshPorts();
 
             }
+
+            /*foreach (Port inputPort in loadedNode.Value.inputContainer.Children())
+            {
+                string parentID = (string) inputPort.userData;
+                if (string.IsNullOrEmpty(parentID))
+                {
+                    continue;
+                }
+                
+            }*/
+            
 
         }
         
@@ -1066,6 +1142,15 @@ public class QSIOUtility : MonoBehaviour
         }
 
         return choices;
+    }
+
+    private static QSParentSaveData CloneParentID(QSParentSaveData parentSaveData)
+    {
+        QSParentSaveData parentData = new QSParentSaveData()
+        {
+            ParentNodeID = parentSaveData.ParentNodeID,
+        };
+        return parentData;
     }
     
 
