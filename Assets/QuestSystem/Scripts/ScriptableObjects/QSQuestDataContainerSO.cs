@@ -11,6 +11,8 @@ public class QSQuestDataContainerSO : ScriptableObject
     [field: SerializeField] public List<QSActivatorSO> activatorSOs { get; set; }
     [field: SerializeField] public List<QSQuestHandlerSO> questHandlerSOs { get; set; }
     [field: SerializeField] public QSQuestSO startingNode { get; set; }
+    [field: SerializeField] public QSQuestSO testTargetNode { get; set; }
+    
 
     public void Initialize(string fileName)
     {

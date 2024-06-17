@@ -17,6 +17,7 @@ public class DialogueTriggerEditor : Editor
         var selectCounterType = serializedObject.FindProperty("counterType");
         var selectDialogueSystemType = serializedObject.FindProperty("dialogueSystemType");
         var dialogueContainerScriptableObject = serializedObject.FindProperty("dialogueContainerScriptableObject");
+        var setDialogueContainerAtStart = serializedObject.FindProperty("setDialogueContainerAtStart");
         EditorGUILayout.PropertyField(selectDialogueSystemType);
 
         switch (selectDialogueSystemType.enumValueFlag)
@@ -25,6 +26,7 @@ public class DialogueTriggerEditor : Editor
             {
                 EditorGUILayout.PropertyField(selectTriggerType);
                 EditorGUILayout.PropertyField(dialogueContainerScriptableObject);
+                EditorGUILayout.PropertyField(setDialogueContainerAtStart);
                 DrawCommonUI(selectTriggerType, selectCounterType);
                 break;
             }

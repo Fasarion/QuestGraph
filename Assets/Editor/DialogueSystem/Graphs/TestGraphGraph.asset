@@ -23,7 +23,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 861e72ae-46fd-4237-b42d-bd4236d0cf2a
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 359, y: 97}
+    <Position>k__BackingField: {x: 359.2, y: 96.8}
   - <ID>k__BackingField: 861e72ae-46fd-4237-b42d-bd4236d0cf2a
     <Name>k__BackingField: Dialogue2
     <Text>k__BackingField: Second text with choices
@@ -34,7 +34,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: dcc93ae6-fc17-4154-9799-9fb2a5714cc2
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 760, y: 73}
+    <Position>k__BackingField: {x: 760, y: 72.8}
   - <ID>k__BackingField: 331fa2f5-6bf4-437d-a52a-a94c880ac555
     <Name>k__BackingField: Dialogue3
     <Text>k__BackingField: First choice
@@ -43,7 +43,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1169, y: -62}
+    <Position>k__BackingField: {x: 1168.8, y: -62.4}
   - <ID>k__BackingField: dcc93ae6-fc17-4154-9799-9fb2a5714cc2
     <Name>k__BackingField: Dialogue4
     <Text>k__BackingField: SecondChoice
@@ -52,8 +52,13 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1242, y: 164}
+    <Position>k__BackingField: {x: 1242.4, y: 164}
   <oldGroupNames>k__BackingField: []
-  <oldUngroupedNodeNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - Dialogue1
+  - Dialogue2
+  - Dialogue3
+  - Dialogue4
   <OldGroupedNodeNames>k__BackingField:
     list: []
+  autoPlayGraph: 0

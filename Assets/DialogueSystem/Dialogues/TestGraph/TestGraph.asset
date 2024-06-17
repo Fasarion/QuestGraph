@@ -20,5 +20,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1c20ba6b405fbe49a69460635b6c7ca, type: 2}
   - {fileID: 11400000, guid: 4ba581485afaf1a469387ae967b38ca1, type: 2}
   - {fileID: 11400000, guid: 34a46edc5ee69454eb8c7d841ee7da42, type: 2}
-  allDialogueNodes: []
-  exitDialogues: []
+  <AutoPlayDialogue>k__BackingField: 0
+  allDialogueNodes:
+  - {fileID: 11400000, guid: 82a6dc7769d893447aa234abeb1abffb, type: 2}
+  - {fileID: 11400000, guid: c1c20ba6b405fbe49a69460635b6c7ca, type: 2}
+  - {fileID: 11400000, guid: 4ba581485afaf1a469387ae967b38ca1, type: 2}
+  - {fileID: 11400000, guid: 34a46edc5ee69454eb8c7d841ee7da42, type: 2}
+  exitDialogues:
+  - {fileID: 11400000, guid: 4ba581485afaf1a469387ae967b38ca1, type: 2}
+  - {fileID: 11400000, guid: 34a46edc5ee69454eb8c7d841ee7da42, type: 2}

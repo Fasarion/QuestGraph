@@ -12,7 +12,7 @@ public enum TriggerType
     Script,
     Counter,
     Collider,
-    Interaction
+    Interaction,
 };
 
 public enum CounterType
@@ -64,6 +64,8 @@ public enum DialogueSystemType
         private DialogueContainerGeneratorBehaviour dialogueContainerGeneratorBehaviour;
         public DSDialogueContainerSO dialogueContainerScriptableObject;
 
+        public bool setDialogueContainerAtStart = true;
+
         
 
         private bool counterDone = false;
@@ -73,15 +75,20 @@ public enum DialogueSystemType
             dialogueManager = FindObjectOfType<DialogueManager>();
             if (dialogueSystemType == DialogueSystemType.DialogueGraph)
             {
-               dialogueContainerGeneratorBehaviour = FindObjectOfType<DialogueContainerGeneratorBehaviour>();
-               dialogueContainerGeneratorBehaviour.Initialize();
+                dialogueContainerGeneratorBehaviour = FindObjectOfType<DialogueContainerGeneratorBehaviour>();
+                dialogueContainerGeneratorBehaviour.Initialize();
                 ContainerParent dialogueParent;
-                dialogueContainerGeneratorBehaviour.dialogueContainerParents.TryGetValue(
-                    dialogueContainerScriptableObject.name, out dialogueParent);
-                //WE might have to do something with this
-                //dialogueContainerScriptableObject.AutoPlayDialogue;
-                startingDialogueBranch = dialogueParent.containers[0];
-                
+                if (setDialogueContainerAtStart)
+                {
+                   
+                    dialogueContainerGeneratorBehaviour.dialogueContainerParents.TryGetValue(
+                        dialogueContainerScriptableObject.name, out dialogueParent);
+                    //WE might have to do something with this
+                    //dialogueContainerScriptableObject.AutoPlayDialogue;
+                    startingDialogueBranch = dialogueParent.containers[0];
+                }
+
+
 
             }
             if (triggerType != TriggerType.Interaction)
@@ -102,6 +109,18 @@ public enum DialogueSystemType
                 
             }
             
+        }
+
+        public void SetDialogueAtRuntimeAndTrigger(DSDialogueContainerSO dialogueContainerSo)
+        {
+            dialogueContainerScriptableObject = dialogueContainerSo;
+            ContainerParent dialogueParent;
+            dialogueContainerGeneratorBehaviour.dialogueContainerParents.TryGetValue(
+                dialogueContainerScriptableObject.name, out dialogueParent);
+            //WE might have to do something with this
+            //dialogueContainerScriptableObject.AutoPlayDialogue;
+            startingDialogueBranch = dialogueParent.containers[0];
+            TriggerDialogue();
         }
 
         public void OnEnable()

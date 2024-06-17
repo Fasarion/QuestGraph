@@ -166,12 +166,29 @@ namespace QS.Elements
             
             //Holds the ID for the node the comes before the current one.
 
-            parentSaveData = new QSParentSaveData()
+            if (parentSaveData != null)
             {
-                ParentNodeID = ""
-            };
+                if (string.IsNullOrEmpty(parentSaveData.ParentNodeID))
+                {
+                    parentSaveData = new QSParentSaveData()
+                    {
+                        ParentNodeID = ""
+                    };
+                }
+                inputPort.userData = parentSaveData;
+            }
+            else
+            {
+                parentSaveData = new QSParentSaveData()
+                {
+                    ParentNodeID = ""
+                };
+                inputPort.userData = parentSaveData;
+            }
+           
+            
           
-            inputPort.userData = parentSaveData;
+            
             inputContainer.Add(inputPort);
 
             customDataContainer = new VisualElement();
@@ -247,6 +264,11 @@ namespace QS.Elements
             
             return false;
 
+        }
+
+        public bool IsTestTargetNode()
+        {
+            return testTarget;
         }
         
         public void SplitStringAtIndex(int index,string inputString, out string string1, out string string2)

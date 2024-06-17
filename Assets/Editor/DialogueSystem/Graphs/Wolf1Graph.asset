@@ -15,15 +15,6 @@ MonoBehaviour:
   <FileName>k__BackingField: Wolf1
   groups: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: 05916e3f-0005-490a-9f86-f849f65420d8
-    <Name>k__BackingField: DialogueName
-    <Text>k__BackingField: Greetings
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: NextDialogue
-      <NodeID>k__BackingField: bd5a3959-0e98-48ea-b66a-4b6e461fe147
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 162.4, y: 121.600006}
   - <ID>k__BackingField: bd5a3959-0e98-48ea-b66a-4b6e461fe147
     <Name>k__BackingField: DialogueName2
     <Text>k__BackingField: Go left or right?
@@ -53,12 +44,21 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 831.2, y: 280.8}
+  - <ID>k__BackingField: 05916e3f-0005-490a-9f86-f849f65420d8
+    <Name>k__BackingField: DialogueName
+    <Text>k__BackingField: Greetings
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: bd5a3959-0e98-48ea-b66a-4b6e461fe147
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 146.4, y: 138.40001}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
-  - DialogueName
   - DialogueName2
   - WentLeft
   - WentRight
+  - DialogueName
   <OldGroupedNodeNames>k__BackingField:
     list: []
   autoPlayGraph: 0

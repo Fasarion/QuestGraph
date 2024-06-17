@@ -61,6 +61,7 @@ MonoBehaviour:
   countGoal: 100
   countingDown: 0
   dialogueContainerScriptableObject: {fileID: 11400000, guid: 4f07d3c07de3fb04e9093d4c3bae903e, type: 2}
+  setDialogueAtStart: 1
 --- !u!65 &1030505047693826769
 BoxCollider:
   m_ObjectHideFlags: 0

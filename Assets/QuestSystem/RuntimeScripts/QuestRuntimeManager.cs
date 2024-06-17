@@ -23,14 +23,23 @@ public class QuestRuntimeManager : MonoBehaviour
     public Action<QuestHandler> sendQuestHandlerSetEvent;
 
     public bool conditionMet = false;
+    
+    public bool autoTest;
 
+    private QSQuestSO testTarget;
+    private QSQuestSO currentTestPathNode;
+    private HashSet<QSQuestSO> currentTestPath;
 
-    private List<GameObject> gameObjectsInSceneAtStart; 
+    private List<GameObject> gameObjectsInSceneAtStart;
+
+    public DialogueTrigger autoPlayTrigger;
+
+    private int testPathNodeIndex;
     // Start is called before the first frame update
     void Awake()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
-        
+       
         if (questData != null)
         {
             if (questData.questHandlerSOs != null)
@@ -41,12 +50,48 @@ public class QuestRuntimeManager : MonoBehaviour
                 }
                 else
                 {
+                   
+                    
                     currentNode = questData.startingNode;
                     var questNode = questData.questHandlerSOs[0];
                     questHandler = questNode.QuestHandler;
+                    if (autoTest)
+                    {
+                        testTarget = questData.testTargetNode;
+                        currentTestPath = new HashSet<QSQuestSO>();
+                        AddTestNodesRecursively(testTarget);
+                        testPathNodeIndex = 0;
+                    }
+
+                    
+
                 }
             }
         }
+    }
+
+    public void AddTestNodesRecursively(QSQuestSO nodePartOfTestPath)
+    {
+        currentTestPathNode = nodePartOfTestPath;
+        if(!currentTestPath.Contains(currentTestPathNode))
+        {
+            currentTestPath.Add(currentTestPathNode);
+            if (currentTestPathNode.ParentData.PreviousQuestNode != null)
+            {
+                AddTestNodesRecursively(currentTestPathNode.ParentData.PreviousQuestNode);
+            }
+        }
+        else
+        {
+            Debug.LogError("An attempt was made to add the same node twice to the Test Node Path. This implies a loop in the graph which AutoTesting currently does not support." +
+                           "Remove the looping quest nodes and try again.");
+        }
+       
+    }
+
+    public void AutoTestTriggerDialogue(DSDialogueContainerSO dialogueContainerSo)
+    {
+        autoPlayTrigger.SetDialogueAtRuntimeAndTrigger(dialogueContainerSo);
     }
 
     private void OnEnable()
@@ -74,13 +119,71 @@ public class QuestRuntimeManager : MonoBehaviour
         //performant and an easier solution as well.
         
         gameObjectsInSceneAtStart = GetAllObjectsOnlyInScene();
-        if (questHandler.questActive)
+        if (autoTest)
         {
+            questHandler.questActive = true;
             CheckNodeTransitionCondition();
         }
+        else
+        {
+            if (questHandler.questActive)
+            {
+                CheckNodeTransitionCondition();
+            }
+        }
+        
        
         
         //currentNode = questData.
+        
+    }
+
+    public void CheckAutoTransitionCondition()
+    {
+         if(currentNode.GetType() == typeof(QSActivatorSO))
+        {
+            var activatorNode = (QSActivatorSO)currentNode;
+            
+            ActivateAndDeactivateGameObjects(activatorNode);
+            //activatorNode.GameObjectNames
+        }
+        else if (currentNode.GetType() == typeof(QSQuestAcceptedSO))
+        {
+            questHandler.questAccepted = true;
+        }
+        else if (currentNode.GetType() == typeof(QSQuestActivatorSO))
+        {
+            var questActivatorNode = (QSQuestActivatorSO)currentNode;
+            questActivatorNode.QuestHandler.QuestActivated();
+        }
+        else if (currentNode.GetType() == typeof(QSQuestHandlerSO))
+        {
+            //Should not be possible.
+        }
+        else if (currentNode.GetType() == typeof(QSConditionSetterSO))
+        {
+            conditionMet = true;
+            //This feels redundant or in the wrong place.
+            if (questHandler.questType == QuestType.TalkToQuest)
+            {
+                questHandler.QuestTasksCompleted();
+            }
+            
+            
+        }
+        else if (currentNode.GetType() == typeof(QSConditionSO))
+        {
+            conditionMet = true;
+        }
+        else if (currentNode.GetType() == typeof(QSDialogueGraphSO))
+        {
+            var dialogueNode = (QSDialogueGraphSO)currentNode;
+            var dialogueContainer = dialogueNode.DialogueContainerSO;
+            AutoTestTriggerDialogue(dialogueContainer);
+        }
+    }
+    public void RunAutoTest()
+    {
         
     }
 
@@ -157,11 +260,26 @@ public class QuestRuntimeManager : MonoBehaviour
         }
         else if (currentNode.GetType() == typeof(QSConditionSO))
         {
+            if (autoTest)
+            {
+                conditionMet = true;
+            }
             if (conditionMet)
             {
                 GoToNextNode(currentNode.Branches[0]);
             }
             
+        }
+        else if (currentNode.GetType() == typeof(QSDialogueGraphSO))
+        {
+            if (autoTest)
+            {
+                var dialogueNode = (QSDialogueGraphSO)currentNode;
+                var dialogueContainer = dialogueNode.DialogueContainerSO;
+                AutoTestTriggerDialogue(dialogueContainer);
+                
+                //Activate the current dialogue
+            }
         }
         else
         {
@@ -263,6 +381,69 @@ public class QuestRuntimeManager : MonoBehaviour
             currentNode = questBranch.NextQuestNode;
             if (currentNode != null)
             {
+                if (currentNode == testTarget)
+                {
+                    autoTest = false;
+                    Debug.Log("Reached AutoTest Target: " + currentNode.name);
+                }
+                CheckNodeTransitionCondition();
+            }
+            else
+            {
+                if (questHandler.questAccepted)
+                {
+                    questHandler.QuestCompleted(questHandler);
+                }
+                else
+                {
+                    //Why would I set the currentNode to be the startingNode if the quest is not accepted and we call go to nextNode I wonder?
+                    //Maybe I need to check that it is also a dialogueNode since this will obviously causes a loop.
+                    Debug.LogWarning("Note that if the quest was not set as accepted, this will cause a stack overflow since it will keep calling nodes.");
+                    //currentNode = questData.startingNode;
+                    //If we have reached the end here we will simply say the quest is completed automatically for now.
+                    //it might cause problems later, but it is what it is right now.
+                    
+                    questHandler.questAccepted = true;
+                    questHandler.QuestCompleted(questHandler);
+                    //CheckNodeTransitionCondition();
+                }
+                
+                
+            }
+            
+        }
+        else
+        {
+            if (questHandler.questAccepted)
+            {
+                questHandler.QuestCompleted(questHandler);
+            }
+            else
+            {
+                Debug.LogError("A quest was traversed without being accepted by the player!");
+                //I am seriously not sure why I am doing this.
+                
+                //currentNode = questData.startingNode;
+                //CheckNodeTransitionCondition();
+            }
+            
+        }
+    }
+    
+    
+    public void GoToNextNodeAutomatically(QSQuestBranchData questBranch)
+    { 
+        if (questBranch != null)
+        {
+            //You have to make this into a dictionary my dude!
+            //currentNode = currentTestPath[testPathNodeIndex];
+            if (currentNode != null)
+            {
+                if (currentNode == testTarget)
+                {
+                    autoTest = false;
+                    Debug.Log("Reached AutoTest Target: " + currentNode.name);
+                }
                 CheckNodeTransitionCondition();
             }
             else

@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: TestGraph
   <Nodes>k__BackingField:
-  - rid: 2168256157144580111
-  - rid: 2168256157144580112
-  - rid: 2168256157144580113
-  - rid: 2168256157144580114
-  - rid: 2168256157144580115
+  - rid: 1684528078341800135
+  - rid: 1684528078341800136
+  - rid: 1684528078341800137
+  - rid: 1684528078341800138
+  - rid: 1684528078341800139
+  - rid: 1684528078341800140
+  - rid: 1684528078341800141
   <QuestHandlerNodes>k__BackingField: []
   <DialogueGraphNodes>k__BackingField: []
   <OldNodeNames>k__BackingField: []
@@ -26,10 +28,12 @@ MonoBehaviour:
   - QuestName
   <OldDialogueGraphNodeNames>k__BackingField:
   - DialogueGraphNodeName
-  <OldActivatorNodeNames>k__BackingField: []
+  <OldActivatorNodeNames>k__BackingField:
+  - ActivatorNodeName
+  - ActivatorNodeName1
   <OldConditionNodeNames>k__BackingField:
-  - ConditionSetterNodeName
   - ConditionNodeName
+  - ConditionSetterNodeName
   <OldQuestAcceptedNodeNames>k__BackingField:
   - QuestAcceptedNodeName
   <OldQuestActivatorNodeNames>k__BackingField: []
@@ -37,57 +41,104 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2168256157144580111
+    - rid: 1684528078341800135
       type: {class: QSQuestAcceptedNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: fbecafc2-ca48-4660-a68d-806b2cecbc75
         <Name>k__BackingField: QuestAcceptedNodeName
         <Branches>k__BackingField:
         - <Text>k__BackingField: NextNode
-          <NodeID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
+          <NextNodeID>k__BackingField: bd1c8dba-dd41-40ba-a149-15c9f3186948
         <QuestNodeType>k__BackingField: 5
-        <Position>k__BackingField: {x: 383, y: -42}
-    - rid: 2168256157144580112
-      type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+        <Position>k__BackingField: {x: 352, y: -296}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
+    - rid: 1684528078341800136
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
-        <ID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
-        <Name>k__BackingField: ConditionSetterNodeName
+        <ID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
+        <Name>k__BackingField: DialogueGraphNodeName
         <Branches>k__BackingField:
-        - <Text>k__BackingField: NextNode
-          <NodeID>k__BackingField: 53280f0e-6d00-43bd-a77c-d2eee441d188
-        <QuestNodeType>k__BackingField: 4
-        <Position>k__BackingField: {x: 858, y: -42}
-    - rid: 2168256157144580113
+        - <Text>k__BackingField: Dialogue3
+          <NextNodeID>k__BackingField: fbecafc2-ca48-4660-a68d-806b2cecbc75
+        - <Text>k__BackingField: Dialogue4
+          <NextNodeID>k__BackingField: d2a23a38-581d-494e-961a-1309b1b24889
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: -231.2, y: -296}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        DialogueContainerSO: {fileID: 11400000, guid: 0219519d5864c264da5a264d7a4d0ddc, type: 2}
+    - rid: 1684528078341800137
       type: {class: QSConditionNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 53280f0e-6d00-43bd-a77c-d2eee441d188
         <Name>k__BackingField: ConditionNodeName
         <Branches>k__BackingField:
         - <Text>k__BackingField: NextNode
-          <NodeID>k__BackingField: 
+          <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 3
-        <Position>k__BackingField: {x: 1479, y: -42}
-    - rid: 2168256157144580114
+        <Position>k__BackingField: {x: 1779.2, y: -296}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
+    - rid: 1684528078341800138
+      type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
+        <Name>k__BackingField: ConditionSetterNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 53280f0e-6d00-43bd-a77c-d2eee441d188
+        <QuestNodeType>k__BackingField: 4
+        <Position>k__BackingField: {x: 1129.6, y: -296}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: bd1c8dba-dd41-40ba-a149-15c9f3186948
+    - rid: 1684528078341800139
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: bd1c8dba-dd41-40ba-a149-15c9f3186948
+        <Name>k__BackingField: ActivatorNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 844.8, y: -296}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: fbecafc2-ca48-4660-a68d-806b2cecbc75
+        GameObjectsToActivateNames:
+        - TestCube
+        GameObjectToDeactivateNames: []
+    - rid: 1684528078341800140
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: d2a23a38-581d-494e-961a-1309b1b24889
+        <Name>k__BackingField: ActivatorNodeName1
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 352, y: -129.6}
+        <TestTarget>k__BackingField: 1
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
+        GameObjectsToActivateNames:
+        - TestCube2
+        GameObjectToDeactivateNames: []
+    - rid: 1684528078341800141
       type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 0398cd01-3af7-4e05-8aa2-104921702bd8
         <Name>k__BackingField: QuestName
         <Branches>k__BackingField:
         - <Text>k__BackingField: NextNode
-          <NodeID>k__BackingField: 
+          <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 0
-        <Position>k__BackingField: {x: -468, y: -42}
+        <Position>k__BackingField: {x: -661.6, y: -296}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
         <QuestHandler>k__BackingField: {fileID: 11400000, guid: 0085738db0a02d747b6acdcca233b84a, type: 2}
-    - rid: 2168256157144580115
-      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
-      data:
-        <ID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
-        <Name>k__BackingField: DialogueGraphNodeName
-        <Branches>k__BackingField:
-        - <Text>k__BackingField: 31
-          <NodeID>k__BackingField: fbecafc2-ca48-4660-a68d-806b2cecbc75
-        - <Text>k__BackingField: 32
-          <NodeID>k__BackingField: 
-        <QuestNodeType>k__BackingField: 1
-        <Position>k__BackingField: {x: -53, y: -42}
-        DialogueContainerSO: {fileID: 11400000, guid: 4f07d3c07de3fb04e9093d4c3bae903e, type: 2}

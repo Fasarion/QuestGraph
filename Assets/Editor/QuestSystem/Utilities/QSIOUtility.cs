@@ -397,6 +397,11 @@ public class QSIOUtility : MonoBehaviour
                 {
                     questDataContainer.startingNode = dialogueGraph;
                 }
+
+                if (dialogueGraphNode.IsTestTargetNode())
+                {
+                    questDataContainer.testTargetNode = dialogueGraph;
+                }
                 SaveAsset(dialogueGraph);
                
                 
@@ -417,6 +422,10 @@ public class QSIOUtility : MonoBehaviour
                 {
                     questDataContainer.startingNode = activator;
                 }
+                if (activatorNode.IsTestTargetNode())
+                {
+                    questDataContainer.testTargetNode = activator;
+                }
                 SaveAsset(activator);
                 break;
                 
@@ -431,7 +440,10 @@ public class QSIOUtility : MonoBehaviour
                     QSQuestNodeType.Condition, conditionNode.IsStartingNode(), conditionNode.testTarget, ConvertParentSaveDataToParentData(conditionNode.parentSaveData));
                 createdConditions.Add(conditionNode.ID, condition);
                 createdNodes.Add(conditionNode.ID, condition);
-               
+                if (conditionNode.IsTestTargetNode())
+                {
+                    questDataContainer.testTargetNode = condition;
+                }
                 SaveAsset(condition);
                 break;
             }
@@ -448,6 +460,10 @@ public class QSIOUtility : MonoBehaviour
                 if (conditionSetterNode.IsStartingNode())
                 {
                     questDataContainer.startingNode = conditionSetter;
+                }
+                if (conditionSetterNode.IsTestTargetNode())
+                {
+                    questDataContainer.testTargetNode = conditionSetter;
                 }
                 SaveAsset(conditionSetter);
                 break;
@@ -467,6 +483,10 @@ public class QSIOUtility : MonoBehaviour
                 {
                     questDataContainer.startingNode = questAccepted;
                 }
+                if (questAcceptedNode.IsTestTargetNode())
+                {
+                    questDataContainer.testTargetNode = questAccepted;
+                }
                 SaveAsset(questAccepted);
                 break;
 
@@ -485,6 +505,10 @@ public class QSIOUtility : MonoBehaviour
                 if (questActivatorNode.IsStartingNode())
                 {
                     questDataContainer.startingNode = questActivator;
+                }
+                if (questActivatorNode.IsTestTargetNode())
+                {
+                    questDataContainer.testTargetNode = questActivator;
                 }
                 SaveAsset(questActivator);
                 break;
@@ -540,6 +564,7 @@ public class QSIOUtility : MonoBehaviour
                  if (!string.IsNullOrEmpty(parentData.ParentNodeID))
                  {
                      activator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                     SaveAsset(activator);
                  }
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
@@ -566,6 +591,7 @@ public class QSIOUtility : MonoBehaviour
                  if (!string.IsNullOrEmpty(parentData.ParentNodeID))
                  {
                      questHandler.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                     SaveAsset(questHandler);
                  }
                  
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
@@ -593,6 +619,7 @@ public class QSIOUtility : MonoBehaviour
                  if (!string.IsNullOrEmpty(parentData.ParentNodeID))
                  {
                      dialogueGraph.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                     SaveAsset(dialogueGraph);
                  }
                  
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
@@ -620,6 +647,7 @@ public class QSIOUtility : MonoBehaviour
                  if (!string.IsNullOrEmpty(parentData.ParentNodeID))
                  {
                      condition.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                     SaveAsset(condition);
                  }
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
@@ -645,6 +673,7 @@ public class QSIOUtility : MonoBehaviour
                  if (!string.IsNullOrEmpty(parentData.ParentNodeID))
                  {
                      questAccepted.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                     SaveAsset(questAccepted);
                  }
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
@@ -665,14 +694,20 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
+                 QSParentSaveData parentData = node.parentSaveData;
+                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+                 {
+                     questActivator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                     SaveAsset(questActivator);
+                 }
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
-                
-                 
                  questActivator.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
-                 questActivator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 
+                 
+                
                  SaveAsset(questActivator);
              }
          }
@@ -685,12 +720,19 @@ public class QSIOUtility : MonoBehaviour
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
+                 QSParentSaveData parentData = node.parentSaveData;
+                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+                 {
+                     conditionSetter.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                     SaveAsset(conditionSetter);
+                 }
+                 
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
                  }
                  conditionSetter.Branches[branchIndex].NextQuestNode = createdNodes[nodeBranch.NextNodeID];
-                 conditionSetter.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                
                  SaveAsset(conditionSetter);
              }
          }
@@ -992,8 +1034,8 @@ public class QSIOUtility : MonoBehaviour
             {
                 //Grab the userData from the Port. This info should include the ID and name.
                 QSBranchSaveData branchData = (QSBranchSaveData)choicePort.userData;
-             
-
+                
+                
                 if (string.IsNullOrEmpty(branchData.NextNodeID))
                 {
                     continue;

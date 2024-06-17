@@ -15,6 +15,10 @@ MonoBehaviour:
   <NodeName>k__BackingField: ConditionSetterNodeName
   <QuestNodeType>k__BackingField: 4
   <IsStartingNode>k__BackingField: 0
+  <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
     <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 831490691c7ab894bbcf015349d23650, type: 2}
+  <ParentData>k__BackingField:
+    <ParentNodeID>k__BackingField: bd1c8dba-dd41-40ba-a149-15c9f3186948
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: d1a8138ca15aafa42ab0eb19c24f074c, type: 2}
