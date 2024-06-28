@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca44d988e147de44abf84141d2fc3f5, type: 3}
+  m_Name: LRRHFetchGoodiesQuestHandlerGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHFetchGoodiesQuestHandler
+  <Nodes>k__BackingField:
+  - rid: 5142065780776763408
+  - rid: 5142065780776763409
+  <QuestHandlerNodes>k__BackingField: []
+  <DialogueGraphNodes>k__BackingField: []
+  <OldNodeNames>k__BackingField: []
+  <OldQuestHandlerNodeNames>k__BackingField:
+  - QuestName
+  <OldDialogueGraphNodeNames>k__BackingField:
+  - DialogueGraphNodeName
+  <OldActivatorNodeNames>k__BackingField: []
+  <OldConditionNodeNames>k__BackingField: []
+  <OldQuestAcceptedNodeNames>k__BackingField: []
+  <OldQuestActivatorNodeNames>k__BackingField: []
+  <OldConditionSetterNodeNames>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5142065780776763408
+      type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 7fa1e2a3-1792-49d6-b628-2099aefc0888
+        <Name>k__BackingField: QuestName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 0
+        <Position>k__BackingField: {x: -692, y: -162}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        <QuestHandler>k__BackingField: {fileID: 11400000, guid: c7a2df73aafce8a4d9336f88a70f689e, type: 2}
+    - rid: 5142065780776763409
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: e1b2ed78-4d36-4df4-936b-2b520d050aac
+        <Name>k__BackingField: DialogueGraphNodeName
+        <Branches>k__BackingField: []
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: -342, y: -195}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        DialogueContainerSO: {fileID: 0}

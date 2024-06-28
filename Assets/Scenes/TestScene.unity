@@ -1009,6 +1009,10 @@ PrefabInstance:
       propertyPath: autoTest
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: autoPlayTrigger
+      value: 
+      objectReference: {fileID: 1771008241}
     - target: {fileID: 4726332937238794552, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_RootOrder
       value: 12

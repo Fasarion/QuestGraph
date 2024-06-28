@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: TestGraph
   <Nodes>k__BackingField:
-  - rid: 1684528078341800135
-  - rid: 1684528078341800136
-  - rid: 1684528078341800137
-  - rid: 1684528078341800138
-  - rid: 1684528078341800139
-  - rid: 1684528078341800140
-  - rid: 1684528078341800141
+  - rid: 5142065780776763399
+  - rid: 5142065780776763400
+  - rid: 5142065780776763401
+  - rid: 5142065780776763402
+  - rid: 5142065780776763403
+  - rid: 5142065780776763404
+  - rid: 5142065780776763405
   <QuestHandlerNodes>k__BackingField: []
   <DialogueGraphNodes>k__BackingField: []
   <OldNodeNames>k__BackingField: []
@@ -41,7 +41,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1684528078341800135
+    - rid: 5142065780776763399
       type: {class: QSQuestAcceptedNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: fbecafc2-ca48-4660-a68d-806b2cecbc75
@@ -54,7 +54,7 @@ MonoBehaviour:
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
-    - rid: 1684528078341800136
+    - rid: 5142065780776763400
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
@@ -65,12 +65,12 @@ MonoBehaviour:
         - <Text>k__BackingField: Dialogue4
           <NextNodeID>k__BackingField: d2a23a38-581d-494e-961a-1309b1b24889
         <QuestNodeType>k__BackingField: 1
-        <Position>k__BackingField: {x: -231.2, y: -296}
+        <Position>k__BackingField: {x: -231, y: -296}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 
         DialogueContainerSO: {fileID: 11400000, guid: 0219519d5864c264da5a264d7a4d0ddc, type: 2}
-    - rid: 1684528078341800137
+    - rid: 5142065780776763401
       type: {class: QSConditionNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 53280f0e-6d00-43bd-a77c-d2eee441d188
@@ -79,11 +79,11 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 3
-        <Position>k__BackingField: {x: 1779.2, y: -296}
+        <Position>k__BackingField: {x: 1779, y: -296}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
-    - rid: 1684528078341800138
+    - rid: 5142065780776763402
       type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
@@ -92,11 +92,11 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: 53280f0e-6d00-43bd-a77c-d2eee441d188
         <QuestNodeType>k__BackingField: 4
-        <Position>k__BackingField: {x: 1129.6, y: -296}
+        <Position>k__BackingField: {x: 1130, y: -296}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: bd1c8dba-dd41-40ba-a149-15c9f3186948
-    - rid: 1684528078341800139
+    - rid: 5142065780776763403
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: bd1c8dba-dd41-40ba-a149-15c9f3186948
@@ -105,14 +105,14 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: db9fe072-0950-4441-9e41-f9637be00c85
         <QuestNodeType>k__BackingField: 2
-        <Position>k__BackingField: {x: 844.8, y: -296}
-        <TestTarget>k__BackingField: 0
+        <Position>k__BackingField: {x: 845, y: -296}
+        <TestTarget>k__BackingField: 1
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: fbecafc2-ca48-4660-a68d-806b2cecbc75
         GameObjectsToActivateNames:
         - TestCube
         GameObjectToDeactivateNames: []
-    - rid: 1684528078341800140
+    - rid: 5142065780776763404
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: d2a23a38-581d-494e-961a-1309b1b24889
@@ -121,14 +121,14 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 2
-        <Position>k__BackingField: {x: 352, y: -129.6}
-        <TestTarget>k__BackingField: 1
+        <Position>k__BackingField: {x: 352, y: -130}
+        <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
         GameObjectsToActivateNames:
         - TestCube2
         GameObjectToDeactivateNames: []
-    - rid: 1684528078341800141
+    - rid: 5142065780776763405
       type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 0398cd01-3af7-4e05-8aa2-104921702bd8
@@ -137,7 +137,7 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 0
-        <Position>k__BackingField: {x: -661.6, y: -296}
+        <Position>k__BackingField: {x: -662, y: -296}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 

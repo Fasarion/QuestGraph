@@ -9,19 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab4d62e97f1ca9448b3b890d225dda12, type: 3}
-  m_Name: ActivatorNodeName1
+  m_Script: {fileID: 11500000, guid: cf10f518b43035c4abc3105af0074bfb, type: 3}
+  m_Name: QuestName
   m_EditorClassIdentifier: 
-  <NodeName>k__BackingField: ActivatorNodeName1
-  <QuestNodeType>k__BackingField: 2
+  <NodeName>k__BackingField: QuestName
+  <QuestNodeType>k__BackingField: 0
   <IsStartingNode>k__BackingField: 0
   <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
     <NextQuestNode>k__BackingField: {fileID: 0}
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: cf6bf6ba-129a-465a-82fc-4c81bf1476a8
-    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 8f68e30030b17b84d8c4b3271d6d4461, type: 2}
-  <GameObjectsToActivateNames>k__BackingField:
-  - TestCube2
-  <GameObjectsToDeactivateNames>k__BackingField: []
+    <ParentNodeID>k__BackingField: 
+    <PreviousQuestNode>k__BackingField: {fileID: 0}
+  <QuestHandler>k__BackingField: {fileID: 11400000, guid: c7a2df73aafce8a4d9336f88a70f689e, type: 2}

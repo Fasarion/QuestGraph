@@ -39,7 +39,10 @@ namespace QS.Elements
             nodeName = CheckForDuplicateNames(nodeName, qsGraphView);
             NodeName = nodeName;
             branches = new List<QSBranchSaveData>();
-            
+            parentSaveData = new QSParentSaveData()
+            {
+                ParentNodeID = null
+            };
             graphView = qsGraphView;
             defaultBackgroundColor = new Color(29f / 255f, 29f / 255f, 30f / 255f);
             
