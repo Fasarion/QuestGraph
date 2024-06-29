@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b326c8638c83c4d8abfd2d25c84aa0, type: 3}
-  m_Name: Goodbye
+  m_Name: MomSaysBye
   m_EditorClassIdentifier: 
-  <DialogueName>k__BackingField: Goodbye
-  <Text>k__BackingField: Don't forget your Red Riding Hood on the way out!
+  <DialogueName>k__BackingField: MomSaysBye
+  <Text>k__BackingField: Goodbye
   <Choices>k__BackingField:
-  - <Text>k__BackingField: Goodbyee
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 50ae1fafc5654bb468eb2cb9f84241e6, type: 2}
-  <DialogueType>k__BackingField: 1
+  - <Text>k__BackingField: NextDialogue
+    <NextDialogue>k__BackingField: {fileID: 0}
+  <DialogueType>k__BackingField: 0
   <isStartingDialogue>k__BackingField: 0

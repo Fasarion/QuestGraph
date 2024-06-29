@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &429284773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1030505047693826768, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: dialogueContainerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 60cc8aaba29d4fc4298da1f5b781f8be, type: 2}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913535, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_Name
+      value: TalkToMotherHasGoodies
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030505048244913535, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
 --- !u!1 &587497349
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,10 +489,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6114486013621733274, guid: c731670802ca05349833aad1b8f76eba, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6869600559191453821, guid: c731670802ca05349833aad1b8f76eba, type: 3}
       propertyPath: m_Name
       value: DialogueManager
@@ -730,39 +791,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a03bf84764b90df46a938e75fc63d5b4, type: 3}
---- !u!1 &1771008238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4726332937238794550, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
-  m_PrefabInstance: {fileID: 4726332935922355184}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1771008241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771008238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 321edf5a49f534f4aa2721188c8f1b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
-  dialogueAdded: 0
-  triggerType: 0
-  counterType: 0
-  dialogueSystemType: 1
-  startingDialogueBranch: {fileID: 0}
-  interactUIText: {fileID: 0}
-  destroyExclamationMarkOnTrigger: 0
-  exclamationMarkObject: {fileID: 0}
-  destroyParentOnTrigger: 0
-  destroySelfOnTrigger: 0
-  counter: 0
-  countGoal: 0
-  countingDown: 0
-  dialogueContainerScriptableObject: {fileID: 0}
-  setDialogueContainerAtStart: 0
 --- !u!1 &2136749291
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,16 +1010,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044468822390199627, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
       propertyPath: DSContainers.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4044468822390199627, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
       propertyPath: DSContainers.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 0219519d5864c264da5a264d7a4d0ddc, type: 2}
+      objectReference: {fileID: 11400000, guid: 3a48f172c148889498c8db9a4233bba1, type: 2}
     - target: {fileID: 4044468822390199627, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
       propertyPath: DSContainers.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 4f07d3c07de3fb04e9093d4c3bae903e, type: 2}
+      objectReference: {fileID: 11400000, guid: 60cc8aaba29d4fc4298da1f5b781f8be, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
 --- !u!1001 &4395150588367520999
@@ -1068,12 +1096,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: autoTest
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
-      propertyPath: autoPlayTrigger
+      propertyPath: questData
       value: 
-      objectReference: {fileID: 1771008241}
+      objectReference: {fileID: 11400000, guid: dc063862e89dcf64b949ea03a5b64c34, type: 2}
     - target: {fileID: 4726332937238794552, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1191,7 +1219,7 @@ PrefabInstance:
     - target: {fileID: 1030505047693826768, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
       propertyPath: dialogueContainerScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 0219519d5864c264da5a264d7a4d0ddc, type: 2}
+      objectReference: {fileID: 11400000, guid: 3a48f172c148889498c8db9a4233bba1, type: 2}
     - target: {fileID: 1030505048244913534, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1238,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030505048244913535, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
       propertyPath: m_Name
-      value: TalkToQuestTestDialogueNPC2
+      value: TalkToMotherIntro
       objectReference: {fileID: 0}
     - target: {fileID: 1030505048244913535, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
       propertyPath: m_IsActive

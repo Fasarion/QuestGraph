@@ -18,9 +18,11 @@ MonoBehaviour:
   <ungroupedDialogues>k__BackingField:
   - {fileID: 11400000, guid: dd00d550f6743f94b8feda80f8beff92, type: 2}
   - {fileID: 11400000, guid: 36e7e639f26753e44bc9e05cfcd0174c, type: 2}
+  - {fileID: 11400000, guid: 50ae1fafc5654bb468eb2cb9f84241e6, type: 2}
   <AutoPlayDialogue>k__BackingField: 0
   allDialogueNodes:
   - {fileID: 11400000, guid: dd00d550f6743f94b8feda80f8beff92, type: 2}
   - {fileID: 11400000, guid: 36e7e639f26753e44bc9e05cfcd0174c, type: 2}
+  - {fileID: 11400000, guid: 50ae1fafc5654bb468eb2cb9f84241e6, type: 2}
   exitDialogues:
-  - {fileID: 11400000, guid: 36e7e639f26753e44bc9e05cfcd0174c, type: 2}
+  - {fileID: 11400000, guid: 50ae1fafc5654bb468eb2cb9f84241e6, type: 2}

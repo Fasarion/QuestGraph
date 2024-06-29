@@ -20,23 +20,33 @@ MonoBehaviour:
     <Text>k__BackingField: I see you have the goodies. Very good.
     <Choices>k__BackingField:
     - <Text>k__BackingField: NextDialogue
-      <NodeID>k__BackingField: 40b311d0-b7cb-4bbd-bf07-0b9f5fbd4f73
+      <NodeID>k__BackingField: acae69e7-add4-4567-8367-b01aba7a84d1
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 300, y: -92.8}
-  - <ID>k__BackingField: 40b311d0-b7cb-4bbd-bf07-0b9f5fbd4f73
+  - <ID>k__BackingField: acae69e7-add4-4567-8367-b01aba7a84d1
     <Name>k__BackingField: Goodbye
     <Text>k__BackingField: Don't forget your Red Riding Hood on the way out!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Goodbyee
+      <NodeID>k__BackingField: 71c8dde8-5f71-411d-9b17-4bf10cc546af
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 627.2, y: -92.8}
+  - <ID>k__BackingField: 71c8dde8-5f71-411d-9b17-4bf10cc546af
+    <Name>k__BackingField: MomSaysBye
+    <Text>k__BackingField: Goodbye
     <Choices>k__BackingField:
     - <Text>k__BackingField: NextDialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 690.4, y: -92.8}
+    <Position>k__BackingField: {x: 1032.8, y: -92.8}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - Return
   - Goodbye
+  - MomSaysBye
   <OldGroupedNodeNames>k__BackingField:
     list: []
   autoPlayGraph: 0

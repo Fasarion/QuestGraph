@@ -15,8 +15,10 @@ MonoBehaviour:
   <NodeName>k__BackingField: DialogueGraphNodeName1
   <QuestNodeType>k__BackingField: 1
   <IsStartingNode>k__BackingField: 0
-  <IsTestTarget>k__BackingField: 1
-  <Branches>k__BackingField: []
+  <IsTestTarget>k__BackingField: 0
+  <Branches>k__BackingField:
+  - <Text>k__BackingField: MomSaysBye
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 61eb63244cba97b49b4a3022168765b3, type: 2}
   <ParentData>k__BackingField:
     <ParentNodeID>k__BackingField: c93d35cc-d6d8-4a1d-ba3e-5f89f1630723
     <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 7598dd634a466b94bbcb40e7ee860bc1, type: 2}
