@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3abeb2780963ae4ab4c21046a96b99d, type: 3}
+  m_Name: LRRHGetGoodiesForMotherGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHGetGoodiesForMother
+  groups: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 2be34e5d-a5e8-47f8-9617-de70143ad17e
+    <Name>k__BackingField: MotherGreetsLRRH
+    <Text>k__BackingField: Hello my dear,  did you sleep well? I need you to go see
+      your grandmother.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 233cfec8-ffba-4964-bd57-c467c9820762
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -48, y: 32}
+  - <ID>k__BackingField: 233cfec8-ffba-4964-bd57-c467c9820762
+    <Name>k__BackingField: ChoiceGetTheGoodies
+    <Text>k__BackingField: Will you go fetch the goodies I got for her from the kitchen?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Accept
+      <NodeID>k__BackingField: 03d5ac5a-2d73-44f0-899e-abf0351d67ec
+    - <Text>k__BackingField: Decline
+      <NodeID>k__BackingField: 2da73606-7b9f-45eb-84f9-1c655fb888d7
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 552, y: -17.6}
+  - <ID>k__BackingField: 03d5ac5a-2d73-44f0-899e-abf0351d67ec
+    <Name>k__BackingField: Accept
+    <Text>k__BackingField: Come back to me when you have the goodies.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1175.2, y: -40.800003}
+  - <ID>k__BackingField: 2da73606-7b9f-45eb-84f9-1c655fb888d7
+    <Name>k__BackingField: Decline
+    <Text>k__BackingField: I suppose you've got a little time still to do other things,
+      but hurry it up!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1175.2, y: 156.8}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - MotherGreetsLRRH
+  - ChoiceGetTheGoodies
+  - Accept
+  - Decline
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
+  autoPlayGraph: 0

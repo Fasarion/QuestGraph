@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d67663a0bf5028418d9437f5e71fe1b, type: 3}
-  m_Name: DialogueGraphNodeName
+  m_Name: DialogueGraphNodeName1
   m_EditorClassIdentifier: 
-  <NodeName>k__BackingField: DialogueGraphNodeName
+  <NodeName>k__BackingField: DialogueGraphNodeName1
   <QuestNodeType>k__BackingField: 1
-  <IsStartingNode>k__BackingField: 1
+  <IsStartingNode>k__BackingField: 0
   <IsTestTarget>k__BackingField: 0
-  <Branches>k__BackingField:
-  - <Text>k__BackingField: Accept
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 0d4c7211afd0ba441b8f3e749af7ce23, type: 2}
-  - <Text>k__BackingField: Decline
-    <NextQuestNode>k__BackingField: {fileID: 0}
+  <Branches>k__BackingField: []
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: 
+    <ParentNodeID>k__BackingField: 0f17fe93-1c97-48db-9573-fda2062bd83c
     <PreviousQuestNode>k__BackingField: {fileID: 0}
-  <DialogueContainerSO>k__BackingField: {fileID: 11400000, guid: 3a48f172c148889498c8db9a4233bba1, type: 2}
+  <DialogueContainerSO>k__BackingField: {fileID: 0}

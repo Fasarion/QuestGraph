@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LRRHFetchGoodiesQuestHandler
   m_EditorClassIdentifier: 
   currentQuestState: 0
-  questType: 1
-  questActive: 0
+  questType: 3
+  questActive: 1
   questTasksComplete: 0
   questComplete: 0
   questAccepted: 0
@@ -24,8 +24,9 @@ MonoBehaviour:
   itemToFetchName: 
   characterToFetchFrom: 
   characterToFetchFor: 
-  collectableItemName: 
-  itemTypesToCollect: []
+  collectableItemName: Goodies
+  itemTypesToCollect:
+  - {fileID: 0}
   numberOfItemsToCollect: 0
   currentCollectedItems: 0
   startingCollectedItems: 0
