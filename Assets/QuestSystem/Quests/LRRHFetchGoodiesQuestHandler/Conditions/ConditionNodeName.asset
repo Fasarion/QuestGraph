@@ -18,7 +18,7 @@ MonoBehaviour:
   <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 0f6656e7bb73d5847acccdef951a8d71, type: 2}
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 7598dd634a466b94bbcb40e7ee860bc1, type: 2}
   <ParentData>k__BackingField:
     <ParentNodeID>k__BackingField: fb49b999-ff71-45cd-8f23-0f28a82f287e
     <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 0d4c7211afd0ba441b8f3e749af7ce23, type: 2}

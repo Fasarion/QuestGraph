@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4726332937238794552}
   - component: {fileID: 4726332937238794551}
+  - component: {fileID: 423987889751530975}
   m_Layer: 0
   m_Name: QuestRuntimeManager
   m_TagString: Untagged
@@ -47,3 +48,33 @@ MonoBehaviour:
   questData: {fileID: 11400000, guid: 5db9aff704075bf41a058ef1f0814f95, type: 2}
   currentNode: {fileID: 0}
   conditionMet: 0
+  autoTest: 0
+  autoPlayTrigger: {fileID: 423987889751530975}
+--- !u!114 &423987889751530975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4726332937238794550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321edf5a49f534f4aa2721188c8f1b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogueAdded: 0
+  triggerType: 0
+  counterType: 0
+  dialogueSystemType: 1
+  startingDialogueBranch: {fileID: 0}
+  interactUIText: {fileID: 0}
+  destroyExclamationMarkOnTrigger: 0
+  exclamationMarkObject: {fileID: 0}
+  destroyParentOnTrigger: 0
+  destroySelfOnTrigger: 0
+  counter: 0
+  countGoal: 0
+  countingDown: 0
+  dialogueContainerScriptableObject: {fileID: 0}
+  setDialogueContainerAtStart: 0

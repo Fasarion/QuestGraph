@@ -556,16 +556,16 @@ public class QSIOUtility : MonoBehaviour
          foreach (QSActivatorNode node in activatorNodes)
          {
              QSActivatorSO activator = createdActivators[node.ID];
-
+             QSParentSaveData parentData = node.parentSaveData;
+             if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+             {
+                 activator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 SaveAsset(activator);
+             }
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
-                 QSParentSaveData parentData = node.parentSaveData;
-                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
-                 {
-                     activator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
-                     SaveAsset(activator);
-                 }
+                 
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
@@ -582,17 +582,17 @@ public class QSIOUtility : MonoBehaviour
          foreach (QSQuestHandlerNode node in questHandlerNodes)
          {
              QSQuestHandlerSO questHandler = createdQuestHandlers[node.ID];
-
+             QSParentSaveData parentData = node.parentSaveData;
+             if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+             {
+                 questHandler.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 SaveAsset(questHandler);
+             }
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 QSParentSaveData parentData = node.parentSaveData;
-                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
-                 {
-                     questHandler.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
-                     SaveAsset(questHandler);
-                 }
+                
                  
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
@@ -611,16 +611,17 @@ public class QSIOUtility : MonoBehaviour
          {
              QSDialogueGraphSO dialogueGraph = createdDialogueGraphs[node.ID];
 
+             QSParentSaveData parentData = node.parentSaveData;
+             if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+             {
+                 dialogueGraph.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 SaveAsset(dialogueGraph);
+             }
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 QSParentSaveData parentData = node.parentSaveData;
-                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
-                 {
-                     dialogueGraph.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
-                     SaveAsset(dialogueGraph);
-                 }
+                 
                  
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
@@ -639,16 +640,18 @@ public class QSIOUtility : MonoBehaviour
          {
              QSConditionSO condition = createdConditions[node.ID];
 
+             
+             QSParentSaveData parentData = node.parentSaveData;
+             if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+             {
+                 condition.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 SaveAsset(condition);
+             }
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 QSParentSaveData parentData = node.parentSaveData;
-                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
-                 {
-                     condition.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
-                     SaveAsset(condition);
-                 }
+                 
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
@@ -665,16 +668,17 @@ public class QSIOUtility : MonoBehaviour
          {
              QSQuestAcceptedSO questAccepted = createdQuestAcceptors[node.ID];
 
+             QSParentSaveData parentData = node.parentSaveData;
+             if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+             {
+                 questAccepted.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 SaveAsset(questAccepted);
+             }
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 QSParentSaveData parentData = node.parentSaveData;
-                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
-                 {
-                     questAccepted.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
-                     SaveAsset(questAccepted);
-                 }
+                 
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
@@ -690,16 +694,17 @@ public class QSIOUtility : MonoBehaviour
          {
              QSQuestActivatorSO questActivator = createdQuestActivators[node.ID];
 
+             QSParentSaveData parentData = node.parentSaveData;
+             if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+             {
+                 questActivator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 SaveAsset(questActivator);
+             }
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 QSParentSaveData parentData = node.parentSaveData;
-                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
-                 {
-                     questActivator.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
-                     SaveAsset(questActivator);
-                 }
+                
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {
                      continue;
@@ -716,16 +721,17 @@ public class QSIOUtility : MonoBehaviour
          {
              QSConditionSetterSO conditionSetter = createdConditionSetters[node.ID];
 
+             QSParentSaveData parentData = node.parentSaveData;
+             if (!string.IsNullOrEmpty(parentData.ParentNodeID))
+             {
+                 conditionSetter.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
+                 SaveAsset(conditionSetter);
+             }
              for (int branchIndex = 0; branchIndex < node.branches.Count; ++branchIndex)
              {
                  QSBranchSaveData nodeBranch = node.branches[branchIndex];
 
-                 QSParentSaveData parentData = node.parentSaveData;
-                 if (!string.IsNullOrEmpty(parentData.ParentNodeID))
-                 {
-                     conditionSetter.ParentData.PreviousQuestNode = createdNodes[node.parentSaveData.ParentNodeID];
-                     SaveAsset(conditionSetter);
-                 }
+                
                  
                  if (string.IsNullOrEmpty(nodeBranch.NextNodeID))
                  {

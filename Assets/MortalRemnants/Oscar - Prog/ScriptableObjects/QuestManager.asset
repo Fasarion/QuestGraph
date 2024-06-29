@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: QuestManager
   m_EditorClassIdentifier: 
   questHandlersToComplete:
-  - {fileID: 11400000, guid: 7b2a4017cc9d46a4ba4160f2d546b5ae, type: 2}
+  - {fileID: 11400000, guid: c7a2df73aafce8a4d9336f88a70f689e, type: 2}
   collectibleQuestHandlers:
-  - {fileID: 11400000, guid: aa5a9a7c531480e4081fccf6ee9b94cc, type: 2}
+  - {fileID: 11400000, guid: c7a2df73aafce8a4d9336f88a70f689e, type: 2}
   killQuestHandlers: []
   allQuestTasksCompleted: 0

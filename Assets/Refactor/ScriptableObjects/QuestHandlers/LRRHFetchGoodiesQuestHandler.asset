@@ -26,8 +26,8 @@ MonoBehaviour:
   characterToFetchFor: 
   collectableItemName: Goodies
   itemTypesToCollect:
-  - {fileID: 0}
-  numberOfItemsToCollect: 0
+  - {fileID: 6437157974215708702, guid: 7f4c12135071fb3458edae26e8e73646, type: 3}
+  numberOfItemsToCollect: 1
   currentCollectedItems: 0
   startingCollectedItems: 0
   enemyTypeName: 

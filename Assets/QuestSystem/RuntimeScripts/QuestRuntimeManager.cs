@@ -64,12 +64,16 @@ public class QuestRuntimeManager : MonoBehaviour
                     if (autoTest)
                     {
                         testTarget = questData.testTargetNode;
-                        //currentTestPath = new HashSet<QSQuestSO>();
-                        indexByCurrentPathNodes = new Dictionary<int, QSQuestSO>();
-                        currentPathIndexFromTestNode = 0;
-                        AddTestNodesRecursively(testTarget, currentPathIndexFromTestNode);
-                        var listIndexInPath = indexByCurrentPathNodes.Count-1;
-                        testPathNodeIndex = listIndexInPath;
+                        if (testTarget != null)
+                        {
+                            //currentTestPath = new HashSet<QSQuestSO>();
+                            indexByCurrentPathNodes = new Dictionary<int, QSQuestSO>();
+                            currentPathIndexFromTestNode = 0;
+                            AddTestNodesRecursively(testTarget, currentPathIndexFromTestNode);
+                            var listIndexInPath = indexByCurrentPathNodes.Count-1;
+                            testPathNodeIndex = listIndexInPath;
+                        }
+                       
                         
                         
                     }
@@ -91,7 +95,7 @@ public class QuestRuntimeManager : MonoBehaviour
         //performant and an easier solution as well.
         
         gameObjectsInSceneAtStart = GetAllObjectsOnlyInScene();
-        if (autoTest)
+        if (autoTest && testTarget != null)
         {
             questHandler.questActive = true;
             CheckAutoTransitionCondition();
@@ -312,7 +316,7 @@ public class QuestRuntimeManager : MonoBehaviour
         }
         else if (currentNode.GetType() == typeof(QSConditionSO))
         {
-            if (autoTest)
+            if (autoTest && testTarget != null)
             {
                 conditionMet = true;
             }
@@ -324,7 +328,7 @@ public class QuestRuntimeManager : MonoBehaviour
         }
         else if (currentNode.GetType() == typeof(QSDialogueGraphSO))
         {
-            if (autoTest)
+            if (autoTest && testTarget != null)
             {
                 var dialogueNode = (QSDialogueGraphSO)currentNode;
                 var dialogueContainer = dialogueNode.DialogueContainerSO;
@@ -401,7 +405,7 @@ public class QuestRuntimeManager : MonoBehaviour
     //We have to set the chosen path based on what dialogue is played out.
     public void SelectDialogueGraphBranch(DSDialogueSO dialogueSo)
     {
-        if (autoTest)
+        if (autoTest && testTarget !=null)
         {
             CheckAutoTransitionCondition();
         }

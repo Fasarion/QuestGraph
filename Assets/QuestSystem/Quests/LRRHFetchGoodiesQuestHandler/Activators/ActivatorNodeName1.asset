@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d62e97f1ca9448b3b890d225dda12, type: 3}
-  m_Name: ActivatorNodeName
+  m_Name: ActivatorNodeName1
   m_EditorClassIdentifier: 
-  <NodeName>k__BackingField: ActivatorNodeName
+  <NodeName>k__BackingField: ActivatorNodeName1
   <QuestNodeType>k__BackingField: 2
   <IsStartingNode>k__BackingField: 0
   <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: d3885a5db6f61c94899bc901c18672c8, type: 2}
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 0f6656e7bb73d5847acccdef951a8d71, type: 2}
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: 211f483b-6578-4dcf-aa8a-1db1cde819e7
-    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: a355f333eec9ab644b0ea8cd5b36a557, type: 2}
+    <ParentNodeID>k__BackingField: 0f17fe93-1c97-48db-9573-fda2062bd83c
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: d3885a5db6f61c94899bc901c18672c8, type: 2}
   <GameObjectsToActivateNames>k__BackingField:
-  - Goodies
-  <GameObjectsToDeactivateNames>k__BackingField:
-  - TalkToMotherIntro
+  - TalkToMotherHasGoodies
+  <GameObjectsToDeactivateNames>k__BackingField: []

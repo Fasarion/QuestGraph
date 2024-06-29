@@ -14,9 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: LRRHReturnGoodiesToMother
   groups: []
-  <nodes>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 2646183d-c7c2-4977-8197-4fe9a0785d7c
+    <Name>k__BackingField: Return
+    <Text>k__BackingField: I see you have the goodies. Very good.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 40b311d0-b7cb-4bbd-bf07-0b9f5fbd4f73
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 300, y: -92.8}
+  - <ID>k__BackingField: 40b311d0-b7cb-4bbd-bf07-0b9f5fbd4f73
+    <Name>k__BackingField: Goodbye
+    <Text>k__BackingField: Don't forget your Red Riding Hood on the way out!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 690.4, y: -92.8}
   <oldGroupNames>k__BackingField: []
-  <oldUngroupedNodeNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - Return
+  - Goodbye
   <OldGroupedNodeNames>k__BackingField:
     list: []
   autoPlayGraph: 0
