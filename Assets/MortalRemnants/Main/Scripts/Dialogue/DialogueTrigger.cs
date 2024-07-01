@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using DS.ScriptableObjects;
 using TMPro;
@@ -120,7 +121,12 @@ public enum DialogueSystemType
             //WE might have to do something with this
             //dialogueContainerScriptableObject.AutoPlayDialogue;
             startingDialogueBranch = dialogueParent.containers[0];
-            TriggerDialogue();
+            dialogueTriggerReceiver.ReceiveCurrentDialogueTrigger(this);
+            //This appears to not be necessary and causes bugs. The dialogueManager has no frame to set the dialogue window as closed before it is set to opened again.
+            //The IEnumerator DisplayDialogue waits for DialogueComplete boolean function to evaluate to true in order to display the next sentence,
+            //which it never does since the value is overwritten. Because of this, the dialogue that is enqueued cannot be displayed, the system breaks
+            //TriggerDialogue();
+            StartCoroutine(TriggerAfterFrame());
         }
 
         public void OnEnable()
@@ -330,6 +336,13 @@ public enum DialogueSystemType
             
             
             
+        }
+
+        public IEnumerator TriggerAfterFrame()
+        {
+            yield return null;
+            //if (dialogueManager.dialogueOpen) yield break;
+            TriggerDialogue();
         }
 
         private void OnTriggerEnter(Collider other)

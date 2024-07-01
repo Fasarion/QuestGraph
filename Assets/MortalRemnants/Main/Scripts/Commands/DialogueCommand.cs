@@ -29,7 +29,13 @@ public class DialogueCommand : Command
                     }
                     else
                     {
+                        //if (dialogueManager.dialogueOpen)
+                        //{
+                          //  dialogueManager.firstTimeDialogueOpened = false;
+                        //}
+                        
                         dialogueManager.DisplayNextSentence();
+                        dialogueManager.CheckLastDialogueBox();
                     }
                     
                 }
