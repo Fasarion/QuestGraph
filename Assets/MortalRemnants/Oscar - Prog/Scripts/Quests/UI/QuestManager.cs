@@ -15,11 +15,20 @@ public class QuestManager : ScriptableObject
     public List<QuestHandler> killQuestHandlers;
     public bool allQuestTasksCompleted;
     
-    public void CheckCollectible(MonoBehaviour monoBehaviour)
+    public void CheckCollectible(MonoBehaviour monoBehaviour, QuestCollectible collectible)
     {
         for (int i = 0; i < collectibleQuestHandlers.Count; i++)
         {
-            collectibleQuestHandlers[i].AddItem(monoBehaviour);
+            if (collectibleQuestHandlers[i].questAccepted)
+            {
+
+                if (collectible.destroyCollectibleOnPickup)
+                {
+                    Destroy(collectible.gameObject);
+                }
+                collectibleQuestHandlers[i].AddItem(monoBehaviour);
+            }
+           
         }
     }
     

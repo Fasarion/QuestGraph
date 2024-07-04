@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questHandlersToComplete:
   - {fileID: 11400000, guid: c7a2df73aafce8a4d9336f88a70f689e, type: 2}
+  - {fileID: 11400000, guid: ecca6918201509546a8c09dfa44882ec, type: 2}
   collectibleQuestHandlers:
   - {fileID: 11400000, guid: c7a2df73aafce8a4d9336f88a70f689e, type: 2}
   killQuestHandlers: []

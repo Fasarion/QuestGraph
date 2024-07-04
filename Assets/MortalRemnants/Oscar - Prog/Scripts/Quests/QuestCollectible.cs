@@ -16,11 +16,8 @@ public class QuestCollectible : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            questManager.CheckCollectible(identityBehaviour);
-            if (destroyCollectibleOnPickup)
-            {
-                Destroy(gameObject);
-            }
+            questManager.CheckCollectible(identityBehaviour, this);
+            
         }
     }
 }
