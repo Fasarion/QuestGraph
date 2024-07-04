@@ -10,24 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70e04ab4ab889ba4eb293dc253f780de, type: 3}
-  m_Name: LRRHFetchGoodiesQuestHandler
+  m_Name: LRRHFetchLockpick
   m_EditorClassIdentifier: 
   currentQuestState: 0
-  questType: 3
-  questActive: 1
+  questType: 1
+  questActive: 0
   questTasksComplete: 0
   questComplete: 0
   questAccepted: 0
   firstTimeAccepting: 1
   characterToTalkTo: 
   fetchItemRetrieved: 0
-  itemToFetchName: 
-  characterToFetchFrom: 
-  characterToFetchFor: 
-  collectableItemName: Goodies
-  itemTypesToCollect:
-  - {fileID: 6437157974215708702, guid: 7f4c12135071fb3458edae26e8e73646, type: 3}
-  numberOfItemsToCollect: 1
+  itemToFetchName: Lockpick
+  characterToFetchFrom: Mr Raccoon
+  characterToFetchFor: Wolf
+  collectableItemName: 
+  itemTypesToCollect: []
+  numberOfItemsToCollect: 0
   currentCollectedItems: 0
   startingCollectedItems: 0
   enemyTypeName: 

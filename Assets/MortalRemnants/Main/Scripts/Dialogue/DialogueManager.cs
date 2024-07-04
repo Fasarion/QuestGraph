@@ -494,7 +494,11 @@ public class DialogueManager : MonoBehaviour
                 animator.SetBool(IsOpen, false);
                 //_audioSource.Stop();
                 dialogueClosed?.Invoke();
-                
+                if (dialogueContainer.branches.Length == 0 && autoPlayDialogue)
+                {
+                    Debug.Log("This was the last dialogue in the sequence");
+                    reachedLastDialogueSO?.Invoke(dialogueContainer.dialogueSOLast);
+                }
                 /*if (dialogueContainer.branches.Length == 0)
                 {
                     Debug.Log("This was the last dialogue in the sequence");

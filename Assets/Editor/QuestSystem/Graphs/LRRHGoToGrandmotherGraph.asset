@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca44d988e147de44abf84141d2fc3f5, type: 3}
+  m_Name: LRRHGoToGrandmotherGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHGoToGrandmother
+  <Nodes>k__BackingField:
+  - rid: 737070895779020823
+  - rid: 737070895779020824
+  - rid: 737070895779020825
+  - rid: 737070895779020826
+  <QuestHandlerNodes>k__BackingField: []
+  <DialogueGraphNodes>k__BackingField: []
+  <OldNodeNames>k__BackingField: []
+  <OldQuestHandlerNodeNames>k__BackingField:
+  - QuestName
+  <OldDialogueGraphNodeNames>k__BackingField:
+  - DialogueGraphNodeName
+  <OldActivatorNodeNames>k__BackingField:
+  - ActivatorNodeName1
+  - ActivatorNodeName
+  <OldConditionNodeNames>k__BackingField: []
+  <OldQuestAcceptedNodeNames>k__BackingField: []
+  <OldQuestActivatorNodeNames>k__BackingField: []
+  <OldConditionSetterNodeNames>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 737070895779020823
+      type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 229eb953-f9d2-419c-bf8d-e8ad63292177
+        <Name>k__BackingField: QuestName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 0
+        <Position>k__BackingField: {x: 2084, y: -110}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        <QuestHandler>k__BackingField: {fileID: 11400000, guid: ecca6918201509546a8c09dfa44882ec, type: 2}
+    - rid: 737070895779020824
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 33e3bce9-f918-42ed-9137-3cd498d228e9
+        <Name>k__BackingField: DialogueGraphNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: Enter
+          <NextNodeID>k__BackingField: f27440f3-4685-4bf1-a3f0-755e8a131a0a
+        - <Text>k__BackingField: RemainOutside
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: 2740, y: -73}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 5fa4b0ce-d977-43ab-becb-1a610009ad5c
+        DialogueContainerSO: {fileID: 11400000, guid: e0208b112ad320c46b7280dad3b733af, type: 2}
+    - rid: 737070895779020825
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: f27440f3-4685-4bf1-a3f0-755e8a131a0a
+        <Name>k__BackingField: ActivatorNodeName1
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 3342, y: -73}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 33e3bce9-f918-42ed-9137-3cd498d228e9
+        GameObjectsToActivateNames:
+        - 
+        GameObjectToDeactivateNames:
+        - ReachGrandmother
+    - rid: 737070895779020826
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 5fa4b0ce-d977-43ab-becb-1a610009ad5c
+        <Name>k__BackingField: ActivatorNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 33e3bce9-f918-42ed-9137-3cd498d228e9
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 2446, y: -73}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        GameObjectsToActivateNames:
+        - ReachGrandmother
+        GameObjectToDeactivateNames: []

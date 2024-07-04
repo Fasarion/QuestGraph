@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3abeb2780963ae4ab4c21046a96b99d, type: 3}
+  m_Name: LRRHReachGrandmotherGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHReachGrandmother
+  groups: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 3ebe519f-15d8-4d46-9a3a-829c0a794bd6
+    <Name>k__BackingField: UnlockedDoor
+    <Text>k__BackingField: As you approach the cottage, you notice that the door
+      is unlocked.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: db0e2144-15d1-4de6-a0fa-85283150d800
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 399, y: 3}
+  - <ID>k__BackingField: 3db1f93c-ad9c-4ef0-bd8e-6ccb91ae396b
+    <Name>k__BackingField: Enter
+    <Text>k__BackingField: You open the door
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1516, y: -76}
+  - <ID>k__BackingField: db0e2144-15d1-4de6-a0fa-85283150d800
+    <Name>k__BackingField: SoundsFromWithin
+    <Text>k__BackingField: You can hear heavy breathing from inside the cottage
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Enter
+      <NodeID>k__BackingField: 3db1f93c-ad9c-4ef0-bd8e-6ccb91ae396b
+    - <Text>k__BackingField: REmain outside
+      <NodeID>k__BackingField: be28a169-fe71-4611-8651-8da64badcf58
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 983, y: 3}
+  - <ID>k__BackingField: be28a169-fe71-4611-8651-8da64badcf58
+    <Name>k__BackingField: RemainOutside
+    <Text>k__BackingField: You decide not to enter just yet, there are still things
+      you need to do.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1516, y: 131}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - UnlockedDoor
+  - Enter
+  - SoundsFromWithin
+  - RemainOutside
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
+  autoPlayGraph: 0

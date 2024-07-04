@@ -35,7 +35,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 2da73606-7b9f-45eb-84f9-1c655fb888d7
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 552, y: -17.6}
+    <Position>k__BackingField: {x: 552, y: -18}
   - <ID>k__BackingField: 03d5ac5a-2d73-44f0-899e-abf0351d67ec
     <Name>k__BackingField: Accept
     <Text>k__BackingField: Come back to me when you have the goodies.
@@ -44,7 +44,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1175.2, y: -40.800003}
+    <Position>k__BackingField: {x: 1175, y: -41}
   - <ID>k__BackingField: 2da73606-7b9f-45eb-84f9-1c655fb888d7
     <Name>k__BackingField: Decline
     <Text>k__BackingField: I suppose you've got a little time still to do other things,
@@ -54,7 +54,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1175.2, y: 156.8}
+    <Position>k__BackingField: {x: 1175, y: 157}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - MotherGreetsLRRH
@@ -63,4 +63,4 @@ MonoBehaviour:
   - Decline
   <OldGroupedNodeNames>k__BackingField:
     list: []
-  autoPlayGraph: 0
+  autoPlayGraph: 1

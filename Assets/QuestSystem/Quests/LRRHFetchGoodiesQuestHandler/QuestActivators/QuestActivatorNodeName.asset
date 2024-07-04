@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43cc54ee20183ab428fbe9c84dcd36bd, type: 3}
+  m_Name: QuestActivatorNodeName
+  m_EditorClassIdentifier: 
+  <NodeName>k__BackingField: QuestActivatorNodeName
+  <QuestNodeType>k__BackingField: 6
+  <IsStartingNode>k__BackingField: 0
+  <IsTestTarget>k__BackingField: 0
+  <Branches>k__BackingField: []
+  <ParentData>k__BackingField:
+    <ParentNodeID>k__BackingField: 29e0b959-fb7c-48c8-b4a2-047f7ac29dc2
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 61eb63244cba97b49b4a3022168765b3, type: 2}
+  <QuestHandler>k__BackingField: {fileID: 0}
