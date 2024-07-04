@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca44d988e147de44abf84141d2fc3f5, type: 3}
+  m_Name: LRRHCollectRedRidingHoodGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHCollectRedRidingHood
+  <Nodes>k__BackingField:
+  - rid: 7690750785700495434
+  - rid: 7690750785700495435
+  - rid: 7690750785700495436
+  - rid: 7690750785700495437
+  - rid: 7690750785700495438
+  - rid: 7690750785700495439
+  <QuestHandlerNodes>k__BackingField: []
+  <DialogueGraphNodes>k__BackingField: []
+  <OldNodeNames>k__BackingField: []
+  <OldQuestHandlerNodeNames>k__BackingField:
+  - QuestName
+  <OldDialogueGraphNodeNames>k__BackingField:
+  - DialogueGraphNodeName
+  <OldActivatorNodeNames>k__BackingField:
+  - ActivatorNodeName1
+  - ActivatorNodeName
+  <OldConditionNodeNames>k__BackingField:
+  - ConditionSetterNodeName
+  <OldQuestAcceptedNodeNames>k__BackingField: []
+  <OldQuestActivatorNodeNames>k__BackingField:
+  - QuestActivatorNodeName
+  <OldConditionSetterNodeNames>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 7690750785700495434
+      type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: de6ac9dd-4f42-45d5-9c84-b3858039fc1f
+        <Name>k__BackingField: QuestName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 0
+        <Position>k__BackingField: {x: 12, y: -22.400002}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        <QuestHandler>k__BackingField: {fileID: 11400000, guid: 29564c2bbe1f0cd4fae43f4f803996ba, type: 2}
+    - rid: 7690750785700495435
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 1730954d-f21a-4aff-9965-dbfe93eedc73
+        <Name>k__BackingField: DialogueGraphNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: PickUpRidingHood
+          <NextNodeID>k__BackingField: b9760e79-6666-4bad-be66-62db798b89e5
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: 770.4, y: -17.6}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: bc948721-904c-4f2a-aac0-811ca2827486
+        DialogueContainerSO: {fileID: 11400000, guid: d2907777904d9c84e93c37178bb30ffc, type: 2}
+    - rid: 7690750785700495436
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: bc948721-904c-4f2a-aac0-811ca2827486
+        <Name>k__BackingField: ActivatorNodeName1
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 1730954d-f21a-4aff-9965-dbfe93eedc73
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 488, y: -17.6}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        GameObjectsToActivateNames:
+        - PickUpRidingHood
+        - PickUpRedRidingHood
+        GameObjectToDeactivateNames: []
+    - rid: 7690750785700495437
+      type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: b9760e79-6666-4bad-be66-62db798b89e5
+        <Name>k__BackingField: ConditionSetterNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: d7eda6a1-eae1-4241-9fef-6d207d07e960
+        <QuestNodeType>k__BackingField: 4
+        <Position>k__BackingField: {x: 1247.2, y: 7.199999}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 1730954d-f21a-4aff-9965-dbfe93eedc73
+    - rid: 7690750785700495438
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: d7eda6a1-eae1-4241-9fef-6d207d07e960
+        <Name>k__BackingField: ActivatorNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 7c099c31-5e37-4ed5-8e6a-aa4a45149868
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 1884, y: 7.199999}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: b9760e79-6666-4bad-be66-62db798b89e5
+        GameObjectsToActivateNames:
+        - GoToGrandmother
+        GameObjectToDeactivateNames:
+        - PickUpRedRidingHood
+        - RedRidingHood
+    - rid: 7690750785700495439
+      type: {class: QSQuestActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 7c099c31-5e37-4ed5-8e6a-aa4a45149868
+        <Name>k__BackingField: QuestActivatorNodeName
+        <Branches>k__BackingField: []
+        <QuestNodeType>k__BackingField: 6
+        <Position>k__BackingField: {x: 2206.4, y: 20.8}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: d7eda6a1-eae1-4241-9fef-6d207d07e960
+        <QuestHandler>k__BackingField: {fileID: 11400000, guid: ecca6918201509546a8c09dfa44882ec, type: 2}
+        <AcceptOnActivate>k__BackingField: 1

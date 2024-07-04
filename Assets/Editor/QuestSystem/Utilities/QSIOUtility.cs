@@ -356,6 +356,7 @@ public class QSIOUtility : MonoBehaviour
                     QuestNodeType = questActivatorNode.QuestNodeType,
                     Position = questActivatorNode.GetPosition().position,
                     TestTarget = questActivatorNode.testTarget,
+                    AcceptOnActivate = questActivatorNode.acceptOnActivate,
                     ParentSaveData = parentSaveData
                 };
                 graphData.Nodes.Add(nodeData);
@@ -498,7 +499,7 @@ public class QSIOUtility : MonoBehaviour
                     CreateAsset<QSQuestActivatorSO>($"{containerFolderPath}/QuestActivators", questActivatorNode.NodeName);
                 questActivator.Initialize(questActivatorNode.NodeName, ConvertQuestBranchesToQuestBranchData(questActivatorNode.branches),
                     questActivatorNode.questHandler, QSQuestNodeType.QuestActivator, questActivatorNode.IsStartingNode(), questActivatorNode.testTarget, 
-                    ConvertParentSaveDataToParentData(questActivatorNode.parentSaveData));
+                    ConvertParentSaveDataToParentData(questActivatorNode.parentSaveData),questActivatorNode.acceptOnActivate);
                 
                 createdQuestActivators.Add(questActivatorNode.ID, questActivator);
                 createdNodes.Add(questActivatorNode.ID, questActivator);
@@ -1011,6 +1012,7 @@ public class QSIOUtility : MonoBehaviour
                     qsQuestActivatorNode.branches = branches;
                     qsQuestActivatorNode.questHandler = questActivatorNodeSaveData.QuestHandler;
                     qsQuestActivatorNode.testTarget = questActivatorNodeSaveData.TestTarget;
+                    qsQuestActivatorNode.acceptOnActivate = questActivatorNodeSaveData.AcceptOnActivate;
                     qsQuestActivatorNode.parentSaveData = parentSaveData;
                     qsQuestActivatorNode.Draw();
                     graphView.AddElement(qsQuestActivatorNode);

@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d62e97f1ca9448b3b890d225dda12, type: 3}
-  m_Name: ActivatorNodeName2
+  m_Name: ActivatorNodeName
   m_EditorClassIdentifier: 
-  <NodeName>k__BackingField: ActivatorNodeName2
+  <NodeName>k__BackingField: ActivatorNodeName
   <QuestNodeType>k__BackingField: 2
   <IsStartingNode>k__BackingField: 0
-  <IsTestTarget>k__BackingField: 1
+  <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: e11328c8a8cb6c84a848d53f8106063a, type: 2}
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: b388edab5c516f843af01c800baad943, type: 2}
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: dce84b30-c46e-405d-972a-71604bbce736
-    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 0f6656e7bb73d5847acccdef951a8d71, type: 2}
+    <ParentNodeID>k__BackingField: b9760e79-6666-4bad-be66-62db798b89e5
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: d765044b319e3cb489e3a5e2d91107e5, type: 2}
   <GameObjectsToActivateNames>k__BackingField:
-  - PickUpRidingHood
+  - GoToGrandmother
   <GameObjectsToDeactivateNames>k__BackingField:
-  - TalkToMotherHasGoodies
+  - PickUpRedRidingHood
+  - RedRidingHood

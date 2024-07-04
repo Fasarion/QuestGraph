@@ -56,8 +56,6 @@ public class QuestRuntimeManager : MonoBehaviour
                 }
                 else
                 {
-                   
-                    
                     currentNode = questData.startingNode;
                     var questNode = questData.questHandlerSOs[0];
                     questHandler = questNode.QuestHandler;
@@ -197,6 +195,10 @@ public class QuestRuntimeManager : MonoBehaviour
                 {
                     var questActivatorNode = (QSQuestActivatorSO)currentNode;
                     questActivatorNode.QuestHandler.QuestActivated();
+                    if (questActivatorNode.AcceptOnActivate)
+                    {
+                        questActivatorNode.QuestHandler.questAccepted = true;
+                    }
                 }
                 else if (currentNode.GetType() == typeof(QSQuestHandlerSO))
                 {
@@ -295,8 +297,15 @@ public class QuestRuntimeManager : MonoBehaviour
         {
             var questActivatorNode = (QSQuestActivatorSO)currentNode;
             questActivatorNode.QuestHandler.QuestActivated();
+            if (questActivatorNode.AcceptOnActivate)
+            {
+                questActivatorNode.QuestHandler.questAccepted = true;
+            }
+            if (currentNode.Branches.Count > 0)
+            {
+                GoToNextNode(currentNode.Branches[0]);
+            }
             
-            GoToNextNode(currentNode.Branches[0]);
         }
         else if (currentNode.GetType() == typeof(QSQuestHandlerSO))
         {

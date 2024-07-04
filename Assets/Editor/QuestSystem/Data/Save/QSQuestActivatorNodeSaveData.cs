@@ -9,4 +9,5 @@ using UnityEngine;
 public class QSQuestActivatorNodeSaveData : QSNodeSaveData
 {
     [field: SerializeField]public QuestHandler QuestHandler { get; set; }
+    [field: SerializeField]public bool AcceptOnActivate { get; set; }
 }

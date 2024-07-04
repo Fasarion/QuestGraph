@@ -17,11 +17,9 @@ MonoBehaviour:
   <IsStartingNode>k__BackingField: 0
   <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
-  - <Text>k__BackingField: Enter
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 25421fdf0b25ec84f875a5eb570abde9, type: 2}
-  - <Text>k__BackingField: RemainOutside
-    <NextQuestNode>k__BackingField: {fileID: 0}
+  - <Text>k__BackingField: PickUpRidingHood
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: d765044b319e3cb489e3a5e2d91107e5, type: 2}
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: 559de129-c56a-41ef-b6c2-423ba70b8696
-    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 5f69f20223993ee41a75ea74461ede42, type: 2}
-  <DialogueContainerSO>k__BackingField: {fileID: 11400000, guid: e0208b112ad320c46b7280dad3b733af, type: 2}
+    <ParentNodeID>k__BackingField: bc948721-904c-4f2a-aac0-811ca2827486
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 3c8fed2263a8039429b6ed6892438aaa, type: 2}
+  <DialogueContainerSO>k__BackingField: {fileID: 11400000, guid: d2907777904d9c84e93c37178bb30ffc, type: 2}

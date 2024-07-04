@@ -12,6 +12,7 @@ public class QSQuestHandlerSO : QSQuestSO
     {
         base.Initialize(nodeName,branches, questNodeType,isStartingNode, testTarget,parentSaveData);
         QuestHandler = questHandler;
-        
+
+
     }
 }

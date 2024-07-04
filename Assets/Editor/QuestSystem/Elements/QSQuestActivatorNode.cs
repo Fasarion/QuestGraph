@@ -17,6 +17,8 @@ namespace QS.Elements
     {
         public QuestHandler questHandler;
         private VisualElement textBoxContainer;
+        private Toggle questAcceptedOnActivateToggle;
+        public bool acceptOnActivate;
         public override void Initialize(string nodeName, QSGraphView qsGraphView, Vector2 position)
         {
             base.Initialize(nodeName, qsGraphView, position);
@@ -27,6 +29,18 @@ namespace QS.Elements
         {
             base.Draw();
             
+            
+            questAcceptedOnActivateToggle = QSElementUtility.CreateToggle("Accept Quest on activation", callback =>
+            {
+                
+                questAcceptedOnActivateToggle.value = callback.newValue;
+                acceptOnActivate = callback.newValue;
+                
+                //graphView.SendCurrentTestNodeUpdatedEvent(this);
+               
+                //ToggleAutoPlay(callback.newValue);
+            });
+            questAcceptedOnActivateToggle.SetValueWithoutNotify(acceptOnActivate);
             
             foreach (QSBranchSaveData branch in branches)
             {
@@ -59,6 +73,7 @@ namespace QS.Elements
             }
 
             customDataContainer.Add(testValueObjectField);
+            extensionContainer.Add(questAcceptedOnActivateToggle);
             RefreshExpandedState();
             
         }
