@@ -174,6 +174,7 @@ namespace DS
                 }
                 else
                 {
+                    //branchContainerList.Add(container);
                     parent.exitContainers.Add(container);
                 }
                 container.dialogue = new Dialogue(sentences.ToArray());
