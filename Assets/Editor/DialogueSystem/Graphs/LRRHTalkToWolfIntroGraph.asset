@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3abeb2780963ae4ab4c21046a96b99d, type: 3}
+  m_Name: LRRHTalkToWolfIntroGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHTalkToWolfIntro
+  groups: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: ad1e3335-e6f2-4ec8-946b-4a1206bf1f14
+    <Name>k__BackingField: DialogueName
+    <Text>k__BackingField: Good day, Little Red Riding Hood
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 61cf8d57-e772-4d88-8cb5-862d50277ba5
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 379, y: 119}
+  - <ID>k__BackingField: 61cf8d57-e772-4d88-8cb5-862d50277ba5
+    <Name>k__BackingField: DialogueName3
+    <Text>k__BackingField: Where are you headed with that lovely basket?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: To my grandmother
+      <NodeID>k__BackingField: 2ab9e8c4-f737-4c3c-bc26-f1ccb2a63455
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 698, y: 95}
+  - <ID>k__BackingField: 2ab9e8c4-f737-4c3c-bc26-f1ccb2a63455
+    <Name>k__BackingField: Dialogue4
+    <Text>k__BackingField: How delightful! But before you go, could you help me with
+      a small favor? I seem to have misplaced a special lockpicking tool that I use
+      to help my friends when they get locked out of their homes. My friend, Mr.
+      Raccoon, has it.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 5e4cb72a-33db-4950-8730-eaa2e1bac3c8
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1091, y: 104}
+  - <ID>k__BackingField: 5e4cb72a-33db-4950-8730-eaa2e1bac3c8
+    <Name>k__BackingField: FetchLockpick
+    <Text>k__BackingField: Would you be so kind as to fetch it for me? He lives just
+      a little way over there, down the path on your right..
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Accept
+      <NodeID>k__BackingField: ce5ed4e1-6226-499e-bb06-8c0d90075ea0
+    - <Text>k__BackingField: Decline
+      <NodeID>k__BackingField: 8e720c91-0436-4d10-ab81-f30ae7d237ce
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1830, y: 80}
+  - <ID>k__BackingField: ce5ed4e1-6226-499e-bb06-8c0d90075ea0
+    <Name>k__BackingField: AcceptLockpick
+    <Text>k__BackingField: How very kind of you my child! Mr. Raccoon is very friendly,
+      and I'm sure he won't mind lending it to you.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: b3a2b6da-7b04-4df5-85ef-51cfb28c26e6
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2550, y: 1}
+  - <ID>k__BackingField: 8e720c91-0436-4d10-ab81-f30ae7d237ce
+    <Name>k__BackingField: DeclineLockpick
+    <Text>k__BackingField: Too busy to help a good friend? Did you say your grandmother
+      lives down this path? What misfortune!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 218508ab-4677-42f7-a1b6-cdb1b3383600
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2616, y: 236}
+  - <ID>k__BackingField: 218508ab-4677-42f7-a1b6-cdb1b3383600
+    <Name>k__BackingField: DeclineLockpickContinue
+    <Text>k__BackingField: 'It appears the path this way has been blocked by a boulder
+      recently. I would move it but I am far too distressed of being locked out of
+      my own home to manage right now. '
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3259, y: 236}
+  - <ID>k__BackingField: b3a2b6da-7b04-4df5-85ef-51cfb28c26e6
+    <Name>k__BackingField: AcceptLockpick2
+    <Text>k__BackingField: I will be waiting right here for your return!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3290, y: 1}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - DialogueName
+  - DialogueName3
+  - Dialogue4
+  - FetchLockpick
+  - AcceptLockpick
+  - DeclineLockpick
+  - DeclineLockpickContinue
+  - AcceptLockpick2
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
+  autoPlayGraph: 0

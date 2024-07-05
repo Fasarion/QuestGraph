@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64c63bd223f6cd48a3d7d970be663f9, type: 3}
+  m_Name: LRRHFetchLockpick
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHFetchLockpick
+  <questDialogueGraphSOs>k__BackingField:
+  - {fileID: 11400000, guid: a656d03ce24b4194cad033f36ef0fd16, type: 2}
+  - {fileID: 11400000, guid: 90e72ecf7c6b4b544af524d53339cb88, type: 2}
+  - {fileID: 11400000, guid: 75584f3623d8e7949a1ec7f51911c80e, type: 2}
+  <activatorSOs>k__BackingField:
+  - {fileID: 11400000, guid: f123a2a86db0716468d9cbd9e4b1fbd5, type: 2}
+  - {fileID: 11400000, guid: 73e6f785817480a4a96c5eb1e0ffba74, type: 2}
+  - {fileID: 11400000, guid: 016343993e91dd6419e3c4e804600709, type: 2}
+  - {fileID: 11400000, guid: fcac1b786315bb041bd5a015b0740688, type: 2}
+  <questHandlerSOs>k__BackingField:
+  - {fileID: 11400000, guid: 7a4f9891bb25aff48ba14b9176c6096f, type: 2}
+  <startingNode>k__BackingField: {fileID: 11400000, guid: 73e6f785817480a4a96c5eb1e0ffba74, type: 2}
+  <testTargetNode>k__BackingField: {fileID: 0}

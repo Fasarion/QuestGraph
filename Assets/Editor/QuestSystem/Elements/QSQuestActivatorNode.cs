@@ -23,6 +23,13 @@ namespace QS.Elements
         {
             base.Initialize(nodeName, qsGraphView, position);
             QuestNodeType = QSQuestNodeType.QuestActivator;
+            
+            QSBranchSaveData branchSaveData = new QSBranchSaveData()
+            {
+                Text = "NextNode"
+            };
+            
+            branches.Add(branchSaveData);
         }
 
         public override void Draw()

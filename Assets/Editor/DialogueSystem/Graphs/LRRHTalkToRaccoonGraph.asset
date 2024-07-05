@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3abeb2780963ae4ab4c21046a96b99d, type: 3}
+  m_Name: LRRHTalkToRaccoonGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHTalkToRaccoon
+  groups: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 61cf8d57-e772-4d88-8cb5-862d50277ba5
+    <Name>k__BackingField: DialogueName3
+    <Text>k__BackingField: Hello, Little Red Riding Hood. What brings you here?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Ask for lockpick
+      <NodeID>k__BackingField: 5e4cb72a-33db-4950-8730-eaa2e1bac3c8
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 559, y: 25}
+  - <ID>k__BackingField: 5e4cb72a-33db-4950-8730-eaa2e1bac3c8
+    <Name>k__BackingField: FetchLockpick
+    <Text>k__BackingField: The Wolf, you say? That doesn't sound right. The Wolf
+      is known for his tricky and deceitful nature. Why would he need a lockpicking
+      tool? This sounds suspicious, Little Red Riding Hood.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: He is just trying to help
+      <NodeID>k__BackingField: ce5ed4e1-6226-499e-bb06-8c0d90075ea0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1094, y: 25}
+  - <ID>k__BackingField: ce5ed4e1-6226-499e-bb06-8c0d90075ea0
+    <Name>k__BackingField: ReceivedLockpick
+    <Text>k__BackingField: 'Be careful, Little Red Riding Hood. Not everyone is as
+      kind as they seem, but here you go.em. '
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1793, y: 25}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - DialogueName3
+  - FetchLockpick
+  - ReceivedLockpick
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
+  autoPlayGraph: 0

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70e04ab4ab889ba4eb293dc253f780de, type: 3}
-  m_Name: LRRHFetchLockpick
+  m_Name: LRRHFetchLockpickQuestHandler
   m_EditorClassIdentifier: 
   currentQuestState: 0
   questType: 1
-  questActive: 0
+  questActive: 1
   questTasksComplete: 0
-  questComplete: 0
-  questAccepted: 0
+  questComplete: 1
+  questAccepted: 1
   firstTimeAccepting: 1
   characterToTalkTo: 
   fetchItemRetrieved: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b326c8638c83c4d8abfd2d25c84aa0, type: 3}
+  m_Name: FetchLockpick
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: FetchLockpick
+  <Text>k__BackingField: Would you be so kind as to fetch it for me? He lives just
+    a little way over there, down the path on your right..
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Accept
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 3af4012bbbf58c448801e5812869b78c, type: 2}
+  - <Text>k__BackingField: Decline
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: fd45e3554853b7848b8448131b9aff96, type: 2}
+  <DialogueType>k__BackingField: 1
+  <isStartingDialogue>k__BackingField: 0

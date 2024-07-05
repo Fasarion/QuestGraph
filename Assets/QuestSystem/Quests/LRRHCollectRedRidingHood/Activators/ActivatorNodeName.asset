@@ -18,12 +18,14 @@ MonoBehaviour:
   <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: b388edab5c516f843af01c800baad943, type: 2}
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: c582436b2b5df0a47b1b9c42b8432f99, type: 2}
   <ParentData>k__BackingField:
     <ParentNodeID>k__BackingField: b9760e79-6666-4bad-be66-62db798b89e5
     <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: d765044b319e3cb489e3a5e2d91107e5, type: 2}
   <GameObjectsToActivateNames>k__BackingField:
   - GoToGrandmother
+  - DoorOpener
+  - FetchLockpick
   <GameObjectsToDeactivateNames>k__BackingField:
   - PickUpRedRidingHood
   - RedRidingHood

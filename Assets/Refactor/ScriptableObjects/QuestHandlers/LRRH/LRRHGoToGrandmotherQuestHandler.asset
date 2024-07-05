@@ -10,23 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70e04ab4ab889ba4eb293dc253f780de, type: 3}
-  m_Name: LRRHFetchRedRidingHood
+  m_Name: LRRHGoToGrandmotherQuestHandler
   m_EditorClassIdentifier: 
   currentQuestState: 0
-  questType: 1
+  questType: 0
   questActive: 1
   questTasksComplete: 0
   questComplete: 0
-  questAccepted: 0
+  questAccepted: 1
   firstTimeAccepting: 1
   characterToTalkTo: 
   fetchItemRetrieved: 0
-  itemToFetchName: Red Riding Hood
+  itemToFetchName: 
   characterToFetchFrom: 
   characterToFetchFor: 
   collectableItemName: 
-  itemTypesToCollect:
-  - {fileID: 0}
+  itemTypesToCollect: []
   numberOfItemsToCollect: 0
   currentCollectedItems: 0
   startingCollectedItems: 0

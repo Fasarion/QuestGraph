@@ -22,11 +22,6 @@ namespace DS.Elements
             {
                 Text = ("NextDialogue")
             };
-           
-            
-
-           
-            
             choices.Add(choiceData);
             
         }

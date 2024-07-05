@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbc82e8539c2ac468fac43146f346ef, type: 3}
+  m_Name: LRRHReturnToWolfLockpick
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHReturnToWolfLockpick
+  <dialogueGroups>k__BackingField:
+    list: []
+  <ungroupedDialogues>k__BackingField:
+  - {fileID: 11400000, guid: 2373cc219f4b2d24cac28aa1c7526c66, type: 2}
+  - {fileID: 11400000, guid: 530df575ebb8ec24faaa2226bd027c19, type: 2}
+  - {fileID: 11400000, guid: a3fe5e4c8f5496a42a56c318eb07ec8d, type: 2}
+  - {fileID: 11400000, guid: 019ac52ffce55c44eaef59b023d601d5, type: 2}
+  - {fileID: 11400000, guid: 7ccfd4807b9fd8c418d54f0a3cf3d99c, type: 2}
+  <AutoPlayDialogue>k__BackingField: 0
+  allDialogueNodes:
+  - {fileID: 11400000, guid: 2373cc219f4b2d24cac28aa1c7526c66, type: 2}
+  - {fileID: 11400000, guid: 530df575ebb8ec24faaa2226bd027c19, type: 2}
+  - {fileID: 11400000, guid: a3fe5e4c8f5496a42a56c318eb07ec8d, type: 2}
+  - {fileID: 11400000, guid: 019ac52ffce55c44eaef59b023d601d5, type: 2}
+  - {fileID: 11400000, guid: 7ccfd4807b9fd8c418d54f0a3cf3d99c, type: 2}
+  exitDialogues:
+  - {fileID: 11400000, guid: 019ac52ffce55c44eaef59b023d601d5, type: 2}
+  - {fileID: 11400000, guid: 7ccfd4807b9fd8c418d54f0a3cf3d99c, type: 2}

@@ -16,9 +16,11 @@ MonoBehaviour:
   <QuestNodeType>k__BackingField: 6
   <IsStartingNode>k__BackingField: 0
   <IsTestTarget>k__BackingField: 0
-  <Branches>k__BackingField: []
+  <Branches>k__BackingField:
+  - <Text>k__BackingField: NextNode
+    <NextQuestNode>k__BackingField: {fileID: 0}
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: d7eda6a1-eae1-4241-9fef-6d207d07e960
-    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: d1bc1223eb432e446a877c60d5c55c15, type: 2}
-  <QuestHandler>k__BackingField: {fileID: 11400000, guid: ecca6918201509546a8c09dfa44882ec, type: 2}
-  <AcceptOnActivate>k__BackingField: 1
+    <ParentNodeID>k__BackingField: 48e44cd0-c80d-4f26-a3eb-2ffc56e8f7e5
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: c582436b2b5df0a47b1b9c42b8432f99, type: 2}
+  <QuestHandler>k__BackingField: {fileID: 11400000, guid: 12bd6835914f35348a554a0f570d3844, type: 2}
+  <AcceptOnActivate>k__BackingField: 0

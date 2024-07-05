@@ -441,6 +441,10 @@ public class QSIOUtility : MonoBehaviour
                     QSQuestNodeType.Condition, conditionNode.IsStartingNode(), conditionNode.testTarget, ConvertParentSaveDataToParentData(conditionNode.parentSaveData));
                 createdConditions.Add(conditionNode.ID, condition);
                 createdNodes.Add(conditionNode.ID, condition);
+                if (conditionNode.IsStartingNode())
+                {
+                    questDataContainer.startingNode = condition;
+                }
                 if (conditionNode.IsTestTargetNode())
                 {
                     questDataContainer.testTargetNode = condition;

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d67663a0bf5028418d9437f5e71fe1b, type: 3}
+  m_Name: DialogueGraphNodeName
+  m_EditorClassIdentifier: 
+  <NodeName>k__BackingField: DialogueGraphNodeName
+  <QuestNodeType>k__BackingField: 1
+  <IsStartingNode>k__BackingField: 0
+  <IsTestTarget>k__BackingField: 0
+  <Branches>k__BackingField:
+  - <Text>k__BackingField: AcceptLockpick2
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: f123a2a86db0716468d9cbd9e4b1fbd5, type: 2}
+  - <Text>k__BackingField: DeclineLockpickContinue
+    <NextQuestNode>k__BackingField: {fileID: 0}
+  <ParentData>k__BackingField:
+    <ParentNodeID>k__BackingField: b4e05c37-5a12-44eb-ac33-ab3750ac3e02
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 73e6f785817480a4a96c5eb1e0ffba74, type: 2}
+  <DialogueContainerSO>k__BackingField: {fileID: 11400000, guid: d3e6ca245d6890e40b8d3c0f91543e8d, type: 2}

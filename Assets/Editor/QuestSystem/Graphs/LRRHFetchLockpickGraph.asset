@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca44d988e147de44abf84141d2fc3f5, type: 3}
+  m_Name: LRRHFetchLockpickGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: LRRHFetchLockpick
+  <Nodes>k__BackingField:
+  - rid: 737070936441487468
+  - rid: 737070936441487469
+  - rid: 737070936441487470
+  - rid: 737070936441487471
+  - rid: 737070936441487472
+  - rid: 737070936441487473
+  - rid: 737070936441487474
+  - rid: 737070936441487475
+  - rid: 737070936441487476
+  - rid: 737070936441487477
+  <QuestHandlerNodes>k__BackingField: []
+  <DialogueGraphNodes>k__BackingField: []
+  <OldNodeNames>k__BackingField: []
+  <OldQuestHandlerNodeNames>k__BackingField:
+  - QuestName
+  <OldDialogueGraphNodeNames>k__BackingField:
+  - DialogueGraphNodeName
+  - DialogueGraphNodeName1
+  - DialogueGraphNodeName2
+  <OldActivatorNodeNames>k__BackingField:
+  - ActivatorNodeName
+  - ActivatorNodeName2
+  - ActivatorNodeName1
+  - ActivatorNodeName3
+  <OldConditionNodeNames>k__BackingField:
+  - ConditionSetterNodeName
+  <OldQuestAcceptedNodeNames>k__BackingField: []
+  <OldQuestActivatorNodeNames>k__BackingField:
+  - QuestActivatorNodeName
+  <OldConditionSetterNodeNames>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 737070936441487468
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: cbd2ef67-f04b-4925-8fb6-cf9070c344f8
+        <Name>k__BackingField: DialogueGraphNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: AcceptLockpick2
+          <NextNodeID>k__BackingField: a19f7f2b-327b-4541-8296-4ddfe4c82e0e
+        - <Text>k__BackingField: DeclineLockpickContinue
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: 439, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: b4e05c37-5a12-44eb-ac33-ab3750ac3e02
+        DialogueContainerSO: {fileID: 11400000, guid: d3e6ca245d6890e40b8d3c0f91543e8d, type: 2}
+    - rid: 737070936441487469
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: a19f7f2b-327b-4541-8296-4ddfe4c82e0e
+        <Name>k__BackingField: ActivatorNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 8d701d8d-216e-471a-b1d4-eb5c70b06cfd
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 969, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: cbd2ef67-f04b-4925-8fb6-cf9070c344f8
+        GameObjectsToActivateNames:
+        - TalkToRaccoon
+        GameObjectToDeactivateNames:
+        - TalkToWolfIntro
+    - rid: 737070936441487470
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 8d701d8d-216e-471a-b1d4-eb5c70b06cfd
+        <Name>k__BackingField: DialogueGraphNodeName1
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: ReceivedLockpick
+          <NextNodeID>k__BackingField: 1896a203-2565-4923-8126-10803df64cab
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: 1276, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: a19f7f2b-327b-4541-8296-4ddfe4c82e0e
+        DialogueContainerSO: {fileID: 11400000, guid: 9e65872d9cedd114c9549e77e3f5208a, type: 2}
+    - rid: 737070936441487471
+      type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 510ed238-ff8d-4608-8ad5-e5582ba842d8
+        <Name>k__BackingField: QuestName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 0
+        <Position>k__BackingField: {x: -271, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        <QuestHandler>k__BackingField: {fileID: 11400000, guid: 12bd6835914f35348a554a0f570d3844, type: 2}
+    - rid: 737070936441487472
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: b4e05c37-5a12-44eb-ac33-ab3750ac3e02
+        <Name>k__BackingField: ActivatorNodeName2
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: cbd2ef67-f04b-4925-8fb6-cf9070c344f8
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 118, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 
+        GameObjectsToActivateNames:
+        - TalkToWolfIntro
+        GameObjectToDeactivateNames: []
+    - rid: 737070936441487473
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 506b38cd-9eed-44ee-a06a-da942f0b8bd1
+        <Name>k__BackingField: DialogueGraphNodeName2
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: Accept
+          <NextNodeID>k__BackingField: 9a353a95-ac5a-46c7-9202-1fc7546e79de
+        - <Text>k__BackingField: Decline
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: 2919, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: d36e309f-a70f-4d7e-b22b-df2d58b928ac
+        DialogueContainerSO: {fileID: 11400000, guid: f461aa6c407a2024490a6be953a0d7c4, type: 2}
+    - rid: 737070936441487474
+      type: {class: QSQuestActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 9a353a95-ac5a-46c7-9202-1fc7546e79de
+        <Name>k__BackingField: QuestActivatorNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: e722d8fd-5e78-4722-924a-393fff06f7df
+        <QuestNodeType>k__BackingField: 6
+        <Position>k__BackingField: {x: 3457, y: -25}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 506b38cd-9eed-44ee-a06a-da942f0b8bd1
+        <QuestHandler>k__BackingField: {fileID: 11400000, guid: e730df8a98550624ca57a22c65670664, type: 2}
+        <AcceptOnActivate>k__BackingField: 1
+    - rid: 737070936441487475
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: e722d8fd-5e78-4722-924a-393fff06f7df
+        <Name>k__BackingField: ActivatorNodeName1
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 3796, y: -25}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 9a353a95-ac5a-46c7-9202-1fc7546e79de
+        GameObjectsToActivateNames:
+        - CollectFlowers
+        GameObjectToDeactivateNames:
+        - TalkToWolfHaveLockpick
+    - rid: 737070936441487476
+      type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: d36e309f-a70f-4d7e-b22b-df2d58b928ac
+        <Name>k__BackingField: ConditionSetterNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 506b38cd-9eed-44ee-a06a-da942f0b8bd1
+        <QuestNodeType>k__BackingField: 4
+        <Position>k__BackingField: {x: 2170, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 1896a203-2565-4923-8126-10803df64cab
+    - rid: 737070936441487477
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 1896a203-2565-4923-8126-10803df64cab
+        <Name>k__BackingField: ActivatorNodeName3
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: d36e309f-a70f-4d7e-b22b-df2d58b928ac
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 1758, y: -27}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 8d701d8d-216e-471a-b1d4-eb5c70b06cfd
+        GameObjectsToActivateNames:
+        - TalkToWolfHaveLockpick
+        GameObjectToDeactivateNames:
+        - TalkToRaccoon
