@@ -28,7 +28,7 @@ MonoBehaviour:
   itemTypesToCollect:
   - {fileID: 8776994398783834416, guid: 7f4c12135071fb3458edae26e8e73646, type: 3}
   numberOfItemsToCollect: 1
-  currentCollectedItems: 1
+  currentCollectedItems: 0
   startingCollectedItems: 0
   enemyTypeName: 
   enemyTypeToKill: {fileID: 0}

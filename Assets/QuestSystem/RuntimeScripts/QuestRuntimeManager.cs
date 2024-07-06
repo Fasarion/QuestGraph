@@ -394,7 +394,12 @@ public class QuestRuntimeManager : MonoBehaviour
 
     public void OnReachedLastDialogueSO(DSDialogueSO dialogueSo)
     {
-        SelectDialogueGraphBranch(dialogueSo);
+        //I am afraid that checking if the quest has been completed already or is active is just going to move the error further down the line.
+        if (questHandler.questComplete != true && questHandler.questActive)
+        {
+            SelectDialogueGraphBranch(dialogueSo);
+        }
+        
     }
 
     public void OnQuestConditionMet()

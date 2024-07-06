@@ -83,6 +83,13 @@ public class DialogueContainer : MonoBehaviour//, ISerializationCallbackReceiver
         return branchingOptions;
     }
 
+    public void UpdateSingleBranch(string name, DialogueContainer value)
+    {
+        branches = new DictionaryDisplay[1];
+        branches[0].container = value;
+        branches[0].name = name;
+    }
+
     public void UpdateBranches()
     {
         branches = new DictionaryDisplay[branchingOptions.Count];

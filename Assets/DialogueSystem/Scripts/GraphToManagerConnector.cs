@@ -174,13 +174,27 @@ namespace DS
                 }
                 else
                 {
-                    //branchContainerList.Add(container);
+                    
                     parent.exitContainers.Add(container);
+                    
                 }
                 container.dialogue = new Dialogue(sentences.ToArray());
                 container.parentGameObject = parent;
                 allContainers.Add(container);
             }
+         
+
+            for (int i = 0; i < parent.exitContainers.Count; i++)
+            {
+                var choices = parent.exitContainers[i].dialogueSOLast.Choices;
+                for (int j = 0; j < choices.Count; j++)
+                {
+                    var next = choices[j].NextDialogue;
+                    var found = allContainers.Find(e => e.dialogueSOLast == next);
+                    parent.exitContainers[i].branchingOptions.Add(next.name, found);
+                }
+            }
+            
             //Forgive me for this deep level loop.
             //Go through all branches
             for (int i = 0; i < branchContainerList.Count; i++)
@@ -199,6 +213,8 @@ namespace DS
                 branchContainerList[i].UpdateBranches();
                 
             }
+            
+            
 
             parent.containers = allContainers;
             

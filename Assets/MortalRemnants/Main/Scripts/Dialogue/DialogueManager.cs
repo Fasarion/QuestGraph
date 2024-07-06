@@ -521,8 +521,17 @@ public class DialogueManager : MonoBehaviour
         {
             if (dialogueContainer.branches.Length == 0)
             {
+                for (int i = 0; i < dialogueContainer.parentGameObject.exitContainers.Count; i++)
+                {
+                    if (dialogueContainer.parentGameObject.exitContainers[i] == dialogueContainer)
+                    {
+                        
+                    }
+                }
+              
                 Debug.Log("This was the last dialogue in the sequence");
                 reachedLastDialogueSO?.Invoke(dialogueContainer.dialogueSOLast);
+                
             }
         }
     }
