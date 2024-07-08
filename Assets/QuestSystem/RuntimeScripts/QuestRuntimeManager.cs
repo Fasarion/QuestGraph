@@ -1,11 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using DS.ScriptableObjects;
 using KKD;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -40,12 +37,23 @@ public class QuestRuntimeManager : MonoBehaviour
 
     public DialogueTrigger autoPlayTrigger;
 
+    private QSQuestBranchData previousQuestBranch;
+
+    
+    public bool resetToActive;
+    public bool resetToInactive;
+    
+    
     
     // Start is called before the first frame update
     void Awake()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
-       
+    }
+    
+    private void Start()
+    {
+        
         if (questData != null)
         {
             if (questData.questHandlerSOs != null)
@@ -59,6 +67,7 @@ public class QuestRuntimeManager : MonoBehaviour
                     currentNode = questData.startingNode;
                     var questNode = questData.questHandlerSOs[0];
                     questHandler = questNode.QuestHandler;
+
                     if (autoTest)
                     {
                         testTarget = questData.testTargetNode;
@@ -71,17 +80,12 @@ public class QuestRuntimeManager : MonoBehaviour
                             var listIndexInPath = indexByCurrentPathNodes.Count-1;
                             testPathNodeIndex = listIndexInPath;
                         }
-                       
-                        
-                        
                     }
                 }
             }
         }
-    }
-    
-    private void Start()
-    {
+        
+        questHandler.onQuestTasksCompleted += OnQuestConditionMet;
         //This is probably going to be VERY slow when we have 1000s of enemies in the scene. It would at least increase load times. Might have to 
         //resort to some kind of assignment logic for scene objects after all. Could have a base class for all game objects that should be saved
         //in the scene and add them into a list of objects to activate/deactivate. Then we could leave spawned enemies created at runtime out 
@@ -106,9 +110,6 @@ public class QuestRuntimeManager : MonoBehaviour
                 CheckNodeTransitionCondition();
             }
         }
-        
-       
-        
         //currentNode = questData.
         
     }
@@ -162,7 +163,11 @@ public class QuestRuntimeManager : MonoBehaviour
     private void OnEnable()
     {
         dialogueManager.reachedLastDialogueSO += OnReachedLastDialogueSO;
-        questHandler.onQuestTasksCompleted += OnQuestConditionMet;
+        if (questHandler != null)
+        {
+            questHandler.onQuestTasksCompleted += OnQuestConditionMet;
+        }
+        
     }
 
     private void OnDisable()
@@ -433,6 +438,7 @@ public class QuestRuntimeManager : MonoBehaviour
                 {
                     foreach (QSQuestBranchData qsQuestBranchData in dialogueGraphSo.Branches)
                     {
+                        //This is where the problem arises. There are no branches but we still need to progress to the next branch.
                         if (qsQuestBranchData.Text == found.name)
                         {
                             chosenBranch = qsQuestBranchData;
@@ -447,7 +453,19 @@ public class QuestRuntimeManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.LogWarning("No branch was found to transition to, is this intended?");
+                        chosenBranch = currentNode.Branches[0];
+                        if (chosenBranch ==  null)
+                        { 
+                            Debug.LogWarning("No branch was found to transition to, is this intended?");
+                        }
+                        else
+                        {
+                            
+                            GoToNextNode(chosenBranch);
+                            
+                           
+                        }
+                        
                     }
                 }
             }
@@ -457,6 +475,8 @@ public class QuestRuntimeManager : MonoBehaviour
     
     public void GoToNextNode(QSQuestBranchData questBranch)
     { 
+        //If the quest branch is null however, we're possibly at the end of a dialogue graph that ends on a single choice node instead of a branch
+        //So it won't have any branch data. But we can still get the next branch from the currentNode.
         if (questBranch != null)
         {
             currentNode = questBranch.NextQuestNode;
@@ -495,18 +515,27 @@ public class QuestRuntimeManager : MonoBehaviour
         }
         else
         {
-            if (questHandler.questAccepted)
+            //So here we should be able to get the next node if there are still nodes to go, even if the dialogue node had no branches.
+            if (currentNode.Branches[0] != null)
             {
-                questHandler.QuestCompleted(questHandler);
+               
             }
             else
             {
-                Debug.LogError("A quest was traversed without being accepted by the player!");
-                //I am seriously not sure why I am doing this.
+                if (questHandler.questAccepted)
+                {
+                    questHandler.QuestCompleted(questHandler);
+                }
+                else
+                {
+                    Debug.LogError("A quest was traversed without being accepted by the player!");
+                    //I am seriously not sure why I am doing this.
                 
-                //currentNode = questData.startingNode;
-                //CheckNodeTransitionCondition();
+                    //currentNode = questData.startingNode;
+                    //CheckNodeTransitionCondition();
+                }
             }
+           
             
         }
     }

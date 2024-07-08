@@ -284,6 +284,19 @@ namespace KKD
         {
             fetchItemRetrieved = false;
         }
+        
+        public void ResetQuest(bool questActiveState)
+        {
+            currentQuestState = 0;
+            questActive = questActiveState;
+            firstTimeAccepting= true;
+            questAccepted = false;
+            questTasksComplete = false;
+            questComplete = false;
+            currentCollectedItems = 0;
+            currentKills = 0;
+            fetchItemRetrieved = false;
+        }
 
         private void OnEnable()
         {

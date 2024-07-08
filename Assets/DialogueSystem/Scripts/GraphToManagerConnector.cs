@@ -184,7 +184,7 @@ namespace DS
             }
          
 
-            for (int i = 0; i < parent.exitContainers.Count; i++)
+           /* for (int i = 0; i < parent.exitContainers.Count; i++)
             {
                 var choices = parent.exitContainers[i].dialogueSOLast.Choices;
                 for (int j = 0; j < choices.Count; j++)
@@ -193,7 +193,7 @@ namespace DS
                     var found = allContainers.Find(e => e.dialogueSOLast == next);
                     parent.exitContainers[i].branchingOptions.Add(next.name, found);
                 }
-            }
+            }*/
             
             //Forgive me for this deep level loop.
             //Go through all branches

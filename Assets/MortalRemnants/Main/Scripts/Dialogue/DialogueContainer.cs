@@ -71,6 +71,11 @@ public class DialogueContainer : MonoBehaviour//, ISerializationCallbackReceiver
             }
         }
 
+        if (containerType == ContainerType.DialogueOnly)
+        {
+            
+        }
+
         if (containerType == ContainerType.StateSwapper)
         {
             

@@ -689,6 +689,7 @@ Transform:
   - {fileID: 1880967130}
   - {fileID: 1824612154}
   - {fileID: 1172510532}
+  - {fileID: 351979423}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2048,6 +2049,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1165257600929723003, guid: 92697a0fe2dab044a8aaba7ea07ed601, type: 3}
   m_PrefabInstance: {fileID: 1165257600551130013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &351979422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351979423}
+  - component: {fileID: 351979424}
+  m_Layer: 0
+  m_Name: QuestHandlerResetter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &351979423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351979422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 177132625}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &351979424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351979422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ba92314d420714c876af7da779e2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetQuest: 0
+  questRuntimeManagers: []
 --- !u!1 &362864290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,6 +3877,10 @@ PrefabInstance:
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: ff70cbc589618fe47a8aae25cfdecc4a, type: 2}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: resetToInactive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794552, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5303,6 +5354,10 @@ PrefabInstance:
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: 991fce9c315c7d84c85811fbffccdaee, type: 2}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: resetToInactive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794552, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10082,6 +10137,10 @@ PrefabInstance:
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: 4b34602ceef8dd54cae65c47e2a099c4, type: 2}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: resetToInactive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794552, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -12407,6 +12466,10 @@ PrefabInstance:
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: 0dc679edf8cfe684fad0f55d23a4674e, type: 2}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: resetToInactive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794552, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -13648,6 +13711,14 @@ PrefabInstance:
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: dc063862e89dcf64b949ea03a5b64c34, type: 2}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: resetToActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: resetToInactive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794552, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestState: 0
   questType: 1
-  questActive: 1
+  questActive: 0
   questTasksComplete: 0
-  questComplete: 1
-  questAccepted: 1
+  questComplete: 0
+  questAccepted: 0
   firstTimeAccepting: 1
   characterToTalkTo: 
   fetchItemRetrieved: 0

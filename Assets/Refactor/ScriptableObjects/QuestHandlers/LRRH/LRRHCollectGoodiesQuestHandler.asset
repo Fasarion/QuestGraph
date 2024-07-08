@@ -15,9 +15,9 @@ MonoBehaviour:
   currentQuestState: 0
   questType: 3
   questActive: 1
-  questTasksComplete: 1
+  questTasksComplete: 0
   questComplete: 0
-  questAccepted: 1
+  questAccepted: 0
   firstTimeAccepting: 1
   characterToTalkTo: 
   fetchItemRetrieved: 0
