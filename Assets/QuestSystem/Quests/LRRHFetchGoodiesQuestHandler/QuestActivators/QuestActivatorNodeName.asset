@@ -15,7 +15,7 @@ MonoBehaviour:
   <NodeName>k__BackingField: QuestActivatorNodeName
   <QuestNodeType>k__BackingField: 6
   <IsStartingNode>k__BackingField: 0
-  <IsTestTarget>k__BackingField: 0
+  <IsTestTarget>k__BackingField: 1
   <Branches>k__BackingField: []
   <ParentData>k__BackingField:
     <ParentNodeID>k__BackingField: 29e0b959-fb7c-48c8-b4a2-047f7ac29dc2

@@ -28,7 +28,7 @@ public class QuestRuntimeManagerEditor : Editor
 
         //resetQuestToActive = serializedObject.FindProperty("resetToActive");
         //resetQuestToInactive = serializedObject.FindProperty("resetToInactive");
-
+        
         EditorGUILayout.PropertyField(questData);
         EditorGUILayout.PropertyField(currentNode);
         EditorGUILayout.PropertyField(conditionMet);
@@ -37,11 +37,11 @@ public class QuestRuntimeManagerEditor : Editor
         //EditorGUILayout.PropertyField(resetQuestToActive);
         //EditorGUILayout.PropertyField(resetQuestToInactive);
         
-        
+        EditorGUI.BeginChangeCheck();
         QuestRuntimeManager runtimeManager = (QuestRuntimeManager)target;
 
         // Begin checking for changes in the inspector
-        EditorGUI.BeginChangeCheck();
+       
 
         // Display the toggles and handle their logic
         bool newResetToActive = EditorGUILayout.Toggle("Reset Quest To Active", runtimeManager.resetToActive);
@@ -69,6 +69,8 @@ public class QuestRuntimeManagerEditor : Editor
         {
             EditorUtility.SetDirty(runtimeManager);
         }
+
+        serializedObject.ApplyModifiedProperties();
 
 
     }

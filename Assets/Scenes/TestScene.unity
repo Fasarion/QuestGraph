@@ -3871,7 +3871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: autoTest
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: questData
@@ -5344,11 +5344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794550, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: autoTest
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: questData
@@ -10131,7 +10131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: autoTest
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: questData
@@ -12460,7 +12460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: autoTest
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: questData
@@ -13703,14 +13703,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: FetchGoodies
       objectReference: {fileID: 0}
+    - target: {fileID: 4726332937238794550, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: autoTest
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: dc063862e89dcf64b949ea03a5b64c34, type: 2}
+    - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
+      propertyPath: conditionMet
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4726332937238794551, guid: ab76f33192dd34c43a2821e90441dbbc, type: 3}
       propertyPath: resetToActive
       value: 1

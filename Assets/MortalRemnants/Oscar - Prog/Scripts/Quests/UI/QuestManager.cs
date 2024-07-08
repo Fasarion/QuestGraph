@@ -22,11 +22,17 @@ public class QuestManager : ScriptableObject
             if (collectibleQuestHandlers[i].questAccepted)
             {
 
-                if (collectible.destroyCollectibleOnPickup)
+                for (int j = 0; j < collectibleQuestHandlers[i].itemTypesToCollect.Count; j++)
                 {
-                    Destroy(collectible.gameObject);
+                    var collectibleType = collectible.identityBehaviour.GetType();
+                    var questHandlerItemType = collectibleQuestHandlers[i].itemTypesToCollect[j].GetType();
+                    if (collectible.destroyCollectibleOnPickup && collectibleType == questHandlerItemType)
+                    {
+                        Destroy(collectible.gameObject);
+                    }
+                    collectibleQuestHandlers[i].AddItem(monoBehaviour);
                 }
-                collectibleQuestHandlers[i].AddItem(monoBehaviour);
+                
             }
            
         }

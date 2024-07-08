@@ -309,6 +309,9 @@ public enum DialogueSystemType
                 if (dialogueAdded == false)
                 {
                     dialogueManager.EnqueueDialogue(startingDialogueBranch);
+                  
+                    dialogueManager.autoPlayDialogue = dialogueContainerScriptableObject.AutoPlayDialogue;
+            
                     dialogueAdded = true;
                 }
                 if (dialogueManager.dialogueOpen) return;
@@ -342,6 +345,8 @@ public enum DialogueSystemType
         {
             yield return null;
             //if (dialogueManager.dialogueOpen) yield break;
+            
+          
             TriggerDialogue();
         }
 

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: LRRHCollectFlowers
   <Nodes>k__BackingField:
-  - rid: 737070936441487483
-  - rid: 737070936441487484
-  - rid: 737070936441487485
-  - rid: 737070936441487486
-  - rid: 737070936441487487
+  - rid: 7690750878143741994
+  - rid: 7690750878143741995
+  - rid: 7690750878143741996
+  - rid: 7690750878143741997
+  - rid: 7690750878143741998
   <QuestHandlerNodes>k__BackingField: []
   <DialogueGraphNodes>k__BackingField: []
   <OldNodeNames>k__BackingField: []
@@ -37,7 +37,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 737070936441487483
+    - rid: 7690750878143741994
       type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 510ed238-ff8d-4608-8ad5-e5582ba842d8
@@ -46,12 +46,12 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 0
-        <Position>k__BackingField: {x: -271, y: -27}
+        <Position>k__BackingField: {x: -271.2, y: -27.2}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 
         <QuestHandler>k__BackingField: {fileID: 11400000, guid: e730df8a98550624ca57a22c65670664, type: 2}
-    - rid: 737070936441487484
+    - rid: 7690750878143741995
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: e722d8fd-5e78-4722-924a-393fff06f7df
@@ -60,7 +60,7 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: cbd2ef67-f04b-4925-8fb6-cf9070c344f8
         <QuestNodeType>k__BackingField: 2
-        <Position>k__BackingField: {x: 456, y: -8}
+        <Position>k__BackingField: {x: 456, y: -8.000001}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 02d03a21-2347-43f0-83c8-93aaa8fe22d1
@@ -68,7 +68,7 @@ MonoBehaviour:
         - ReturnFlowersWolfGone
         GameObjectToDeactivateNames:
         - Wolf1
-    - rid: 737070936441487485
+    - rid: 7690750878143741996
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: cbd2ef67-f04b-4925-8fb6-cf9070c344f8
@@ -77,12 +77,12 @@ MonoBehaviour:
         - <Text>k__BackingField: DialogueName
           <NextNodeID>k__BackingField: e5b401a6-a849-4339-ba3b-ab7470153b99
         <QuestNodeType>k__BackingField: 1
-        <Position>k__BackingField: {x: 798, y: -8}
+        <Position>k__BackingField: {x: 798.4, y: -8.000001}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: e722d8fd-5e78-4722-924a-393fff06f7df
         DialogueContainerSO: {fileID: 11400000, guid: fad702ccd8f6c3047adb2f78554ab771, type: 2}
-    - rid: 737070936441487486
+    - rid: 7690750878143741997
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: e5b401a6-a849-4339-ba3b-ab7470153b99
@@ -91,14 +91,14 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 2
-        <Position>k__BackingField: {x: 1311, y: -8}
-        <TestTarget>k__BackingField: 0
+        <Position>k__BackingField: {x: 1311.2, y: -8.000001}
+        <TestTarget>k__BackingField: 1
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: cbd2ef67-f04b-4925-8fb6-cf9070c344f8
         GameObjectsToActivateNames: []
         GameObjectToDeactivateNames:
         - ReturnFlowersWolfGone
-    - rid: 737070936441487487
+    - rid: 7690750878143741998
       type: {class: QSConditionNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 02d03a21-2347-43f0-83c8-93aaa8fe22d1
@@ -107,7 +107,7 @@ MonoBehaviour:
         - <Text>k__BackingField: NextNode
           <NextNodeID>k__BackingField: e722d8fd-5e78-4722-924a-393fff06f7df
         <QuestNodeType>k__BackingField: 3
-        <Position>k__BackingField: {x: 141, y: -8}
+        <Position>k__BackingField: {x: 140.8, y: -8.000001}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 

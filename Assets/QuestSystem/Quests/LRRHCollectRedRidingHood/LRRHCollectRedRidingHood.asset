@@ -21,4 +21,4 @@ MonoBehaviour:
   <questHandlerSOs>k__BackingField:
   - {fileID: 11400000, guid: 9436cad8b810dd94e991d7671cf2613c, type: 2}
   <startingNode>k__BackingField: {fileID: 11400000, guid: 3c8fed2263a8039429b6ed6892438aaa, type: 2}
-  <testTargetNode>k__BackingField: {fileID: 0}
+  <testTargetNode>k__BackingField: {fileID: 11400000, guid: b388edab5c516f843af01c800baad943, type: 2}

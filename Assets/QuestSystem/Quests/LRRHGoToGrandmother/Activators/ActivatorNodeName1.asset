@@ -15,12 +15,12 @@ MonoBehaviour:
   <NodeName>k__BackingField: ActivatorNodeName1
   <QuestNodeType>k__BackingField: 2
   <IsStartingNode>k__BackingField: 0
-  <IsTestTarget>k__BackingField: 0
+  <IsTestTarget>k__BackingField: 1
   <Branches>k__BackingField:
   - <Text>k__BackingField: NextNode
     <NextQuestNode>k__BackingField: {fileID: 0}
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: 33e3bce9-f918-42ed-9137-3cd498d228e9
+    <ParentNodeID>k__BackingField: 7c8e0bd2-bd95-4da7-b33d-3163f3f1bbe0
     <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 985a2813f1c305543a8b17841139ec66, type: 2}
   <GameObjectsToActivateNames>k__BackingField:
   - 

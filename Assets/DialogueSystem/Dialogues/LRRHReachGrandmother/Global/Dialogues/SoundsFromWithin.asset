@@ -17,7 +17,7 @@ MonoBehaviour:
   <Choices>k__BackingField:
   - <Text>k__BackingField: Enter
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 6b69f74082653e14e9ceb31af9a8dc64, type: 2}
-  - <Text>k__BackingField: REmain outside
+  - <Text>k__BackingField: Remain outside
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 324b1f56e059cf943bd1a8c7a1813142, type: 2}
   <DialogueType>k__BackingField: 1
   <isStartingDialogue>k__BackingField: 0

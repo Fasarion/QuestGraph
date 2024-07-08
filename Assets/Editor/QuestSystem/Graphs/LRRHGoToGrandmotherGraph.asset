@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: LRRHGoToGrandmother
   <Nodes>k__BackingField:
-  - rid: 7690750785700495448
-  - rid: 7690750785700495449
-  - rid: 7690750785700495450
-  - rid: 7690750785700495451
+  - rid: 7690750878143741990
+  - rid: 7690750878143741991
+  - rid: 7690750878143741992
+  - rid: 7690750878143741993
   <QuestHandlerNodes>k__BackingField: []
   <DialogueGraphNodes>k__BackingField: []
   <OldNodeNames>k__BackingField: []
@@ -35,23 +35,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 7690750785700495448
-      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
-      data:
-        <ID>k__BackingField: 33e3bce9-f918-42ed-9137-3cd498d228e9
-        <Name>k__BackingField: DialogueGraphNodeName
-        <Branches>k__BackingField:
-        - <Text>k__BackingField: Enter
-          <NextNodeID>k__BackingField: f27440f3-4685-4bf1-a3f0-755e8a131a0a
-        - <Text>k__BackingField: RemainOutside
-          <NextNodeID>k__BackingField: 
-        <QuestNodeType>k__BackingField: 1
-        <Position>k__BackingField: {x: 1893.6, y: -159.2}
-        <TestTarget>k__BackingField: 0
-        <ParentSaveData>k__BackingField:
-          <ParentNodeID>k__BackingField: 559de129-c56a-41ef-b6c2-423ba70b8696
-        DialogueContainerSO: {fileID: 11400000, guid: e0208b112ad320c46b7280dad3b733af, type: 2}
-    - rid: 7690750785700495449
+    - rid: 7690750878143741990
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: f27440f3-4685-4bf1-a3f0-755e8a131a0a
@@ -61,21 +45,21 @@ MonoBehaviour:
           <NextNodeID>k__BackingField: 
         <QuestNodeType>k__BackingField: 2
         <Position>k__BackingField: {x: 2504, y: -160.8}
-        <TestTarget>k__BackingField: 0
+        <TestTarget>k__BackingField: 1
         <ParentSaveData>k__BackingField:
-          <ParentNodeID>k__BackingField: 33e3bce9-f918-42ed-9137-3cd498d228e9
+          <ParentNodeID>k__BackingField: 7c8e0bd2-bd95-4da7-b33d-3163f3f1bbe0
         GameObjectsToActivateNames:
         - 
         GameObjectToDeactivateNames:
         - ReachGrandmother
-    - rid: 7690750785700495450
+    - rid: 7690750878143741991
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 559de129-c56a-41ef-b6c2-423ba70b8696
         <Name>k__BackingField: ActivatorNodeName
         <Branches>k__BackingField:
         - <Text>k__BackingField: NextNode
-          <NextNodeID>k__BackingField: 33e3bce9-f918-42ed-9137-3cd498d228e9
+          <NextNodeID>k__BackingField: 7c8e0bd2-bd95-4da7-b33d-3163f3f1bbe0
         <QuestNodeType>k__BackingField: 2
         <Position>k__BackingField: {x: 1472.8, y: -159.2}
         <TestTarget>k__BackingField: 0
@@ -84,7 +68,7 @@ MonoBehaviour:
         GameObjectsToActivateNames:
         - ReachGrandmother
         GameObjectToDeactivateNames: []
-    - rid: 7690750785700495451
+    - rid: 7690750878143741992
       type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 229eb953-f9d2-419c-bf8d-e8ad63292177
@@ -98,3 +82,19 @@ MonoBehaviour:
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 
         <QuestHandler>k__BackingField: {fileID: 11400000, guid: ecca6918201509546a8c09dfa44882ec, type: 2}
+    - rid: 7690750878143741993
+      type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 7c8e0bd2-bd95-4da7-b33d-3163f3f1bbe0
+        <Name>k__BackingField: DialogueGraphNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: Enter
+          <NextNodeID>k__BackingField: f27440f3-4685-4bf1-a3f0-755e8a131a0a
+        - <Text>k__BackingField: RemainOutside
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 1
+        <Position>k__BackingField: {x: 1933.6, y: -191.2}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 559de129-c56a-41ef-b6c2-423ba70b8696
+        DialogueContainerSO: {fileID: 11400000, guid: 4db5b4ab1cb774a4badb8cc275e938ad, type: 2}
