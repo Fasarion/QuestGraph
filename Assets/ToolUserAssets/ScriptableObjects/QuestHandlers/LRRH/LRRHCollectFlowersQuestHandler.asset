@@ -26,7 +26,7 @@ MonoBehaviour:
   characterToFetchFor: 
   collectableItemName: 
   itemTypesToCollect:
-  - {fileID: 315789004955658956, guid: e5da0b62d06fc0640b1381636b8a38f3, type: 3}
+  - {fileID: 0}
   numberOfItemsToCollect: 11
   currentCollectedItems: 0
   startingCollectedItems: 0

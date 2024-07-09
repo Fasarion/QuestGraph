@@ -45,11 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a203ad643e13f4c80443d16d874366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questData: {fileID: 11400000, guid: 5db9aff704075bf41a058ef1f0814f95, type: 2}
+  questData: {fileID: 0}
   currentNode: {fileID: 0}
   conditionMet: 0
   autoTest: 0
   autoPlayTrigger: {fileID: 423987889751530975}
+  resetToActive: 0
+  resetToInactive: 0
 --- !u!114 &423987889751530975
 MonoBehaviour:
   m_ObjectHideFlags: 0
