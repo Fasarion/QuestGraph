@@ -17,9 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ecca6918201509546a8c09dfa44882ec, type: 2}
   - {fileID: 11400000, guid: 12bd6835914f35348a554a0f570d3844, type: 2}
   - {fileID: 11400000, guid: 29564c2bbe1f0cd4fae43f4f803996ba, type: 2}
-  - {fileID: 11400000, guid: e730df8a98550624ca57a22c65670664, type: 2}
   collectibleQuestHandlers:
   - {fileID: 11400000, guid: c7a2df73aafce8a4d9336f88a70f689e, type: 2}
-  - {fileID: 11400000, guid: e730df8a98550624ca57a22c65670664, type: 2}
   killQuestHandlers: []
   allQuestTasksCompleted: 0
