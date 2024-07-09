@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4356038312938181584}
   - component: {fileID: 315789004955658946}
   - component: {fileID: 315789004955658956}
-  - component: {fileID: 315789004955658947}
   - component: {fileID: 7498012075653835584}
   m_Layer: 0
   m_Name: Flower
@@ -98,21 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf7638dc200c384a92b901772048925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &315789004955658947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099824756091024517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b0e5aaf74070e428fd8f8b8157405b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identityBehaviour: {fileID: 315789004955658956}
-  questManager: {fileID: 11400000, guid: 55ca707d460c85f4fbc736b1ceefe277, type: 2}
-  destroyCollectibleOnPickup: 1
 --- !u!65 &7498012075653835584
 BoxCollider:
   m_ObjectHideFlags: 0

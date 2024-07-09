@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030505048244913534}
   m_Layer: 0
-  m_Name: TalkToQuestTestPrefab
+  m_Name: TalkToQuestPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
