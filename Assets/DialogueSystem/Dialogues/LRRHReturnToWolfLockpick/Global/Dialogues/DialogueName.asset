@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: DialogueName
-  <Text>k__BackingField: Why don't you go gather some for your dear grandmother while
-    I move this here boulder? I am sure she would be delighted!
+  <Text>k__BackingField: Thank you so much, Little Red Riding Hood!
   <Choices>k__BackingField:
-  - <Text>k__BackingField: Accept
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 019ac52ffce55c44eaef59b023d601d5, type: 2}
-  - <Text>k__BackingField: Decline
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 7ccfd4807b9fd8c418d54f0a3cf3d99c, type: 2}
-  <DialogueType>k__BackingField: 1
-  <isStartingDialogue>k__BackingField: 0
+  - <Text>k__BackingField: NextDialogue
+    <NextDialogue>k__BackingField: {fileID: 0}
+  <DialogueType>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1

@@ -17,9 +17,7 @@ MonoBehaviour:
   <IsStartingNode>k__BackingField: 0
   <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
-  - <Text>k__BackingField: Accept
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 35178f045ed7aaa499667919175438e6, type: 2}
-  - <Text>k__BackingField: Decline
+  - <Text>k__BackingField: DialogueName
     <NextQuestNode>k__BackingField: {fileID: 0}
   <ParentData>k__BackingField:
     <ParentNodeID>k__BackingField: d36e309f-a70f-4d7e-b22b-df2d58b928ac
