@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d62e97f1ca9448b3b890d225dda12, type: 3}
+  m_Name: ActivatorNodeName1
+  m_EditorClassIdentifier: 
+  <NodeName>k__BackingField: ActivatorNodeName1
+  <QuestNodeType>k__BackingField: 2
+  <IsStartingNode>k__BackingField: 0
+  <IsTestTarget>k__BackingField: 0
+  <Branches>k__BackingField:
+  - <Text>k__BackingField: NextNode
+    <NextQuestNode>k__BackingField: {fileID: 0}
+  <ParentData>k__BackingField:
+    <ParentNodeID>k__BackingField: 101e6a21-069c-480d-8b68-1c632890be33
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 65f8d5cc649dfdf47b1c2f2dae60add1, type: 2}
+  <GameObjectsToActivateNames>k__BackingField:
+  - CollectFlowers
+  <GameObjectsToDeactivateNames>k__BackingField:
+  - TalkToWolfHaveLockpick

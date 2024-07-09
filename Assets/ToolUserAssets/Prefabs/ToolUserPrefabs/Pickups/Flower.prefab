@@ -125,4 +125,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identityBehaviour: {fileID: -1960843059112646997}
   questManager: {fileID: 11400000, guid: 55ca707d460c85f4fbc736b1ceefe277, type: 2}
-  destroyCollectibleOnPickup: 0
+  destroyCollectibleOnPickup: 1

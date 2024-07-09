@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d67663a0bf5028418d9437f5e71fe1b, type: 3}
-  m_Name: DialogueGraphNodeName2
+  m_Name: DialogueGraphNodeName1
   m_EditorClassIdentifier: 
-  <NodeName>k__BackingField: DialogueGraphNodeName2
+  <NodeName>k__BackingField: DialogueGraphNodeName1
   <QuestNodeType>k__BackingField: 1
   <IsStartingNode>k__BackingField: 0
   <IsTestTarget>k__BackingField: 0
   <Branches>k__BackingField:
-  - <Text>k__BackingField: DialogueName
-    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 65f8d5cc649dfdf47b1c2f2dae60add1, type: 2}
+  - <Text>k__BackingField: BoulderGone
+    <NextQuestNode>k__BackingField: {fileID: 11400000, guid: 553d589fe503d5143bfa1007cebac923, type: 2}
   <ParentData>k__BackingField:
-    <ParentNodeID>k__BackingField: d36e309f-a70f-4d7e-b22b-df2d58b928ac
-    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 1d2251e99c7872748bf7c05d4d7d87bf, type: 2}
-  <DialogueContainerSO>k__BackingField: {fileID: 11400000, guid: f461aa6c407a2024490a6be953a0d7c4, type: 2}
+    <ParentNodeID>k__BackingField: 82106629-f6c3-423f-8a18-bb6052b0f4c1
+    <PreviousQuestNode>k__BackingField: {fileID: 11400000, guid: 883b97cc5b335f2419eeacd4f949abc4, type: 2}
+  <DialogueContainerSO>k__BackingField: {fileID: 11400000, guid: 66de2f59046786646920ee471ede1cab, type: 2}

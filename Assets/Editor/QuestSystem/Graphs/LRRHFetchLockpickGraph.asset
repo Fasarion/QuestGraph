@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: LRRHFetchLockpick
   <Nodes>k__BackingField:
-  - rid: 7690750896645341194
-  - rid: 7690750896645341195
-  - rid: 7690750896645341196
-  - rid: 7690750896645341197
-  - rid: 7690750896645341198
-  - rid: 7690750896645341199
-  - rid: 7690750896645341200
-  - rid: 7690750896645341201
+  - rid: 7690750899351715902
+  - rid: 7690750899351715903
+  - rid: 7690750899351715904
+  - rid: 7690750899351715905
+  - rid: 7690750899351715906
+  - rid: 7690750899351715907
+  - rid: 7690750899351715908
+  - rid: 7690750899351715909
+  - rid: 7690750899351715910
+  - rid: 7690750899351715911
   <QuestHandlerNodes>k__BackingField: []
   <DialogueGraphNodes>k__BackingField: []
   <OldNodeNames>k__BackingField: []
@@ -35,15 +37,17 @@ MonoBehaviour:
   - ActivatorNodeName
   - ActivatorNodeName2
   - ActivatorNodeName3
+  - ActivatorNodeName1
   <OldConditionNodeNames>k__BackingField:
   - ConditionSetterNodeName
   <OldQuestAcceptedNodeNames>k__BackingField: []
-  <OldQuestActivatorNodeNames>k__BackingField: []
+  <OldQuestActivatorNodeNames>k__BackingField:
+  - QuestActivatorNodeName
   <OldConditionSetterNodeNames>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 7690750896645341194
+    - rid: 7690750899351715902
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: cbd2ef67-f04b-4925-8fb6-cf9070c344f8
@@ -59,7 +63,7 @@ MonoBehaviour:
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: b4e05c37-5a12-44eb-ac33-ab3750ac3e02
         DialogueContainerSO: {fileID: 11400000, guid: d3e6ca245d6890e40b8d3c0f91543e8d, type: 2}
-    - rid: 7690750896645341195
+    - rid: 7690750899351715903
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: a19f7f2b-327b-4541-8296-4ddfe4c82e0e
@@ -76,7 +80,7 @@ MonoBehaviour:
         - TalkToRaccoon
         GameObjectToDeactivateNames:
         - TalkToWolfIntro
-    - rid: 7690750896645341196
+    - rid: 7690750899351715904
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 8d701d8d-216e-471a-b1d4-eb5c70b06cfd
@@ -90,7 +94,7 @@ MonoBehaviour:
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: a19f7f2b-327b-4541-8296-4ddfe4c82e0e
         DialogueContainerSO: {fileID: 11400000, guid: 9e65872d9cedd114c9549e77e3f5208a, type: 2}
-    - rid: 7690750896645341197
+    - rid: 7690750899351715905
       type: {class: QSQuestHandlerNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 510ed238-ff8d-4608-8ad5-e5582ba842d8
@@ -104,7 +108,7 @@ MonoBehaviour:
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 
         <QuestHandler>k__BackingField: {fileID: 11400000, guid: 12bd6835914f35348a554a0f570d3844, type: 2}
-    - rid: 7690750896645341198
+    - rid: 7690750899351715906
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: b4e05c37-5a12-44eb-ac33-ab3750ac3e02
@@ -120,7 +124,7 @@ MonoBehaviour:
         GameObjectsToActivateNames:
         - TalkToWolfIntro
         GameObjectToDeactivateNames: []
-    - rid: 7690750896645341199
+    - rid: 7690750899351715907
       type: {class: QSConditionSetterNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: d36e309f-a70f-4d7e-b22b-df2d58b928ac
@@ -133,7 +137,7 @@ MonoBehaviour:
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: 1896a203-2565-4923-8126-10803df64cab
-    - rid: 7690750896645341200
+    - rid: 7690750899351715908
       type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 1896a203-2565-4923-8126-10803df64cab
@@ -150,17 +154,49 @@ MonoBehaviour:
         - TalkToWolfHaveLockpick
         GameObjectToDeactivateNames:
         - TalkToRaccoon
-    - rid: 7690750896645341201
+    - rid: 7690750899351715909
       type: {class: QSDialogueGraphNodeSaveData, ns: QS.Data.Save, asm: Assembly-CSharp-Editor}
       data:
         <ID>k__BackingField: 6f7a2430-b422-4a42-99b3-0fcb43abe524
         <Name>k__BackingField: DialogueGraphNodeName2
         <Branches>k__BackingField:
         - <Text>k__BackingField: DialogueName
-          <NextNodeID>k__BackingField: 
+          <NextNodeID>k__BackingField: 101e6a21-069c-480d-8b68-1c632890be33
         <QuestNodeType>k__BackingField: 1
         <Position>k__BackingField: {x: 2909.6, y: -27.2}
         <TestTarget>k__BackingField: 0
         <ParentSaveData>k__BackingField:
           <ParentNodeID>k__BackingField: d36e309f-a70f-4d7e-b22b-df2d58b928ac
         DialogueContainerSO: {fileID: 11400000, guid: f461aa6c407a2024490a6be953a0d7c4, type: 2}
+    - rid: 7690750899351715910
+      type: {class: QSQuestActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: 101e6a21-069c-480d-8b68-1c632890be33
+        <Name>k__BackingField: QuestActivatorNodeName
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: c61f079e-fbdf-4516-89b7-6fa444cef953
+        <QuestNodeType>k__BackingField: 6
+        <Position>k__BackingField: {x: 3380, y: -27.2}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 6f7a2430-b422-4a42-99b3-0fcb43abe524
+        <QuestHandler>k__BackingField: {fileID: 11400000, guid: e730df8a98550624ca57a22c65670664, type: 2}
+        <AcceptOnActivate>k__BackingField: 0
+    - rid: 7690750899351715911
+      type: {class: QSActivatorNodeSaveData, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        <ID>k__BackingField: c61f079e-fbdf-4516-89b7-6fa444cef953
+        <Name>k__BackingField: ActivatorNodeName1
+        <Branches>k__BackingField:
+        - <Text>k__BackingField: NextNode
+          <NextNodeID>k__BackingField: 
+        <QuestNodeType>k__BackingField: 2
+        <Position>k__BackingField: {x: 3841.6, y: -37.6}
+        <TestTarget>k__BackingField: 0
+        <ParentSaveData>k__BackingField:
+          <ParentNodeID>k__BackingField: 101e6a21-069c-480d-8b68-1c632890be33
+        GameObjectsToActivateNames:
+        - CollectFlowers
+        GameObjectToDeactivateNames:
+        - TalkToWolfHaveLockpick

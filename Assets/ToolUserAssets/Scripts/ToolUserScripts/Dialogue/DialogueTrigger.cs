@@ -244,6 +244,8 @@ public enum DialogueSystemType
             if (canOpenDialogue)
             {
                 canOpenDialogue = false;
+              
+                if (dialogueManager.dialogueOpen) return;
                 if (dialogueAdded == false)
                 {
                     dialogueManager.autoPlayDialogue = dialogueContainerScriptableObject.AutoPlayDialogue;
@@ -251,7 +253,6 @@ public enum DialogueSystemType
                     
                     dialogueAdded = true;
                 }
-                if (dialogueManager.dialogueOpen) return;
                 TriggerDialogue();
                
             }

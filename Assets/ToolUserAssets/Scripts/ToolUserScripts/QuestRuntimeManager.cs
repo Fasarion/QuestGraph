@@ -494,6 +494,7 @@ public class QuestRuntimeManager : MonoBehaviour
                 if (questHandler.questAccepted)
                 {
                     questHandler.QuestCompleted(questHandler);
+                    gameObject.SetActive(false);
                 }
                 else
                 {
