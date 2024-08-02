@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3abeb2780963ae4ab4c21046a96b99d, type: 3}
+  m_Name: TwoDialoguesGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: TwoDialogues
+  groups: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: c5ae3e29-a156-4f9c-ae3e-e6d6f0abc7a0
+    <Name>k__BackingField: MultipleChoiceName
+    <Text>k__BackingField: This dialogue will be shown together with the choices
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Choice 1
+      <NodeID>k__BackingField: 1f7c3a4b-8398-44e3-b104-85b8a1f31f4e
+    - <Text>k__BackingField: 'Choice 2 '
+      <NodeID>k__BackingField: fbfcb56e-b4e5-4ed7-a8a3-40f990a4139d
+    - <Text>k__BackingField: 'Choice 3 '
+      <NodeID>k__BackingField: 95b6d59c-e56b-4d28-bc65-2fe6bb98fdb4
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 730.4, y: 173.59999}
+  - <ID>k__BackingField: 20f505c2-7a39-4435-afde-3e254e9beffd
+    <Name>k__BackingField: SingleNodeName
+    <Text>k__BackingField: This dialogue will be played first.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: c5ae3e29-a156-4f9c-ae3e-e6d6f0abc7a0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 402.4, y: 173.59999}
+  - <ID>k__BackingField: 1f7c3a4b-8398-44e3-b104-85b8a1f31f4e
+    <Name>k__BackingField: Result1
+    <Text>k__BackingField: This is the result
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1178.4, y: 173.59999}
+  - <ID>k__BackingField: fbfcb56e-b4e5-4ed7-a8a3-40f990a4139d
+    <Name>k__BackingField: DialogueName2
+    <Text>k__BackingField: Dialogue text.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1209.6, y: 356.80002}
+  - <ID>k__BackingField: 95b6d59c-e56b-4d28-bc65-2fe6bb98fdb4
+    <Name>k__BackingField: DialogueName3
+    <Text>k__BackingField: Dialogue text.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: NextDialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1169.6, y: 559.2}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - MultipleChoiceName
+  - SingleNodeName
+  - Result1
+  - DialogueName2
+  - DialogueName3
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
+  autoPlayGraph: 0

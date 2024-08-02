@@ -7,7 +7,7 @@ public class QuestRuntimeManagerEditor : Editor
 {
     private SerializedProperty questData;
     private SerializedProperty currentNode;
-    private SerializedProperty conditionMet;
+    //private SerializedProperty conditionMet;
     
     private SerializedProperty autoTest;
     private SerializedProperty autoPlayTrigger;
@@ -21,7 +21,7 @@ public class QuestRuntimeManagerEditor : Editor
       
         questData = serializedObject.FindProperty("questData");
         currentNode = serializedObject.FindProperty("currentNode");
-        conditionMet = serializedObject.FindProperty("conditionMet");
+        //conditionMet = serializedObject.FindProperty("conditionMet");
         autoTest = serializedObject.FindProperty("autoTest");
         autoPlayTrigger = serializedObject.FindProperty("autoPlayTrigger");
 
@@ -31,7 +31,7 @@ public class QuestRuntimeManagerEditor : Editor
         
         EditorGUILayout.PropertyField(questData);
         EditorGUILayout.PropertyField(currentNode);
-        EditorGUILayout.PropertyField(conditionMet);
+        //EditorGUILayout.PropertyField(conditionMet);
         EditorGUILayout.PropertyField(autoTest);
         EditorGUILayout.PropertyField(autoPlayTrigger);
         //EditorGUILayout.PropertyField(resetQuestToActive);

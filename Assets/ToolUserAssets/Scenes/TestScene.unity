@@ -2377,7 +2377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044468822390199627, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
       propertyPath: DSContainers.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4044468822390199627, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
       propertyPath: DSContainers.Array.data[0]
@@ -2410,7 +2410,7 @@ PrefabInstance:
     - target: {fileID: 4044468822390199627, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
       propertyPath: DSContainers.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 48a1b7316abb2c4409e6aca719e77bf0, type: 2}
+      objectReference: {fileID: 11400000, guid: 20533f5e3a223684a9d3e345c3420b13, type: 2}
     - target: {fileID: 4044468822390199627, guid: dcb0ce5ead203af478730a2df89fa5cb, type: 3}
       propertyPath: DSContainers.Array.data[8]
       value: 
@@ -2773,7 +2773,7 @@ PrefabInstance:
     - target: {fileID: 1030505047693826768, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
       propertyPath: dialogueContainerScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 3a48f172c148889498c8db9a4233bba1, type: 2}
+      objectReference: {fileID: 11400000, guid: 20533f5e3a223684a9d3e345c3420b13, type: 2}
     - target: {fileID: 1030505047909672943, guid: 19c52db86599ee844a0b0e7c16e52491, type: 3}
       propertyPath: m_IsActive
       value: 1

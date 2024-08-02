@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <FileName>k__BackingField: LRRHFetchGoodiesQuestHandler
   <questDialogueGraphSOs>k__BackingField:
-  - {fileID: 11400000, guid: 152ba6ff33af6f845b15897b050263cb, type: 2}
   - {fileID: 11400000, guid: 0f6656e7bb73d5847acccdef951a8d71, type: 2}
+  - {fileID: 11400000, guid: 152ba6ff33af6f845b15897b050263cb, type: 2}
   <activatorSOs>k__BackingField:
   - {fileID: 11400000, guid: 0d4c7211afd0ba441b8f3e749af7ce23, type: 2}
   - {fileID: 11400000, guid: 7598dd634a466b94bbcb40e7ee860bc1, type: 2}
