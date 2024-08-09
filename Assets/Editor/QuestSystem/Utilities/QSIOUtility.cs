@@ -12,6 +12,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+//I need to look into why this is a monobehaviour. I don't think it needs to be.
 public class QSIOUtility : MonoBehaviour
 {
     private static QSGraphView graphView;
@@ -1079,6 +1080,7 @@ public class QSIOUtility : MonoBehaviour
 
         }
         
+        //Is this really doing anything?
         foreach (var nodeData in loadedDialogueGraphs)
         {
             nodeData.Value.RedrawBranches();

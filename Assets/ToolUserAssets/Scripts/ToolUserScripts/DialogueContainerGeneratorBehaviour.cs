@@ -16,7 +16,9 @@ public class DialogueContainerGeneratorBehaviour : MonoBehaviour
     
     public Dictionary<string,ContainerParent> dialogueContainerParents;
     private bool initialized = false;
+    
 
+    
     //private  DSNodeSaveData currentNode;
     // Start is called before the first frame update
     public void Awake()

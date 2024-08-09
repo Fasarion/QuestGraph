@@ -22,7 +22,7 @@ namespace QS.Elements
     {
         private VisualElement textBoxContainer;
         //List<PropertyField> propertyFields;
-        private ConvertDialogueSOToQSDialogueNodeSO dialogueSoToQuestNodeSoConverter;
+        //private ConvertDialogueSOToQSDialogueNodeSO dialogueSoToQuestNodeSoConverter;
         public DSDialogueContainerSO dialogueContainerSO;
         private List<QSBranchSaveData> branchesToStore;
         private List<Port> currentPorts;
