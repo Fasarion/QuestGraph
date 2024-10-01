@@ -20,7 +20,7 @@ The project is currently in the form of a standalone Unity project and therefore
 
 ## Usage
 
-Documentation on the parts of the tools a guide on how to use the tool and a class diagram can be found in this [zip-file](https://drive.google.com/file/d/1ZEhgC2A6yhQt9h_DpFg0HFmpkeYqxWoY/view?usp=sharing)
+Documentation, a tutorial on how to use the tool and a class diagram can be found in the following [zip-file](https://drive.google.com/file/d/1ZEhgC2A6yhQt9h_DpFg0HFmpkeYqxWoY/view?usp=sharing)
 
 ## Contribution
 
