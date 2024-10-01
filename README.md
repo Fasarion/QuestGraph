@@ -26,6 +26,6 @@ Documentation on the parts of the tools a guide on how to use the tool and a cla
 
 I will not open the repo up to edits right now, but I have no problems if you want to download and edit the project yourself.
 
-## 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+## License
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).\
 ![My Image](Assets/README/CCBY.png)
