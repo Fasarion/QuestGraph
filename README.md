@@ -4,7 +4,7 @@
 
 This is a tool for creating dialogue and quest structures using a graph view. The work is still in progress.
 
-The graph system is based at its core off of Indie Wafflus tutorial series [Dialogue System (Node Based)](https://www.youtube.com/watch?v=nvELzBYMK1U&list=PL0yxB6cCkoWK38XT4stSztcLueJ_kTx5f) but has been greatly expanded to provide support for creating quests.
+The graph system is based at its core off of Indie Wafflus tutorial series: [Dialogue System (Node Based)](https://www.youtube.com/watch?v=nvELzBYMK1U&list=PL0yxB6cCkoWK38XT4stSztcLueJ_kTx5f), but has been greatly expanded to provide support for creating quests.
 
 Features:
 
@@ -20,7 +20,7 @@ The project is currently in the form of a standalone Unity project and therefore
 
 ## Usage
 
-Documentation, a tutorial on how to use the tool and a class diagram can be found in the following [zip-file](https://drive.google.com/file/d/1ZEhgC2A6yhQt9h_DpFg0HFmpkeYqxWoY/view?usp=sharing)
+Documentation, a tutorial on how to use the tool and a class diagram can be found in the following [zip-file](https://drive.google.com/file/d/1ZEhgC2A6yhQt9h_DpFg0HFmpkeYqxWoY/view?usp=sharing).
 
 ## Contribution
 
